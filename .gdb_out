@@ -1,0 +1,141 @@
+GNU gdb (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 8.3.0.20190709-git
+Copyright (C) 2019 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "--host=x86_64-apple-darwin10 --target=arm-none-eabi".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+SEGGER J-Link GDB Server V7.50a Command Line Version
+
+JLinkARM.dll V7.50a (DLL compiled Jul  8 2021 18:16:55)
+
+Command line: -device AMA3B1KK-KBR -speed 1000 -if SWD -port 3333 -singlerun
+-----GDB Server start settings-----
+GDBInit file:                  none
+GDB Server Listening port:     3333
+SWO raw output listening port: 2332
+Terminal I/O port:             2333
+Accept remote connection:      yes
+Generate logfile:              off
+Verify download:               off
+Init regs on start:            off
+Silent mode:                   off
+Single run mode:               on
+Target connection timeout:     0 ms
+------J-Link related settings------
+J-Link Host interface:         USB
+J-Link script:                 none
+J-Link settings file:          none
+------Target related settings------
+Target device:                 AMA3B1KK-KBR
+Target interface:              SWD
+Target interface speed:        1000kHz
+Target endian:                 little
+
+Connecting to J-Link...
+J-Link is connected.
+Firmware: J-Link OB-K22-NordicSemi compiled Jul  2 2021 10:44:28
+Hardware: V1.00
+S/N: 960174232
+Feature(s): RDI, FlashBP, FlashDL, JFlash, GDB
+Checking target voltage...
+Target voltage: 3.30 V
+Listening on TCP/IP port 3333
+Connecting to target...
+Connected to target
+Waiting for GDB connection...Connected to 127.0.0.1
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+Reading all registers
+Read 4 bytes @ address 0x0000E788 (Data = 0xE8BDB11C)
+Read 2 bytes @ address 0x0000E788 (Data = 0xB11C)
+0x0000e788 in ?? ()
+Received monitor command: reset
+Resetting target
+Resetting target
+Downloading 13148 bytes @ address 0x0000C000
+Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0xc000 to 0xf35c)
+ERROR: Failed to prepare for programming.
+Could not preserve target memory.
+Reading register (MSP = 0x 749AF55)
+Reading register (PSP = 0x       0)
+Reading register (PRIMASK = 0x       0)
+Reading register (BASEPRI = 0x       0)
+Reading register (FAULTMASK = 0x       0)
+Reading register (CONTROL = 0x       0)
+Reading register (FPSCR = 0x       0)
+Reading register (MSP_S = 0x20080000)
+Reading register (MSPLIM_S = 0x       0)
+Reading register (PSP_S = 0x       0)
+Reading register (PSPLIM_S = 0x       0)
+Reading register (MSP_NS = 0x       0)
+Reading register (MSPLIM_NS = 0x       0)
+Reading register (PSP_NS = 0xFFFFFFFC)
+Reading register (PSPLIM_NS = 0x       0)
+Reading register (CONTROL_S = 0x       0)
+Reading register (FAULTMASK_S = 0x       0)
+Reading register (BASEPRI_S = 0x       0)
+Reading register (PRIMASK_S = 0x       0)
+Reading register (CONTROL_NS = 0x       0)
+Reading register (FAULTMASK_NS = 0x       0)
+Reading register (BASEPRI_NS = 0x       0)
+Reading register (PRIMASK_NS = 0x       0)
+r0             0x7ffb              32763
+r1             0x398005            3768325
+r2             0x4000              16384
+r3             0x398000            3768320
+r4             0x80                128
+r5             0x0                 0
+r6             0x3480              13440
+r7             0x200005a0          536872352
+r8             0x3980              14720
+r9             0xffffffff          4294967295
+r10            0xc8d5              51413
+r11            0xffffffff          4294967295
+r12            0xdeadbeef          3735928559
+sp             0x20000580          0x20000580
+lr             0xe6e5              59109
+pc             0xe788              0xe788
+xpsr           0x21000000          553648128
+msp            0x749af55           122269525
+psp            0x0                 0
+primask        0x0                 0
+basepri        0x0                 0
+faultmask      0x0                 0
+control        0x0                 0
+fpscr          0x0                 0
+msp_s          0x20080000          537395200
+msplim_s       0x0                 0
+psp_s          0x0                 0
+psplim_s       0x0                 0
+msp_ns         0x0                 0
+msplim_ns      0x0                 0
+psp_ns         0xfffffffc          4294967292
+psplim_ns      0x0                 0
+control_s      0x0                 0
+faultmask_s    0x0                 0
+basepri_s      0x0                 0
+primask_s      0x0                 0
+control_ns     0x0                 0
+faultmask_ns   0x0                 0
+basepri_ns     0x0                 0
+primask_ns     0x0                 0
+Received monitor command: reset
+Resetting target
+Resetting target
+A debugging session is active.
+
+	Inferior 1 [Remote target] will be killed.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+GDB closed TCP/IP connection (Socket 9)
+Restoring target state and closing J-Link connection...
+Shutting down...
