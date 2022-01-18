@@ -61,11 +61,10 @@ Read 2 bytes @ address 0x0000E788 (Data = 0xB11C)
 Received monitor command: reset
 Resetting target
 Resetting target
-Downloading 13148 bytes @ address 0x0000C000
-Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0xc000 to 0xf35c)
-ERROR: Failed to prepare for programming.
-Could not preserve target memory.
-Reading register (MSP = 0x 749AF55)
+Downloading 15968 bytes @ address 0x00000000
+Downloading 948 bytes @ address 0x00003E60
+Restoring binary file bin/targets/my_blinky_boot/app/@mcuboot/boot/mynewt/mynewt.elf.bin into memory (0x0 to 0x4214)
+Reading register (MSP = 0x20080000)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
 Reading register (BASEPRI = 0x       0)
@@ -89,14 +88,14 @@ Reading register (FAULTMASK_NS = 0x       0)
 Reading register (BASEPRI_NS = 0x       0)
 Reading register (PRIMASK_NS = 0x       0)
 r0             0x7ffb              32763
-r1             0x398005            3768325
+r1             0x1e8005            1998853
 r2             0x4000              16384
-r3             0x398000            3768320
+r3             0x1e8000            1998848
 r4             0x80                128
 r5             0x0                 0
-r6             0x3480              13440
+r6             0x91c80             597120
 r7             0x200005a0          536872352
-r8             0x3980              14720
+r8             0x91e80             597632
 r9             0xffffffff          4294967295
 r10            0xc8d5              51413
 r11            0xffffffff          4294967295
@@ -105,7 +104,7 @@ sp             0x20000580          0x20000580
 lr             0xe6e5              59109
 pc             0xe788              0xe788
 xpsr           0x21000000          553648128
-msp            0x749af55           122269525
+msp            0x20080000          537395200
 psp            0x0                 0
 primask        0x0                 0
 basepri        0x0                 0

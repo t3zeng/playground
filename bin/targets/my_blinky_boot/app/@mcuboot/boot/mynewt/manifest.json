@@ -1,6 +1,6 @@
 {
   "name": "targets/my_blinky_boot",
-  "build_time": "2022-01-17T18:09:48-05:00",
+  "build_time": "2022-01-18T10:23:07-05:00",
   "build_version": "0.0.0.0",
   "id": "4792ad4ce7f3d2b4338eace1a6605e51b871a0af28ca10fe3a71e9b9bf0f3238",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky_boot/app/@mcuboot/boot/mynewt/mynewt.img",
@@ -144,7 +144,9 @@
     },
     {
       "name": "my_project",
-      "commit": "UNKNOWN"
+      "commit": "12b69451e70d2b15825c3e7a13fab78381b9569e",
+      "dirty": true,
+      "url": "https://github.com/t3zeng/playground.git"
     }
   ],
   "syscfg": {

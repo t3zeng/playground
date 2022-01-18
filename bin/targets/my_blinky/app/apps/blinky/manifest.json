@@ -1,6 +1,6 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-01-18T09:27:04-05:00",
+  "build_time": "2022-01-18T10:22:39-05:00",
   "build_version": "0.0.0.0",
   "id": "",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
@@ -144,7 +144,9 @@
     },
     {
       "name": "my_project",
-      "commit": "UNKNOWN"
+      "commit": "12b69451e70d2b15825c3e7a13fab78381b9569e",
+      "dirty": true,
+      "url": "https://github.com/t3zeng/playground.git"
     }
   ],
   "syscfg": {

@@ -52,6 +52,15 @@
 #define MYNEWT_VAL_REPO_VERSION_MCUBOOT ("0.0.0")
 #endif
 
+/*** Repository @my_project info */
+#ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("12b69451e70d2b15825c3e7a13fab78381b9569e-dirty")
+#endif
+
+#ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
+#define MYNEWT_VAL_REPO_VERSION_MY_PROJECT ("0.0.0")
+#endif
+
 
 
 /*** @apache-mynewt-core/compiler/arm-none-eabi-m4 */
