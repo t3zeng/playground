@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky_boot",
-  "build_time": "2022-01-18T10:23:07-05:00",
+  "build_time": "2022-01-21T19:31:37-05:00",
   "build_version": "0.0.0.0",
-  "id": "4792ad4ce7f3d2b4338eace1a6605e51b871a0af28ca10fe3a71e9b9bf0f3238",
+  "id": "77625a3c64f98776029ee54314edd1c209dab859fbc6d38eb06dc340bf600730",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky_boot/app/@mcuboot/boot/mynewt/mynewt.img",
-  "image_hash": "4792ad4ce7f3d2b4338eace1a6605e51b871a0af28ca10fe3a71e9b9bf0f3238",
+  "image_hash": "77625a3c64f98776029ee54314edd1c209dab859fbc6d38eb06dc340bf600730",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -133,8 +133,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "77169d63b1a5040b25b3d0205291c2f339633bd6",
-      "dirty": true,
+      "commit": "a28f4c45b998da96e4b487e2e51f9316827c9e94",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -144,7 +143,7 @@
     },
     {
       "name": "my_project",
-      "commit": "12b69451e70d2b15825c3e7a13fab78381b9569e",
+      "commit": "663e989bd5761b007c82a62dc312e33f5421d70b",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -388,8 +387,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 38
+                  "name": "RAM",
+                  "size": 259
                 }
               ]
             },
@@ -397,8 +396,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 259
+                  "name": "FLASH",
+                  "size": 38
                 }
               ]
             }
@@ -965,15 +964,6 @@
               ]
             },
             {
-              "name": "am_hal_triple_read",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
               "name": "ctimer_clr",
               "areas": [
                 {
@@ -1142,7 +1132,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 112
+                  "size": 116
                 }
               ]
             },
@@ -1152,6 +1142,15 @@
                 {
                   "name": "FLASH",
                   "size": 180
+                }
+              ]
+            },
+            {
+              "name": "pwrctrl_periph_disable_msk_check",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 124
                 }
               ]
             }
@@ -1172,6 +1171,20 @@
           ]
         },
         {
+          "name": "am_hal_global.o",
+          "sym": [
+            {
+              "name": "am_hal_triple_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 28
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "am_hal_uart.o",
           "sym": [
             {
@@ -1179,7 +1192,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 244
+                  "size": 268
                 }
               ]
             },
@@ -1233,7 +1246,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 200
+                  "size": 208
                 }
               ]
             }

@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-01-18T10:22:39-05:00",
+  "build_time": "2022-01-21T19:32:21-05:00",
   "build_version": "0.0.0.0",
-  "id": "",
+  "id": "75708de8462b6f893902eaf027f8a4cab5e9543ef172711aad50d2f8f9fd81e4",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "",
+  "image_hash": "75708de8462b6f893902eaf027f8a4cab5e9543ef172711aad50d2f8f9fd81e4",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -133,8 +133,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "77169d63b1a5040b25b3d0205291c2f339633bd6",
-      "dirty": true,
+      "commit": "a28f4c45b998da96e4b487e2e51f9316827c9e94",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -144,7 +143,7 @@
     },
     {
       "name": "my_project",
-      "commit": "12b69451e70d2b15825c3e7a13fab78381b9569e",
+      "commit": "663e989bd5761b007c82a62dc312e33f5421d70b",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -789,15 +788,6 @@
               ]
             },
             {
-              "name": "am_hal_triple_read",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
               "name": "ctimer_clr",
               "areas": [
                 {
@@ -984,7 +974,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 112
+                  "size": 116
                 }
               ]
             },
@@ -994,6 +984,15 @@
                 {
                   "name": "FLASH",
                   "size": 180
+                }
+              ]
+            },
+            {
+              "name": "pwrctrl_periph_disable_msk_check",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 124
                 }
               ]
             }
@@ -1048,7 +1047,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 12
+                  "size": 32
                 }
               ]
             },
@@ -1073,6 +1072,20 @@
           ]
         },
         {
+          "name": "am_hal_global.o",
+          "sym": [
+            {
+              "name": "am_hal_triple_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 28
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "am_hal_uart.o",
           "sym": [
             {
@@ -1080,7 +1093,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 244
+                  "size": 268
                 }
               ]
             },
@@ -1134,7 +1147,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 200
+                  "size": 208
                 }
               ]
             }
