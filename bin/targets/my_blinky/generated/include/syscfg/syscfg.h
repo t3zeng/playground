@@ -18,7 +18,7 @@
 
 /*** Repository @apache-mynewt-core info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("a28f4c45b998da96e4b487e2e51f9316827c9e94")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("85ad349c10125ce8d84b7b5cca1d8ca62ff221bb-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_CORE
@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("663e989bd5761b007c82a62dc312e33f5421d70b-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("e10ffca968b8f3a7a455dec0a60b7109204a04ea-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
@@ -329,7 +329,7 @@
 #define MYNEWT_VAL_MBEDTLS_TIMING_C (0)
 #endif
 
-/*** @apache-mynewt-core/hw/bsp/apollo3_edge */
+/*** @apache-mynewt-core/hw/bsp/apollo3_evb */
 #ifndef MYNEWT_VAL_BSP_APOLLO3
 #define MYNEWT_VAL_BSP_APOLLO3 (1)
 #endif
@@ -949,11 +949,11 @@
 #endif
 
 #ifndef MYNEWT_VAL_BSP_NAME
-#define MYNEWT_VAL_BSP_NAME ("apollo3_edge")
+#define MYNEWT_VAL_BSP_NAME ("apollo3_evb")
 #endif
 
-#ifndef MYNEWT_VAL_BSP_apollo3_edge
-#define MYNEWT_VAL_BSP_apollo3_edge (1)
+#ifndef MYNEWT_VAL_BSP_apollo3_evb
+#define MYNEWT_VAL_BSP_apollo3_evb (1)
 #endif
 
 #ifndef MYNEWT_VAL_NEWT_FEATURE_LOGCFG

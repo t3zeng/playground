@@ -19,5 +19,5 @@
 
 ### Target: targets/my_blinky_sim
 target.app: "@mcuboot/boot/mynewt"
-target.bsp: "@apache-mynewt-core/hw/bsp/apollo3_edge"
+target.bsp: "@apache-mynewt-core/hw/bsp/apollo3_evb"
 target.build_profile: "debug"

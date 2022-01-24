@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "hal_apollo3.h": "c"
+        "hal_apollo3.h": "c",
+        "hal_spi.h": "c"
     }
 }
