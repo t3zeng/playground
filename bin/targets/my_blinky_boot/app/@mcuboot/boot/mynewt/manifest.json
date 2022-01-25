@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky_boot",
-  "build_time": "2022-01-25T08:28:25-05:00",
+  "build_time": "2022-01-25T15:37:26-05:00",
   "build_version": "0.0.0.0",
-  "id": "",
+  "id": "7abc08ef2545e14966fd77abc73f560893af61de40957c91080f1b56dab8e873",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky_boot/app/@mcuboot/boot/mynewt/mynewt.img",
-  "image_hash": "",
+  "image_hash": "7abc08ef2545e14966fd77abc73f560893af61de40957c91080f1b56dab8e873",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -133,8 +133,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "e73678a1964bb649b54b284d6ef2c163a36de2d4",
-      "dirty": true,
+      "commit": "81e7cd385e53a9495d3aaa7aa58f00369939c1bd",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -144,7 +143,7 @@
     },
     {
       "name": "my_project",
-      "commit": "9e8b4c2b9a9e41a1b515b8955fcaad188d0f5b1e",
+      "commit": "56bac7c8c4b8149371b8b403b4a79899d6531c1c",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }

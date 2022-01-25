@@ -60,9 +60,8 @@ Read 2 bytes @ address 0x00015D86 (Data = 0xB974)
 Received monitor command: reset
 Resetting target
 Resetting target
-Downloading 15968 bytes @ address 0x000C0000
-Downloading 1100 bytes @ address 0x000C3E60
-Restoring binary file bin/targets/my_blinky_boot/app/@mcuboot/boot/mynewt/mynewt.elf.bin into memory (0xc0000 to 0xc42ac)
+Downloading 13320 bytes @ address 0x00014000
+Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0x14000 to 0x17408)
 Reading register (MSP = 0x10003FD4)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
@@ -73,11 +72,11 @@ Reading register (FPSCR = 0x 2000000)
 r0             0x80000000          2147483648
 r1             0x1                 1
 r2             0x40008000          1073774592
-r3             0x1e00              7680
+r3             0x4d580             316800
 r4             0x80                128
 r5             0x0                 0
-r6             0x1680              5760
-r7             0x18b1              6321
+r6             0x4ce00             314880
+r7             0x4d0ed             315629
 r8             0x100               256
 r9             0x40                64
 r10            0x0                 0
