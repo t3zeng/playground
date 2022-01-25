@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-01-24T16:25:16-05:00",
+  "build_time": "2022-01-25T08:29:49-05:00",
   "build_version": "0.0.0.0",
-  "id": "",
+  "id": "e5cd33fcd13d6152a6bc21ce20dd5c5e66ddfb962a4f701d9727c4e52b99c306",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "",
+  "image_hash": "e5cd33fcd13d6152a6bc21ce20dd5c5e66ddfb962a4f701d9727c4e52b99c306",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -133,7 +133,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "85ad349c10125ce8d84b7b5cca1d8ca62ff221bb",
+      "commit": "e73678a1964bb649b54b284d6ef2c163a36de2d4",
       "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
@@ -144,7 +144,7 @@
     },
     {
       "name": "my_project",
-      "commit": "e10ffca968b8f3a7a455dec0a60b7109204a04ea",
+      "commit": "9e8b4c2b9a9e41a1b515b8955fcaad188d0f5b1e",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -385,8 +385,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 77
+                  "name": "RAM",
+                  "size": 270
                 }
               ]
             },
@@ -394,8 +394,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 270
+                  "name": "FLASH",
+                  "size": 77
                 }
               ]
             }
