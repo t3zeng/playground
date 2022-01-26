@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-01-25T16:25:08-05:00",
+  "build_time": "2022-01-26T09:55:36-05:00",
   "build_version": "0.0.0.0",
-  "id": "e1f6a3e9e0cfab3e7e08eebce514a76231c00284263444b0aa13447d5b5a2417",
+  "id": "6f0e325071d04e0d42c3c4422c868ab9a667a20f677cc82dc53771ee263123d3",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "e1f6a3e9e0cfab3e7e08eebce514a76231c00284263444b0aa13447d5b5a2417",
+  "image_hash": "6f0e325071d04e0d42c3c4422c868ab9a667a20f677cc82dc53771ee263123d3",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -144,7 +144,7 @@
     },
     {
       "name": "my_project",
-      "commit": "56bac7c8c4b8149371b8b403b4a79899d6531c1c",
+      "commit": "640477c046186a39c9b28908353c4565fc091cdf",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -184,6 +184,9 @@
     "BSP_APOLLO3": "1",
     "BSP_NAME": "\"apollo3_evb\"",
     "BSP_apollo3_evb": "1",
+    "BUTTON_0_PIN": "16",
+    "BUTTON_1_PIN": "18",
+    "BUTTON_2_PIN": "19",
     "CONSOLE_UART_BAUD": "115200",
     "CONSOLE_UART_DEV": "\"uart0\"",
     "CONSOLE_UART_FLOW_CONTROL": "UART_FLOW_CTL_NONE",
@@ -202,6 +205,11 @@
     "HAL_SBRK": "1",
     "HAL_SYSTEM_RESET_CB": "0",
     "HARDFLOAT": "0",
+    "LED_0_PIN": "10",
+    "LED_1_PIN": "30",
+    "LED_2_PIN": "15",
+    "LED_3_PIN": "14",
+    "LED_4_PIN": "17",
     "LOG_CONSOLE": "1",
     "LOG_FCB": "0",
     "LOG_FCB_SLOT1": "0",
@@ -386,7 +394,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 270
+                  "size": 266
                 }
               ]
             },
@@ -2869,11 +2877,11 @@
           "name": "main.o",
           "sym": [
             {
-              "name": "g_led_pin",
+              "name": ".rodata",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 4
+                  "name": "FLASH",
+                  "size": 20
                 }
               ]
             },
@@ -2891,7 +2899,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 60
+                  "size": 132
                 }
               ]
             }

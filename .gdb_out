@@ -54,14 +54,14 @@ Waiting for GDB connection...Connected to 127.0.0.1
 warning: No executable has been specified and target does not support
 determining executable automatically.  Try using the "file" command.
 Reading all registers
-Read 4 bytes @ address 0x00015D86 (Data = 0xBD10B974)
-Read 2 bytes @ address 0x00015D86 (Data = 0xB974)
-0x00015d86 in ?? ()
+Read 4 bytes @ address 0x00015DCE (Data = 0xBD10B974)
+Read 2 bytes @ address 0x00015DCE (Data = 0xB974)
+0x00015dce in ?? ()
 Received monitor command: reset
 Resetting target
 Resetting target
-Downloading 13320 bytes @ address 0x00014000
-Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0x14000 to 0x17408)
+Downloading 13412 bytes @ address 0x00014000
+Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0x14000 to 0x17464)
 Reading register (MSP = 0x10003FD4)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
@@ -72,19 +72,19 @@ Reading register (FPSCR = 0x 2000000)
 r0             0x80000000          2147483648
 r1             0x1                 1
 r2             0x40008000          1073774592
-r3             0x4d580             316800
-r4             0x80                128
+r3             0x1e00              7680
+r4             0x3d                61
 r5             0x0                 0
-r6             0x4ce00             314880
-r7             0x4d0ed             315629
+r6             0x1680              5760
+r7             0x1dc3              7619
 r8             0x100               256
 r9             0x40                64
 r10            0x0                 0
 r11            0x0                 0
 r12            0x0                 0
-sp             0x10000290          0x10000290
-lr             0x15d13             89363
-pc             0x15d86             0x15d86
+sp             0x10000288          0x10000288
+lr             0x15d5b             89435
+pc             0x15dce             0x15dce
 xpsr           0xa1000000          2701131776
 msp            0x10003fd4          268451796
 psp            0x0                 0

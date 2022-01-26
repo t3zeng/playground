@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("56bac7c8c4b8149371b8b403b4a79899d6531c1c-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("640477c046186a39c9b28908353c4565fc091cdf-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
@@ -332,6 +332,38 @@
 /*** @apache-mynewt-core/hw/bsp/apollo3_evb */
 #ifndef MYNEWT_VAL_BSP_APOLLO3
 #define MYNEWT_VAL_BSP_APOLLO3 (1)
+#endif
+
+#ifndef MYNEWT_VAL_BUTTON_0_PIN
+#define MYNEWT_VAL_BUTTON_0_PIN (16)
+#endif
+
+#ifndef MYNEWT_VAL_BUTTON_1_PIN
+#define MYNEWT_VAL_BUTTON_1_PIN (18)
+#endif
+
+#ifndef MYNEWT_VAL_BUTTON_2_PIN
+#define MYNEWT_VAL_BUTTON_2_PIN (19)
+#endif
+
+#ifndef MYNEWT_VAL_LED_0_PIN
+#define MYNEWT_VAL_LED_0_PIN (10)
+#endif
+
+#ifndef MYNEWT_VAL_LED_1_PIN
+#define MYNEWT_VAL_LED_1_PIN (30)
+#endif
+
+#ifndef MYNEWT_VAL_LED_2_PIN
+#define MYNEWT_VAL_LED_2_PIN (15)
+#endif
+
+#ifndef MYNEWT_VAL_LED_3_PIN
+#define MYNEWT_VAL_LED_3_PIN (14)
+#endif
+
+#ifndef MYNEWT_VAL_LED_4_PIN
+#define MYNEWT_VAL_LED_4_PIN (17)
 #endif
 
 #ifndef MYNEWT_VAL_SPI_0_MASTER_PIN_MISO
