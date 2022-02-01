@@ -6,6 +6,7 @@
 
 void os_pkg_init(void);
 void flash_map_init(void);
+void bus_pkg_init(void);
 void modlog_init(void);
 
 void
@@ -20,7 +21,9 @@ sysinit_app(void)
     flash_map_init();
 
     /*** Stage 100 */
-    /* 100.0: modlog_init (sys/log/modlog) */
+    /* 100.0: bus_pkg_init (hw/bus) */
+    bus_pkg_init();
+    /* 100.1: modlog_init (sys/log/modlog) */
     modlog_init();
 }
 

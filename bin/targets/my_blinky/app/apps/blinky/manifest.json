@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-01-26T09:55:36-05:00",
+  "build_time": "2022-02-01T18:12:23-05:00",
   "build_version": "0.0.0.0",
-  "id": "6f0e325071d04e0d42c3c4422c868ab9a667a20f677cc82dc53771ee263123d3",
+  "id": "986c7e27a1122fcc1494d542fbaac2af8893bbd13a5ad8fae06d533ddf8fb112",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "6f0e325071d04e0d42c3c4422c868ab9a667a20f677cc82dc53771ee263123d3",
+  "image_hash": "986c7e27a1122fcc1494d542fbaac2af8893bbd13a5ad8fae06d533ddf8fb112",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -34,6 +34,14 @@
     },
     {
       "name": "@apache-mynewt-core/hw/bsp/apollo3_evb",
+      "repo": "apache-mynewt-core"
+    },
+    {
+      "name": "@apache-mynewt-core/hw/bus",
+      "repo": "apache-mynewt-core"
+    },
+    {
+      "name": "@apache-mynewt-core/hw/bus/drivers/i2c_common",
       "repo": "apache-mynewt-core"
     },
     {
@@ -133,7 +141,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "81e7cd385e53a9495d3aaa7aa58f00369939c1bd",
+      "commit": "676e76380eb71ab280d8a90d318a3ad293c4ad24",
       "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
@@ -144,7 +152,7 @@
     },
     {
       "name": "my_project",
-      "commit": "640477c046186a39c9b28908353c4565fc091cdf",
+      "commit": "bbd088221f0600bdd85ae976c5ff1299bafb3cae",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -184,6 +192,15 @@
     "BSP_APOLLO3": "1",
     "BSP_NAME": "\"apollo3_evb\"",
     "BSP_apollo3_evb": "1",
+    "BUS_DEBUG_OS_DEV": "0",
+    "BUS_DEFAULT_LOCK_TIMEOUT_MS": "1000",
+    "BUS_DEFAULT_TRANSACTION_TIMEOUT_MS": "50",
+    "BUS_DRIVER_PRESENT": "1",
+    "BUS_PM": "0",
+    "BUS_PM_INACTIVITY_TMO": "1",
+    "BUS_PM_MODE": "AUTO",
+    "BUS_STATS": "0",
+    "BUS_STATS_PER_NODE": "0",
     "BUTTON_0_PIN": "16",
     "BUTTON_1_PIN": "18",
     "BUTTON_2_PIN": "19",
@@ -205,6 +222,31 @@
     "HAL_SBRK": "1",
     "HAL_SYSTEM_RESET_CB": "0",
     "HARDFLOAT": "0",
+    "I2C_0": "1",
+    "I2C_0_PIN_SCL": "5",
+    "I2C_0_PIN_SDA": "6",
+    "I2C_1": "0",
+    "I2C_1_PIN_SCL": "8",
+    "I2C_1_PIN_SDA": "9",
+    "I2C_2": "0",
+    "I2C_2_PIN_SCL": "27",
+    "I2C_2_PIN_SDA": "25",
+    "I2C_3": "0",
+    "I2C_3_PIN_SCL": "42",
+    "I2C_3_PIN_SDA": "43",
+    "I2C_4": "0",
+    "I2C_4_PIN_SCL": "39",
+    "I2C_4_PIN_SDA": "40",
+    "I2C_5": "0",
+    "I2C_5_PIN_SCL": "48",
+    "I2C_5_PIN_SDA": "49",
+    "IOS_CE_PIN": "3",
+    "IOS_MISO_PIN": "2",
+    "IOS_MOSI_PIN": "1",
+    "IOS_SCK_PIN": "0",
+    "IOS_SCL_PIN": "0",
+    "IOS_SDA_PIN": "1",
+    "ITM_SWO_PIN": "41",
     "LED_0_PIN": "10",
     "LED_1_PIN": "30",
     "LED_2_PIN": "15",
@@ -287,6 +329,17 @@
     "MODLOG_MAX_MAPPINGS": "16",
     "MODLOG_MAX_PRINTF_LEN": "128",
     "MODLOG_SYSINIT_STAGE": "100",
+    "MSPI_CE_0_PIN": "19",
+    "MSPI_CE_1_PIN": "41",
+    "MSPI_DATA_0_PIN": "22",
+    "MSPI_DATA_1_PIN": "26",
+    "MSPI_DATA_2_PIN": "4",
+    "MSPI_DATA_3_PIN": "23",
+    "MSPI_DATA_4_PIN": "0",
+    "MSPI_DATA_5_PIN": "1",
+    "MSPI_DATA_6_PIN": "2",
+    "MSPI_DATA_7_PIN": "3",
+    "MSPI_SCK_PIN": "24",
     "MSYS_1_BLOCK_COUNT": "12",
     "MSYS_1_BLOCK_SIZE": "292",
     "MSYS_1_SANITY_MIN_COUNT": "0",
@@ -332,38 +385,52 @@
     "OS_TICKS_PER_SEC": "128",
     "OS_TIME_DEBUG": "0",
     "OS_WATCHDOG_MONITOR": "0",
+    "PDM_CLK_PIN": "12",
+    "PDM_DATA_PIN": "11",
     "RWLOCK_DEBUG": "0",
     "SANITY_INTERVAL": "15000",
+    "SCARD_SCCCLK_PIN": "8",
+    "SCARD_SCCIO_PIN": "9",
+    "SCARD_SCCRST_PIN": "46",
     "SPI_0_MASTER": "0",
     "SPI_0_MASTER_PIN_MISO": "6",
     "SPI_0_MASTER_PIN_MOSI": "7",
     "SPI_0_MASTER_PIN_SCK": "5",
+    "SPI_0_PIN_CS": "11",
+    "SPI_0_PIN_CS3": "15",
     "SPI_0_SLAVE": "0",
     "SPI_1_MASTER": "0",
     "SPI_1_MASTER_PIN_MISO": "9",
     "SPI_1_MASTER_PIN_MOSI": "10",
     "SPI_1_MASTER_PIN_SCK": "8",
+    "SPI_1_PIN_CS": "14",
     "SPI_1_SLAVE": "0",
     "SPI_2_MASTER": "0",
     "SPI_2_MASTER_PIN_MISO": "25",
     "SPI_2_MASTER_PIN_MOSI": "28",
     "SPI_2_MASTER_PIN_SCK": "27",
+    "SPI_2_PIN_CS": "15",
     "SPI_2_SLAVE": "0",
     "SPI_3_MASTER": "0",
     "SPI_3_MASTER_PIN_MISO": "43",
     "SPI_3_MASTER_PIN_MOSI": "38",
     "SPI_3_MASTER_PIN_SCK": "42",
+    "SPI_3_PIN_CS": "12",
     "SPI_3_SLAVE": "0",
     "SPI_4_MASTER": "0",
     "SPI_4_MASTER_PIN_MISO": "40",
     "SPI_4_MASTER_PIN_MOSI": "44",
     "SPI_4_MASTER_PIN_SCK": "39",
+    "SPI_4_PIN_CS": "13",
     "SPI_4_SLAVE": "0",
     "SPI_5_MASTER": "0",
     "SPI_5_MASTER_PIN_MISO": "49",
     "SPI_5_MASTER_PIN_MOSI": "47",
     "SPI_5_MASTER_PIN_SCK": "48",
+    "SPI_5_PIN_CS": "16",
     "SPI_5_SLAVE": "0",
+    "SWDCK_PIN": "20",
+    "SWDIO_PIN": "21",
     "SYSDOWN_CONSTRAIN_DOWN": "1",
     "SYSDOWN_PANIC_FILE_LINE": "0",
     "SYSDOWN_PANIC_MESSAGE": "0",
@@ -377,9 +444,14 @@
     "TIMER_1_SOURCE": "",
     "UART_0": "1",
     "UART_0_PIN_CTS": "38",
-    "UART_0_PIN_RTS": "41",
-    "UART_0_PIN_RX": "49",
-    "UART_0_PIN_TX": "48",
+    "UART_0_PIN_RTS": "37",
+    "UART_0_PIN_RX": "23",
+    "UART_0_PIN_TX": "22",
+    "UART_1": "1",
+    "UART_1_PIN_CTS": "45",
+    "UART_1_PIN_RTS": "44",
+    "UART_1_PIN_RX": "36",
+    "UART_1_PIN_TX": "35",
     "WATCHDOG_INTERVAL": "30000"
   },
   "pkgsz": [
@@ -393,8 +465,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 266
+                  "name": "FLASH",
+                  "size": 87
                 }
               ]
             },
@@ -402,8 +474,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 77
+                  "name": "RAM",
+                  "size": 269
                 }
               ]
             }
@@ -500,11 +572,20 @@
               ]
             },
             {
+              "name": "hal_bsp_i2c0m_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 2
+                }
+              ]
+            },
+            {
               "name": "hal_bsp_init",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 142
+                  "size": 238
                 }
               ]
             },
@@ -522,6 +603,52 @@
               "areas": [
                 {
                   "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart1",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart1_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@apache-mynewt-core/hw/bus",
+      "files": [
+        {
+          "name": "bus.o",
+          "sym": [
+            {
+              "name": "bus_pkg_init",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "g_bus_node_lock_timeout",
+              "areas": [
+                {
+                  "name": "RAM",
                   "size": 4
                 }
               ]
@@ -695,6 +822,56 @@
       "name": "@apache-mynewt-core/hw/mcu/ambiq/apollo3",
       "files": [
         {
+          "name": "am_hal_cmdq.o",
+          "sym": [
+            {
+              "name": "am_hal_cmdq_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
+                }
+              ]
+            },
+            {
+              "name": "am_hal_cmdq_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
+                }
+              ]
+            },
+            {
+              "name": "am_hal_cmdq_init",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 204
+                }
+              ]
+            },
+            {
+              "name": "gAmHalCmdQReg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 320
+                }
+              ]
+            },
+            {
+              "name": "gAmHalCmdq",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 352
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "am_hal_ctimer.o",
           "sym": [
             {
@@ -847,6 +1024,15 @@
               ]
             },
             {
+              "name": "am_hal_flash_delay_status_check",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
+                }
+              ]
+            },
+            {
               "name": "am_hal_flash_page_erase",
               "areas": [
                 {
@@ -870,6 +1056,51 @@
           "name": "am_hal_gpio.o",
           "sym": [
             {
+              "name": "am_hal_gpio_interrupt_clear",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            },
+            {
+              "name": "am_hal_gpio_interrupt_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "am_hal_gpio_interrupt_register_adv",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
+                }
+              ]
+            },
+            {
+              "name": "am_hal_gpio_interrupt_service",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 148
+                }
+              ]
+            },
+            {
+              "name": "am_hal_gpio_interrupt_status_get",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 72
+                }
+              ]
+            },
+            {
               "name": "am_hal_gpio_pinconfig",
               "areas": [
                 {
@@ -889,6 +1120,24 @@
             },
             {
               "name": "g_AM_HAL_GPIO_DISABLE",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "g_AM_HAL_GPIO_INPUT",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "g_AM_HAL_GPIO_INPUT_PULLUP",
               "areas": [
                 {
                   "name": "FLASH",
@@ -942,6 +1191,24 @@
               ]
             },
             {
+              "name": "gpio_pHandlerCtxt",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 200
+                }
+              ]
+            },
+            {
+              "name": "gpio_ppfnHandlers",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 200
+                }
+              ]
+            },
+            {
               "name": "pincfg_equ",
               "areas": [
                 {
@@ -976,6 +1243,164 @@
           ]
         },
         {
+          "name": "am_hal_iom.o",
+          "sym": [
+            {
+              "name": "am_hal_iom_CQDisable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_CQEnable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 38
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_CQInit",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 54
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_blocking_transfer",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 660
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_configure",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 328
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 164
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_initialize",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 92
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_power_ctrl",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 580
+                }
+              ]
+            },
+            {
+              "name": "build_cmd",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "compute_freq",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
+                }
+              ]
+            },
+            {
+              "name": "enable_submodule",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 36
+                }
+              ]
+            },
+            {
+              "name": "g_IOMhandles",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 13272
+                }
+              ]
+            },
+            {
+              "name": "internal_iom_get_int_err",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "internal_iom_reset_on_error",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 268
+                }
+              ]
+            },
+            {
+              "name": "iom_get_interface_clock_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 324
+                }
+              ]
+            },
+            {
+              "name": "onebit",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 20
+                }
+              ]
+            },
+            {
+              "name": "validate_transaction",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 138
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "am_hal_pwrctrl.o",
           "sym": [
             {
@@ -984,6 +1409,15 @@
                 {
                   "name": "FLASH",
                   "size": 116
+                }
+              ]
+            },
+            {
+              "name": "am_hal_pwrctrl_periph_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 144
                 }
               ]
             },
@@ -1588,6 +2022,65 @@
           ]
         },
         {
+          "name": "hal_i2c.o",
+          "sym": [
+            {
+              "name": "g_i2c_handles",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 24
+                }
+              ]
+            },
+            {
+              "name": "g_sIOMI2cDefaultConfig",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 20
+                }
+              ]
+            },
+            {
+              "name": "hal_i2c_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 20
+                }
+              ]
+            },
+            {
+              "name": "hal_i2c_init",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 116
+                }
+              ]
+            },
+            {
+              "name": "hal_i2c_master_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "hal_i2c_pin_config",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 34
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "hal_system.o",
           "sym": [
             {
@@ -1632,6 +2125,33 @@
               ]
             },
             {
+              "name": "hal_gpio_irq_handler",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 34
+                }
+              ]
+            },
+            {
+              "name": "hal_gpio_irq_init",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 160
+                }
+              ]
+            },
+            {
+              "name": "hal_gpio_irq_setup",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            },
+            {
               "name": "hal_gpio_toggle",
               "areas": [
                 {
@@ -1646,6 +2166,15 @@
                 {
                   "name": "FLASH",
                   "size": 20
+                }
+              ]
+            },
+            {
+              "name": "irq_setup",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 1
                 }
               ]
             }
@@ -2899,7 +3428,16 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 132
+                  "size": 180
+                }
+              ]
+            },
+            {
+              "name": "test_isr",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 2
                 }
               ]
             }
@@ -2932,7 +3470,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 16
+                  "size": 20
                 }
               ]
             }

@@ -30,3 +30,7 @@ pkg.deps:
     - "@apache-mynewt-core/sys/console/stub"
     - "@apache-mynewt-core/sys/log/stub"
     - "@mcuboot/boot/bootutil"
+    - "@apache-mynewt-core/hw/bus"
+
+pkg.deps.BUS_DRIVER_PRESENT:
+    - "@apache-mynewt-core/hw/bus/drivers/i2c_common"

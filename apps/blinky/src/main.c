@@ -24,11 +24,16 @@
 #include "os/os.h"
 #include "bsp/bsp.h"
 #include "hal/hal_gpio.h"
+#include "hal/hal_i2c.h"
 #ifdef ARCH_sim
 #include "mcu/mcu_sim.h"
 #endif
 
 static volatile int g_task1_loops;
+
+static void test_isr(void *arg) {
+    return;
+}
 
 /**
  * main
@@ -55,8 +60,20 @@ main(int argc, char **argv)
     hal_gpio_init_out(g_led_pin[2], 0);
     hal_gpio_init_out(g_led_pin[3], 0);
     hal_gpio_init_out(g_led_pin[4], 0);
+    uint8_t buf[4];
+    struct hal_i2c_master_data test_data = {
+        .address = 0x12,
+        .len = 4,
+        .buffer = buf
+    };
+
+    /* Set up a gpio irq to validate the functionality, set breakpoint to isr and touch the gpio to ground to hit the breakpoint */
+    hal_gpio_irq_init(42, test_isr, NULL,
+                      HAL_GPIO_TRIG_FALLING, HAL_GPIO_PULL_UP);
 
     while (1) {
+        /* I2C read */
+        hal_i2c_master_read(0, &test_data, 0, 1);
         /* Toggle the LED */
         hal_gpio_toggle(g_led_pin[g_task1_loops%5]);
         

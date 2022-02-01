@@ -1,6 +1,12 @@
 {
     "files.associations": {
         "hal_apollo3.h": "c",
-        "hal_spi.h": "c"
+        "hal_spi.h": "c",
+        "hal_i2c.h": "c",
+        "am_mcu_apollo.h": "c",
+        "i2c_common.h": "c",
+        "uart_hal.h": "c",
+        "complex": "c",
+        "typeinfo": "c"
     }
 }

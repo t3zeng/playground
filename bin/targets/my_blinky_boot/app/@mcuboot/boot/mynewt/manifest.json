@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky_boot",
-  "build_time": "2022-01-25T15:37:26-05:00",
+  "build_time": "2022-02-01T13:26:45-05:00",
   "build_version": "0.0.0.0",
-  "id": "7abc08ef2545e14966fd77abc73f560893af61de40957c91080f1b56dab8e873",
+  "id": "",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky_boot/app/@mcuboot/boot/mynewt/mynewt.img",
-  "image_hash": "7abc08ef2545e14966fd77abc73f560893af61de40957c91080f1b56dab8e873",
+  "image_hash": "",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -133,7 +133,8 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "81e7cd385e53a9495d3aaa7aa58f00369939c1bd",
+      "commit": "8e5e97b8f67a96d1d2d312a514e57a5954f7ed1f",
+      "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -143,7 +144,7 @@
     },
     {
       "name": "my_project",
-      "commit": "56bac7c8c4b8149371b8b403b4a79899d6531c1c",
+      "commit": "bbd088221f0600bdd85ae976c5ff1299bafb3cae",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -186,6 +187,9 @@
     "BSP_APOLLO3": "1",
     "BSP_NAME": "\"apollo3_evb\"",
     "BSP_apollo3_evb": "1",
+    "BUTTON_0_PIN": "16",
+    "BUTTON_1_PIN": "18",
+    "BUTTON_2_PIN": "19",
     "CONSOLE_UART_BAUD": "115200",
     "CONSOLE_UART_DEV": "\"uart0\"",
     "CONSOLE_UART_FLOW_CONTROL": "UART_FLOW_CTL_NONE",
@@ -204,6 +208,36 @@
     "HAL_SBRK": "1",
     "HAL_SYSTEM_RESET_CB": "0",
     "HARDFLOAT": "0",
+    "I2C_0": "0",
+    "I2C_0_PIN_SCL": "5",
+    "I2C_0_PIN_SDA": "6",
+    "I2C_1": "0",
+    "I2C_1_PIN_SCL": "8",
+    "I2C_1_PIN_SDA": "9",
+    "I2C_2": "0",
+    "I2C_2_PIN_SCL": "27",
+    "I2C_2_PIN_SDA": "25",
+    "I2C_3": "0",
+    "I2C_3_PIN_SCL": "42",
+    "I2C_3_PIN_SDA": "43",
+    "I2C_4": "0",
+    "I2C_4_PIN_SCL": "39",
+    "I2C_4_PIN_SDA": "40",
+    "I2C_5": "0",
+    "I2C_5_PIN_SCL": "48",
+    "I2C_5_PIN_SDA": "49",
+    "IOS_CE_PIN": "3",
+    "IOS_MISO_PIN": "2",
+    "IOS_MOSI_PIN": "1",
+    "IOS_SCK_PIN": "0",
+    "IOS_SCL_PIN": "0",
+    "IOS_SDA_PIN": "1",
+    "ITM_SWO_PIN": "41",
+    "LED_0_PIN": "10",
+    "LED_1_PIN": "30",
+    "LED_2_PIN": "15",
+    "LED_3_PIN": "14",
+    "LED_4_PIN": "17",
     "LOG_CONSOLE": "1",
     "LOG_FCB": "0",
     "LOG_FCB_SLOT1": "0",
@@ -281,6 +315,17 @@
     "MODLOG_MAX_MAPPINGS": "16",
     "MODLOG_MAX_PRINTF_LEN": "128",
     "MODLOG_SYSINIT_STAGE": "100",
+    "MSPI_CE_0_PIN": "19",
+    "MSPI_CE_1_PIN": "41",
+    "MSPI_DATA_0_PIN": "22",
+    "MSPI_DATA_1_PIN": "26",
+    "MSPI_DATA_2_PIN": "4",
+    "MSPI_DATA_3_PIN": "23",
+    "MSPI_DATA_4_PIN": "0",
+    "MSPI_DATA_5_PIN": "1",
+    "MSPI_DATA_6_PIN": "2",
+    "MSPI_DATA_7_PIN": "3",
+    "MSPI_SCK_PIN": "24",
     "MSYS_1_BLOCK_COUNT": "0",
     "MSYS_1_BLOCK_SIZE": "292",
     "MSYS_1_SANITY_MIN_COUNT": "0",
@@ -326,38 +371,52 @@
     "OS_TICKS_PER_SEC": "128",
     "OS_TIME_DEBUG": "0",
     "OS_WATCHDOG_MONITOR": "0",
+    "PDM_CLK_PIN": "12",
+    "PDM_DATA_PIN": "11",
     "RWLOCK_DEBUG": "0",
     "SANITY_INTERVAL": "15000",
+    "SCARD_SCCCLK_PIN": "8",
+    "SCARD_SCCIO_PIN": "9",
+    "SCARD_SCCRST_PIN": "46",
     "SPI_0_MASTER": "0",
     "SPI_0_MASTER_PIN_MISO": "6",
     "SPI_0_MASTER_PIN_MOSI": "7",
     "SPI_0_MASTER_PIN_SCK": "5",
+    "SPI_0_PIN_CS": "11",
+    "SPI_0_PIN_CS3": "15",
     "SPI_0_SLAVE": "0",
     "SPI_1_MASTER": "0",
     "SPI_1_MASTER_PIN_MISO": "9",
     "SPI_1_MASTER_PIN_MOSI": "10",
     "SPI_1_MASTER_PIN_SCK": "8",
+    "SPI_1_PIN_CS": "14",
     "SPI_1_SLAVE": "0",
     "SPI_2_MASTER": "0",
     "SPI_2_MASTER_PIN_MISO": "25",
     "SPI_2_MASTER_PIN_MOSI": "28",
     "SPI_2_MASTER_PIN_SCK": "27",
+    "SPI_2_PIN_CS": "15",
     "SPI_2_SLAVE": "0",
     "SPI_3_MASTER": "0",
     "SPI_3_MASTER_PIN_MISO": "43",
     "SPI_3_MASTER_PIN_MOSI": "38",
     "SPI_3_MASTER_PIN_SCK": "42",
+    "SPI_3_PIN_CS": "12",
     "SPI_3_SLAVE": "0",
     "SPI_4_MASTER": "0",
     "SPI_4_MASTER_PIN_MISO": "40",
     "SPI_4_MASTER_PIN_MOSI": "44",
     "SPI_4_MASTER_PIN_SCK": "39",
+    "SPI_4_PIN_CS": "13",
     "SPI_4_SLAVE": "0",
     "SPI_5_MASTER": "0",
     "SPI_5_MASTER_PIN_MISO": "49",
     "SPI_5_MASTER_PIN_MOSI": "47",
     "SPI_5_MASTER_PIN_SCK": "48",
+    "SPI_5_PIN_CS": "16",
     "SPI_5_SLAVE": "0",
+    "SWDCK_PIN": "20",
+    "SWDIO_PIN": "21",
     "SYSDOWN_CONSTRAIN_DOWN": "1",
     "SYSDOWN_PANIC_FILE_LINE": "0",
     "SYSDOWN_PANIC_MESSAGE": "0",
@@ -371,9 +430,14 @@
     "TIMER_1_SOURCE": "",
     "UART_0": "1",
     "UART_0_PIN_CTS": "38",
-    "UART_0_PIN_RTS": "41",
-    "UART_0_PIN_RX": "49",
-    "UART_0_PIN_TX": "48",
+    "UART_0_PIN_RTS": "37",
+    "UART_0_PIN_RX": "23",
+    "UART_0_PIN_TX": "22",
+    "UART_1": "1",
+    "UART_1_PIN_CTS": "45",
+    "UART_1_PIN_RTS": "44",
+    "UART_1_PIN_RX": "36",
+    "UART_1_PIN_TX": "35",
     "WATCHDOG_INTERVAL": "30000"
   },
   "pkgsz": [
@@ -387,8 +451,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 38
+                  "name": "RAM",
+                  "size": 259
                 }
               ]
             },
@@ -396,8 +460,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 259
+                  "name": "FLASH",
+                  "size": 38
                 }
               ]
             }
@@ -594,7 +658,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 142
+                  "size": 206
                 }
               ]
             },
@@ -609,6 +673,24 @@
             },
             {
               "name": "os_bsp_uart0_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart1",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart1_cfg",
               "areas": [
                 {
                   "name": "FLASH",
