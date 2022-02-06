@@ -1,2 +1,6 @@
 syscfg.vals:
+  # Enable I2C for testing/validation
   I2C_0: 1
+
+  # Enable SPI for testing/validation
+  SPI_1_MASTER: 1

@@ -18,7 +18,7 @@
 
 /*** Repository @apache-mynewt-core info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("676e76380eb71ab280d8a90d318a3ad293c4ad24-dirty")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("f594aca45584abf4e0b3cde373e66ab93f1e2f28")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_CORE
@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("bbd088221f0600bdd85ae976c5ff1299bafb3cae-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("9c95dbd66f3eedf56bcbb39a14055034f5c0384c-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
@@ -760,8 +760,9 @@
 #define MYNEWT_VAL_SPI_0_SLAVE (0)
 #endif
 
+/* Overridden by apps/blinky (defined by @apache-mynewt-core/hw/mcu/ambiq/apollo3) */
 #ifndef MYNEWT_VAL_SPI_1_MASTER
-#define MYNEWT_VAL_SPI_1_MASTER (0)
+#define MYNEWT_VAL_SPI_1_MASTER (1)
 #endif
 
 #ifndef MYNEWT_VAL_SPI_1_SLAVE

@@ -54,15 +54,15 @@ Waiting for GDB connection...Connected to 127.0.0.1
 warning: No executable has been specified and target does not support
 determining executable automatically.  Try using the "file" command.
 Reading all registers
-Read 4 bytes @ address 0x00016E22 (Data = 0xBD10B974)
-Read 2 bytes @ address 0x00016E22 (Data = 0xB974)
-0x00016e22 in ?? ()
+Read 4 bytes @ address 0x00015174 (Data = 0x680BB92B)
+Read 2 bytes @ address 0x00015174 (Data = 0xB92B)
+0x00015174 in ?? ()
 Received monitor command: reset
 Resetting target
 Resetting target
 Downloading 16016 bytes @ address 0x00014000
-Downloading 2224 bytes @ address 0x00017E90
-Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0x14000 to 0x18740)
+Downloading 1712 bytes @ address 0x00017E90
+Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0x14000 to 0x18540)
 Reading register (MSP = 0x10003FD4)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
@@ -70,23 +70,23 @@ Reading register (BASEPRI = 0x       0)
 Reading register (FAULTMASK = 0x       0)
 Reading register (CONTROL = 0x       4)
 Reading register (FPSCR = 0x 2000000)
-r0             0x80000000          2147483648
-r1             0x1                 1
-r2             0x40008000          1073774592
-r3             0x6bd00             441600
-r4             0x80                128
-r5             0x0                 0
-r6             0x6b580             439680
-r7             0x6b82a             440362
-r8             0x100               256
-r9             0x40                64
-r10            0x0                 0
+r0             0x0                 0
+r1             0x10004958          268454232
+r2             0x1                 1
+r3             0x0                 0
+r4             0x0                 0
+r5             0x1                 1
+r6             0x1                 1
+r7             0x10000be4          268438500
+r8             0x10004958          268454232
+r9             0x10000be4          268438500
+r10            0x2                 2
 r11            0x0                 0
-r12            0x0                 0
-sp             0x100037f0          0x100037f0
-lr             0x16daf             93615
-pc             0x16e22             0x16e22
-xpsr           0xa1000000          2701131776
+r12            0x2                 2
+sp             0x100048fc          0x100048fc
+lr             0x1591b             88347
+pc             0x15174             0x15174
+xpsr           0x81000000          2164260864
 msp            0x10003fd4          268451796
 psp            0x0                 0
 primask        0x0                 0
