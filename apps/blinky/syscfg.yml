@@ -4,3 +4,6 @@ syscfg.vals:
 
   # Enable SPI for testing/validation
   SPI_1_MASTER: 1
+
+  # Enable UART for testing/validation
+  UART_0: 1

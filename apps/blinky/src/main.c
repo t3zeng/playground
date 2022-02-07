@@ -26,13 +26,15 @@
 #include "hal/hal_gpio.h"
 #include "hal/hal_i2c.h"
 #include "hal/hal_spi.h"
+#include "console/console.h"
 #ifdef ARCH_sim
 #include "mcu/mcu_sim.h"
 #endif
 
 #define GPIO_TEST (0)
-#define SPI_TEST (1)
+#define SPI_TEST (0)
 #define I2C_TEST (0)
+#define UART_TEST (1)
 
 static volatile int g_task1_loops;
 
@@ -90,6 +92,9 @@ memset(rxbuf, 0, 128);
 #endif
 
     while (1) {
+#if UART_TEST
+        console_printf("Hello world!\n");
+#endif
 #if SPI_TEST
 /* Works in conjunction with following micropython code */
 // spi = pyb.SPI(2, pyb.SPI.SLAVE, polarity=0, phase=0)

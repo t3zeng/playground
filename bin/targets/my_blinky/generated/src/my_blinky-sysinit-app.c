@@ -6,7 +6,9 @@
 
 void os_pkg_init(void);
 void flash_map_init(void);
+void console_pkg_init(void);
 void bus_pkg_init(void);
+void log_init(void);
 void modlog_init(void);
 
 void
@@ -20,10 +22,16 @@ sysinit_app(void)
     /* 9.0: flash_map_init (sys/flash_map) */
     flash_map_init();
 
+    /*** Stage 20 */
+    /* 20.0: console_pkg_init (sys/console/full) */
+    console_pkg_init();
+
     /*** Stage 100 */
     /* 100.0: bus_pkg_init (hw/bus) */
     bus_pkg_init();
-    /* 100.1: modlog_init (sys/log/modlog) */
+    /* 100.1: log_init (sys/log/full) */
+    log_init();
+    /* 100.2: modlog_init (sys/log/modlog) */
     modlog_init();
 }
 
