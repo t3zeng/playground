@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-02-06T14:50:24-05:00",
+  "build_time": "2022-02-07T11:03:20-05:00",
   "build_version": "0.0.0.0",
-  "id": "2e73d050c01ac9f4250b2ccaf5c8ad2773a771e58f90a7d689b54cba130d80aa",
+  "id": "",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "2e73d050c01ac9f4250b2ccaf5c8ad2773a771e58f90a7d689b54cba130d80aa",
+  "image_hash": "",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -146,6 +146,7 @@
     {
       "name": "apache-mynewt-core",
       "commit": "f594aca45584abf4e0b3cde373e66ab93f1e2f28",
+      "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -155,7 +156,7 @@
     },
     {
       "name": "my_project",
-      "commit": "9c95dbd66f3eedf56bcbb39a14055034f5c0384c",
+      "commit": "a26ef76bf7d587097e561b78338ae33a0528f1fa",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -468,8 +469,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 81
+                  "name": "RAM",
+                  "size": 270
                 }
               ]
             },
@@ -477,8 +478,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 270
+                  "name": "FLASH",
+                  "size": 79
                 }
               ]
             }
@@ -1739,11 +1740,11 @@
               ]
             },
             {
-              "name": "hal_spi_tx_val",
+              "name": "hal_spi_txrx",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 114
+                  "size": 84
                 }
               ]
             }
@@ -3359,7 +3360,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 56
+                  "size": 112
                 }
               ]
             }

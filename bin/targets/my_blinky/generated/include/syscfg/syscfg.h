@@ -18,7 +18,7 @@
 
 /*** Repository @apache-mynewt-core info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("f594aca45584abf4e0b3cde373e66ab93f1e2f28")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("f594aca45584abf4e0b3cde373e66ab93f1e2f28-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_CORE
@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("9c95dbd66f3eedf56bcbb39a14055034f5c0384c-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("a26ef76bf7d587097e561b78338ae33a0528f1fa-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT

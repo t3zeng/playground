@@ -81,14 +81,47 @@ main(int argc, char **argv)
         .len = 4,
         .buffer = buf
     };
-
 #endif
+#if SPI_TEST
+uint8_t txbuf[128];
+uint8_t rxbuf[128];
+memset(txbuf, 0, 128);
+memset(rxbuf, 0, 128);
+#endif
+
     while (1) {
+#if SPI_TEST
+/* Works in conjunction with following micropython code */
+// spi = pyb.SPI(2, pyb.SPI.SLAVE, polarity=0, phase=0)
+
+// # NSS callback.
+// recv_val = bytearray(2)
+// def nss_callback(line):
+//     global spi, data, recv_val
+    
+//     print("Cb hit!")
+//     try:
+//         spi.recv(recv_val)
+//         print(recv_val)
+//         spi.send(0x0085, timeout=1000)
+//     except OSError as err:
+//         pass # Don't care about errors - so pass.
+
+// # Configure NSS/CS in IRQ mode to send data when requested by the master.
+// pyb.ExtInt(pyb.Pin("P3"), pyb.ExtInt.IRQ_FALLING, pyb.Pin.PULL_UP, nss_callback)
+
+// while(True):
+//     time.sleep_ms(1000)
         /* SPI Write */
-        uint16_t read_val = hal_spi_tx_val(1, 0x69);
+        txbuf[0] = 0x69;
+        hal_spi_txrx(1, txbuf, rxbuf, 2);
+        uint16_t read_val = rxbuf[0];
         while (read_val != 0x85) {
-            read_val = hal_spi_tx_val(1, 0x69);
+            hal_spi_txrx(1, txbuf, rxbuf, 2);
+            read_val = rxbuf[0];
+            os_time_delay(10);
         }
+#endif
 
 #if I2C_TEST
         /* I2C read */
