@@ -7,3 +7,6 @@ syscfg.vals:
 
   # Enable UART for testing/validation
   UART_0: 1
+
+  # Enable ADC for testing/validation
+  ADC_0: 1

@@ -7,6 +7,8 @@
         "i2c_common.h": "c",
         "uart_hal.h": "c",
         "complex": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "bsp.h": "c",
+        "adc_apollo3.h": "c"
     }
 }

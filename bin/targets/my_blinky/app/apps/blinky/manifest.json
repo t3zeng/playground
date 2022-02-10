@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-02-07T15:51:44-05:00",
+  "build_time": "2022-02-10T15:05:38-05:00",
   "build_version": "0.0.0.0",
-  "id": "818a7d8bbbc68b22580aa11d5f8b5b6f712a742423519a0f61d63406004b010b",
+  "id": "746bc2ca5ea7f520c909dd4cb7e4bda32b1b86a4b1dbb0dc22fcf916d9f2966e",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "818a7d8bbbc68b22580aa11d5f8b5b6f712a742423519a0f61d63406004b010b",
+  "image_hash": "746bc2ca5ea7f520c909dd4cb7e4bda32b1b86a4b1dbb0dc22fcf916d9f2966e",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -58,6 +58,14 @@
     },
     {
       "name": "@apache-mynewt-core/hw/cmsis-core",
+      "repo": "apache-mynewt-core"
+    },
+    {
+      "name": "@apache-mynewt-core/hw/drivers/adc",
+      "repo": "apache-mynewt-core"
+    },
+    {
+      "name": "@apache-mynewt-core/hw/drivers/adc/adc_apollo3",
       "repo": "apache-mynewt-core"
     },
     {
@@ -157,7 +165,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "d01bbdc45ca1bebfb01797e1d90af844b78bd1e8",
+      "commit": "9bb105a898e76511361ddc25dd124db4607b849e",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -172,12 +180,13 @@
     },
     {
       "name": "my_project",
-      "commit": "67634264239005d9e2a3191ce12b4020d966ce1d",
+      "commit": "201ad9ee45134305d76a30333c2adbcd03cb6fdc",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
   ],
   "syscfg": {
+    "ADC_0": "1",
     "APP_NAME": "\"blinky\"",
     "APP_blinky": "1",
     "ARCH_NAME": "\"cortex_m4\"",
@@ -533,7 +542,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 105
+                  "size": 103
                 }
               ]
             },
@@ -889,6 +898,15 @@
           "name": "hal_bsp.o",
           "sym": [
             {
+              "name": "g_ui32ADCSampleBuffer",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 512
+                }
+              ]
+            },
+            {
               "name": "hal_bsp_flash_dev",
               "areas": [
                 {
@@ -911,7 +929,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 214
+                  "size": 281
                 }
               ]
             },
@@ -921,6 +939,24 @@
                 {
                   "name": "FLASH",
                   "size": 4
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_adc0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 72
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_adc0_config",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 24
                 }
               ]
             },
@@ -986,6 +1022,133 @@
                 {
                   "name": "FLASH",
                   "size": 52
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@apache-mynewt-core/hw/drivers/adc/adc_apollo3",
+      "files": [
+        {
+          "name": "adc_apollo3.o",
+          "sym": [
+            {
+              "name": "apollo3_adc_chans",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 48
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_close",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 88
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_configure_channel",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 92
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_dev_init",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_funcs",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 28
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_handle",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_open",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 144
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_read_buffer",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_read_channel",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 124
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_release_buffer",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 108
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_sample",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 24
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_set_buffer",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 116
+                }
+              ]
+            },
+            {
+              "name": "apollo3_adc_size_buffer",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 8
                 }
               ]
             }
@@ -1147,6 +1310,146 @@
     {
       "name": "@apache-mynewt-core/hw/mcu/ambiq/apollo3",
       "files": [
+        {
+          "name": "am_hal_adc.o",
+          "sym": [
+            {
+              "name": "am_hal_adc_configure",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 112
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_configure_dma",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 116
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_configure_slot",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 104
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_deinitialize",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 52
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_initialize",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 196
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_interrupt_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 48
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_interrupt_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 48
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_power_control",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 200
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_samples_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 140
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_sw_trigger",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 40
+                }
+              ]
+            },
+            {
+              "name": "g_ADCSlotsConfigured",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "g_ADCState",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 64
+                }
+              ]
+            },
+            {
+              "name": "priv_temp_trims",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "am_hal_cmdq.o",
           "sym": [
@@ -1346,6 +1649,15 @@
                 {
                   "name": "FLASH",
                   "size": 40
+                }
+              ]
+            },
+            {
+              "name": "am_hal_flash_load_ui32",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 12
                 }
               ]
             },
@@ -5081,7 +5393,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 58
+                  "size": 232
                 }
               ]
             }

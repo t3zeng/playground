@@ -18,7 +18,7 @@
 
 /*** Repository @apache-mynewt-core info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("d01bbdc45ca1bebfb01797e1d90af844b78bd1e8")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("9bb105a898e76511361ddc25dd124db4607b849e")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_CORE
@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("67634264239005d9e2a3191ce12b4020d966ce1d-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("201ad9ee45134305d76a30333c2adbcd03cb6fdc-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
@@ -719,6 +719,11 @@
 #endif
 
 /*** @apache-mynewt-core/hw/mcu/ambiq/apollo3 */
+/* Overridden by apps/blinky (defined by @apache-mynewt-core/hw/mcu/ambiq/apollo3) */
+#ifndef MYNEWT_VAL_ADC_0
+#define MYNEWT_VAL_ADC_0 (1)
+#endif
+
 /* Overridden by apps/blinky (defined by @apache-mynewt-core/hw/mcu/ambiq/apollo3) */
 #ifndef MYNEWT_VAL_I2C_0
 #define MYNEWT_VAL_I2C_0 (1)

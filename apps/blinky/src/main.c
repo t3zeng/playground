@@ -26,7 +26,10 @@
 #include "hal/hal_gpio.h"
 #include "hal/hal_i2c.h"
 #include "hal/hal_spi.h"
+#include "adc/adc.h"
+#include "adc_apollo3/adc_apollo3.h"
 #include "console/console.h"
+#include "am_mcu_apollo.h"
 #ifdef ARCH_sim
 #include "mcu/mcu_sim.h"
 #endif
@@ -35,6 +38,7 @@
 #define SPI_TEST (0)
 #define I2C_TEST (0)
 #define UART_TEST (1)
+#define ADC_TEST (1)
 
 static volatile int g_task1_loops;
 
@@ -85,10 +89,54 @@ main(int argc, char **argv)
     };
 #endif
 #if SPI_TEST
-uint8_t txbuf[128];
-uint8_t rxbuf[128];
-memset(txbuf, 0, 128);
-memset(rxbuf, 0, 128);
+    uint8_t txbuf[128];
+    uint8_t rxbuf[128];
+    memset(txbuf, 0, 128);
+    memset(rxbuf, 0, 128);
+#endif
+#if ADC_TEST
+    /* Pick one of the pins to use as adc pin */
+    int adc_pin = MYNEWT_VAL(BUTTON_0_PIN);
+
+    /* Call ambiq hal directly as mynewt hal gpio doesnt support pin config */
+    const am_hal_gpio_pincfg_t g_AM_PIN_16_ADCSE0 =
+    {
+        .uFuncSel       = AM_HAL_PIN_16_ADCSE0,
+    };
+    am_hal_gpio_pinconfig(adc_pin, g_AM_PIN_16_ADCSE0);
+
+    #define ADC_SAMPLE_BUF_SIZE 128
+    uint32_t g_ui32ADCSampleBuffer[ADC_SAMPLE_BUF_SIZE];
+
+    struct adc_cfg os_bsp_adc0_config = {
+        .ADCConfig = {
+            .eClock             = AM_HAL_ADC_CLKSEL_HFRC,
+            .ePolarity          = AM_HAL_ADC_TRIGPOL_RISING,
+            .eTrigger           = AM_HAL_ADC_TRIGSEL_SOFTWARE,
+            .eReference         = AM_HAL_ADC_REFSEL_INT_1P5,
+            .eClockMode         = AM_HAL_ADC_CLKMODE_LOW_LATENCY,
+            .ePowerMode         = AM_HAL_ADC_LPMODE0,
+            .eRepeat            = AM_HAL_ADC_REPEATING_SCAN,
+        },
+        .ADCSlotConfig = {
+            .eMeasToAvg      = AM_HAL_ADC_SLOT_AVG_128,
+            .ePrecisionMode  = AM_HAL_ADC_SLOT_14BIT,
+            .eChannel        = AM_HAL_ADC_SLOT_CHSEL_SE0,
+            .bWindowCompare  = false,
+            .bEnabled        = true,
+        },
+        .ADCDMAConfig = {
+            .bDynamicPriority = true,
+            .ePriority = AM_HAL_ADC_PRIOR_SERVICE_IMMED,
+            .bDMAEnable = true,
+            .ui32SampleCount = ADC_SAMPLE_BUF_SIZE,
+            .ui32TargetAddress = (uint32_t)g_ui32ADCSampleBuffer
+        }
+    };
+    // struct adc_dev *dev = hal_bsp_get_adc_dev();
+    // assert(dev != NULL);
+    struct adc_dev *dev = (struct adc_dev *) os_dev_open("adc0", OS_TIMEOUT_NEVER, &os_bsp_adc0_config);
+    assert(dev != NULL);
 #endif
 
     while (1) {
@@ -136,6 +184,12 @@ memset(rxbuf, 0, 128);
 #if GPIO_TEST
         /* Toggle the LED */
         hal_gpio_toggle(g_led_pin[g_task1_loops%5]);
+#endif
+
+#if ADC_TEST
+        int result = 0;
+        adc_read_channel(dev, 0, &result);
+        console_printf("Result: %d\n", result);
 #endif
         
         ++g_task1_loops;
