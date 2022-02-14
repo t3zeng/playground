@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-02-10T15:05:38-05:00",
+  "build_time": "2022-02-14T11:38:43-05:00",
   "build_version": "0.0.0.0",
-  "id": "746bc2ca5ea7f520c909dd4cb7e4bda32b1b86a4b1dbb0dc22fcf916d9f2966e",
+  "id": "4cb00859cb96a7b163458f2e8d626316738d2b1a5ff91e34115941089d4cc001",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "746bc2ca5ea7f520c909dd4cb7e4bda32b1b86a4b1dbb0dc22fcf916d9f2966e",
+  "image_hash": "4cb00859cb96a7b163458f2e8d626316738d2b1a5ff91e34115941089d4cc001",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -166,6 +166,7 @@
     {
       "name": "apache-mynewt-core",
       "commit": "9bb105a898e76511361ddc25dd124db4607b849e",
+      "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -180,7 +181,7 @@
     },
     {
       "name": "my_project",
-      "commit": "201ad9ee45134305d76a30333c2adbcd03cb6fdc",
+      "commit": "9b546b1a870e62b6e4ee1f883e8c4c04033e6f4c",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -551,7 +552,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 283
+                  "size": 285
                 }
               ]
             }
@@ -1058,7 +1059,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 92
+                  "size": 108
                 }
               ]
             },
@@ -1067,7 +1068,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 56
+                  "size": 72
                 }
               ]
             },
@@ -1094,7 +1095,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 144
+                  "size": 192
                 }
               ]
             },
@@ -1112,7 +1113,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 124
+                  "size": 228
                 }
               ]
             },
@@ -1121,7 +1122,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 108
+                  "size": 124
                 }
               ]
             },
@@ -1139,7 +1140,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 116
+                  "size": 132
                 }
               ]
             },
@@ -1149,6 +1150,42 @@
                 {
                   "name": "FLASH",
                   "size": 8
+                }
+              ]
+            },
+            {
+              "name": "apollo3_irq_handler",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "g_bADCDMAComplete",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 1
+                }
+              ]
+            },
+            {
+              "name": "g_bADCDMAError",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 1
+                }
+              ]
+            },
+            {
+              "name": "init_timerA3_for_ADC",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 52
                 }
               ]
             }
@@ -1377,6 +1414,15 @@
               ]
             },
             {
+              "name": "am_hal_adc_interrupt_clear",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 40
+                }
+              ]
+            },
+            {
               "name": "am_hal_adc_interrupt_disable",
               "areas": [
                 {
@@ -1391,6 +1437,15 @@
                 {
                   "name": "FLASH",
                   "size": 48
+                }
+              ]
+            },
+            {
+              "name": "am_hal_adc_interrupt_status",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
                 }
               ]
             },
@@ -1503,6 +1558,15 @@
         {
           "name": "am_hal_ctimer.o",
           "sym": [
+            {
+              "name": "am_hal_ctimer_adc_trigger_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 36
+                }
+              ]
+            },
             {
               "name": "am_hal_ctimer_clear",
               "areas": [
@@ -1754,6 +1818,15 @@
           "sym": [
             {
               "name": "am_hal_interrupt_master_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 8
+                }
+              ]
+            },
+            {
+              "name": "am_hal_interrupt_master_enable",
               "areas": [
                 {
                   "name": "FLASH",

@@ -10,3 +10,6 @@ syscfg.vals:
 
   # Enable ADC for testing/validation
   ADC_0: 1
+
+  # Timer 1 is required to enable ADC timer requirements
+  TIMER_1_SOURCE: 'APOLLO3_TIMER_SOURCE_HFRC'

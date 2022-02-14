@@ -133,8 +133,6 @@ main(int argc, char **argv)
             .ui32TargetAddress = (uint32_t)g_ui32ADCSampleBuffer
         }
     };
-    // struct adc_dev *dev = hal_bsp_get_adc_dev();
-    // assert(dev != NULL);
     struct adc_dev *dev = (struct adc_dev *) os_dev_open("adc0", OS_TIMEOUT_NEVER, &os_bsp_adc0_config);
     assert(dev != NULL);
 #endif
