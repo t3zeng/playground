@@ -18,7 +18,7 @@
 
 /*** Repository @apache-mynewt-core info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("9bb105a898e76511361ddc25dd124db4607b849e-dirty")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("d03376bdc4dbfd9699e159fe193ff069940f2824")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_CORE
@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("9b546b1a870e62b6e4ee1f883e8c4c04033e6f4c-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("f00f28806f4e15f42e71a98fc95a560929987bfc-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
@@ -810,7 +810,10 @@
 #define MYNEWT_VAL_TIMER_0_SOURCE (APOLLO3_TIMER_SOURCE_HFRC)
 #endif
 
-#undef MYNEWT_VAL_TIMER_1_SOURCE
+/* Overridden by apps/blinky (defined by @apache-mynewt-core/hw/mcu/ambiq/apollo3) */
+#ifndef MYNEWT_VAL_TIMER_1_SOURCE
+#define MYNEWT_VAL_TIMER_1_SOURCE (APOLLO3_TIMER_SOURCE_HFRC)
+#endif
 
 /* Overridden by apps/blinky (defined by @apache-mynewt-core/hw/mcu/ambiq/apollo3) */
 #ifndef MYNEWT_VAL_UART_0

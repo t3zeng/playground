@@ -184,7 +184,7 @@ main(int argc, char **argv)
         hal_gpio_toggle(g_led_pin[g_task1_loops%5]);
 #endif
 
-#if ADC_TEST
+#if ADC_TEST && UART_TEST
         int result = 0;
         adc_read_channel(dev, 0, &result);
         console_printf("Result: %d\n", result);
