@@ -17,12 +17,7 @@
 # under the License.
 #
 
-### Package: targets/my_blinky
-pkg.name: "targets/my_blinky"
-pkg.type: "target"
-pkg.description: Blinky for the Ambiq Apollo3 development board
-pkg.author: Tianyu Zeng
-pkg.homepage: 
-pkg.keywords:
-    - ambiq
-    - evb
+### Target: targets/btshell
+target.app: "apps/btshell"
+target.bsp: "@apache-mynewt-core/hw/bsp/apollo3_evb"
+target.build_profile: "debug"

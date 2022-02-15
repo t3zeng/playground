@@ -20,9 +20,9 @@
 ### Package: targets/my_blinky
 pkg.name: "targets/my_blinky_boot"
 pkg.type: "target"
-pkg.description: Blinky bootloader for the Ambiq Edge development board
+pkg.description: Blinky bootloader for the Ambiq Apollo3 development board
 pkg.author: Tianyu Zeng
 pkg.homepage: 
 pkg.keywords:
     - ambiq
-    - edge
+    - evb

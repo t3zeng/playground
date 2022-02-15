@@ -1,4 +1,3 @@
-#
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -17,12 +16,30 @@
 # under the License.
 #
 
-### Package: targets/my_blinky
-pkg.name: "targets/my_blinky"
-pkg.type: "target"
-pkg.description: Blinky for the Ambiq Apollo3 development board
-pkg.author: Tianyu Zeng
-pkg.homepage: 
-pkg.keywords:
-    - ambiq
-    - evb
+syscfg.defs:
+    BTSHELL_ANS:
+        description: Include support for the alert notification service.
+        value: 1
+
+syscfg.vals:
+    # Enable the shell task.
+    SHELL_TASK: 1
+
+    # Set log level to info (disable debug logging).
+    LOG_LEVEL: 1
+
+    # Disable security manager (pairing and bonding).
+    BLE_SM_LEGACY: 0
+    BLE_SM_SC: 0
+
+    # Default task settings
+    OS_MAIN_STACK_SIZE: 512
+
+    # SMP is not supported in this app, so disable smp-over-shell.
+    SHELL_MGMT: 0
+
+    # Whether to save data to sys/config, or just keep it in RAM.
+    BLE_STORE_CONFIG_PERSIST: 0
+
+syscfg.vals.BLE_MESH:
+    MSYS_1_BLOCK_COUNT: 16

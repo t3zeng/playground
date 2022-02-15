@@ -17,10 +17,10 @@
 # under the License.
 #
 
-### Package: targets/my_blinky
-pkg.name: "targets/my_blinky"
+### Package: targets/ble_test_target
+pkg.name: "targets/ble_test_target"
 pkg.type: "target"
-pkg.description: Blinky for the Ambiq Apollo3 development board
+pkg.description: BLE test target for the Ambiq Apollo3 development board
 pkg.author: Tianyu Zeng
 pkg.homepage: 
 pkg.keywords:

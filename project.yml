@@ -42,5 +42,5 @@ repository.mcuboot:
 repository.apache-mynewt-nimble:
     type: github
     vers: 0.0.0
-    user: apache
+    user: t3zeng
     repo: mynewt-nimble

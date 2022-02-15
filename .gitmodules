@@ -1,3 +1,6 @@
 [submodule "repos/mynewt-core"]
 	path = repos/mynewt-core
 	url = https://github.com/t3zeng/mynewt-core.git
+[submodule "repos/mynewt-nimble"]
+	path = repos/mynewt-nimble
+	url = https://github.com/t3zeng/mynewt-nimble.git
