@@ -22,6 +22,7 @@ project.name: "my_project"
 project.repositories:
     - apache-mynewt-core
     - mcuboot
+    - apache-mynewt-nimble
 
 # Use github's distribution mechanism for core ASF libraries.
 # This provides mirroring automatically for us.
@@ -34,6 +35,12 @@ repository.apache-mynewt-core:
 
 repository.mcuboot:
     type: github
-    vers: 0-dev
+    vers: 0.0.0
     user: mcu-tools
     repo: mcuboot
+
+repository.apache-mynewt-nimble:
+    type: github
+    vers: 0.0.0
+    user: apache
+    repo: mynewt-nimble
