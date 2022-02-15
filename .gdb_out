@@ -54,16 +54,23 @@ Waiting for GDB connection...Connected to 127.0.0.1
 warning: No executable has been specified and target does not support
 determining executable automatically.  Try using the "file" command.
 Reading all registers
-Read 4 bytes @ address 0x00018FAA (Data = 0x4B039001)
-Read 2 bytes @ address 0x00018FAA (Data = 0x9001)
-0x00018faa in ?? ()
+Read 4 bytes @ address 0x0001C132 (Data = 0x47986AC3)
+Read 2 bytes @ address 0x0001C132 (Data = 0x6AC3)
+0x0001c132 in ?? ()
 Received monitor command: reset
 Resetting target
 Resetting target
-Downloading 16048 bytes @ address 0x00014000
-Downloading 16048 bytes @ address 0x00017EB0
-Downloading 532 bytes @ address 0x0001BD60
-Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0x14000 to 0x1bf74)
+Downloading 16176 bytes @ address 0x00014000
+Downloading 16032 bytes @ address 0x00017F30
+Downloading 16096 bytes @ address 0x0001BDD0
+Downloading 16000 bytes @ address 0x0001FCB0
+Downloading 16048 bytes @ address 0x00023B30
+Downloading 16000 bytes @ address 0x000279E0
+Downloading 16112 bytes @ address 0x0002B860
+Downloading 16032 bytes @ address 0x0002F750
+Downloading 16288 bytes @ address 0x000335F0
+Downloading 12056 bytes @ address 0x00037590
+Restoring binary file bin/targets/ble_test_target/app/apps/btshell/btshell.img into memory (0x14000 to 0x3a4a8)
 Reading register (MSP = 0x10003FD4)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
@@ -72,22 +79,22 @@ Reading register (FAULTMASK = 0x       0)
 Reading register (CONTROL = 0x       4)
 Reading register (FPSCR = 0x 2000000)
 r0             0x0                 0
-r1             0x1                 1
-r2             0x7f                127
-r3             0x40                64
-r4             0x40                64
-r5             0x0                 0
-r6             0x0                 0
-r7             0x0                 0
-r8             0x1                 1
+r1             0x30                48
+r2             0x1                 1
+r3             0x1c131             114993
+r4             0x30                48
+r5             0x10003a34          268450356
+r6             0x1005fef7          268828407
+r7             0x10000688          268437128
+r8             0x1005ff38          268828472
 r9             0x0                 0
 r10            0x0                 0
 r11            0x0                 0
 r12            0x0                 0
-sp             0x1005ffc8          0x1005ffc8
-lr             0x18fab             102315
-pc             0x18faa             0x18faa
-xpsr           0x2100001e          553648158
+sp             0x1005fea8          0x1005fea8
+lr             0x1c327             115495
+pc             0x1c132             0x1c132
+xpsr           0x21000003          553648131
 msp            0x10003fd4          268451796
 psp            0x0                 0
 primask        0x0                 0

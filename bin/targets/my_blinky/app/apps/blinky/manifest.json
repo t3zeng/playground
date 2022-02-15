@@ -1,6 +1,6 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-02-14T13:30:02-05:00",
+  "build_time": "2022-02-15T14:15:11-05:00",
   "build_version": "0.0.0.0",
   "id": "cc811911bb467c1bf4486fe26d42c65cc003ff375948d044573f30279b91d757",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
@@ -166,6 +166,7 @@
     {
       "name": "apache-mynewt-core",
       "commit": "d03376bdc4dbfd9699e159fe193ff069940f2824",
+      "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -180,7 +181,7 @@
     },
     {
       "name": "my_project",
-      "commit": "f00f28806f4e15f42e71a98fc95a560929987bfc",
+      "commit": "ae2f7f1cd79b12846e9ca6343cc30726ab9d0d3d",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
