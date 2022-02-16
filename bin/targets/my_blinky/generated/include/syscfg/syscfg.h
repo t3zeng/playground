@@ -18,7 +18,7 @@
 
 /*** Repository @apache-mynewt-core info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("d03376bdc4dbfd9699e159fe193ff069940f2824-dirty")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("10762952417fe1242f39db36941324e4036a4726-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_CORE
@@ -36,7 +36,7 @@
 
 /*** Repository @apache-mynewt-nimble info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE ("dbed9d46d551847f7580c22a1e56f088dfb47941-dirty")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE ("c69460236eb038823acdc950473e0df22f485923-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_NIMBLE
@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("ae2f7f1cd79b12846e9ca6343cc30726ab9d0d3d-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("8480d621fc5b202430a25994858d103361562e1f-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
@@ -810,9 +810,10 @@
 #define MYNEWT_VAL_TIMER_0_SOURCE (APOLLO3_TIMER_SOURCE_HFRC)
 #endif
 
-/* Overridden by apps/blinky (defined by @apache-mynewt-core/hw/mcu/ambiq/apollo3) */
-#ifndef MYNEWT_VAL_TIMER_1_SOURCE
-#define MYNEWT_VAL_TIMER_1_SOURCE (APOLLO3_TIMER_SOURCE_HFRC)
+#undef MYNEWT_VAL_TIMER_1_SOURCE
+
+#ifndef MYNEWT_VAL_TIMER_ADC_SOURCE
+#define MYNEWT_VAL_TIMER_ADC_SOURCE (APOLLO3_TIMER_SOURCE_HFRC)
 #endif
 
 /* Overridden by apps/blinky (defined by @apache-mynewt-core/hw/mcu/ambiq/apollo3) */

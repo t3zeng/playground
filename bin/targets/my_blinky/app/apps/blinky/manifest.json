@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-02-15T14:15:11-05:00",
+  "build_time": "2022-02-16T13:37:16-05:00",
   "build_version": "0.0.0.0",
-  "id": "cc811911bb467c1bf4486fe26d42c65cc003ff375948d044573f30279b91d757",
+  "id": "81f105af8fb9107a2ef2f9a545d710d64ac37b15475b7cc8559d650490a777b8",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "cc811911bb467c1bf4486fe26d42c65cc003ff375948d044573f30279b91d757",
+  "image_hash": "81f105af8fb9107a2ef2f9a545d710d64ac37b15475b7cc8559d650490a777b8",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -165,7 +165,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "d03376bdc4dbfd9699e159fe193ff069940f2824",
+      "commit": "10762952417fe1242f39db36941324e4036a4726",
       "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
@@ -181,7 +181,7 @@
     },
     {
       "name": "my_project",
-      "commit": "ae2f7f1cd79b12846e9ca6343cc30726ab9d0d3d",
+      "commit": "8480d621fc5b202430a25994858d103361562e1f",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -518,7 +518,8 @@
     "TARGET_NAME": "\"my_blinky\"",
     "TARGET_my_blinky": "1",
     "TIMER_0_SOURCE": "APOLLO3_TIMER_SOURCE_HFRC",
-    "TIMER_1_SOURCE": "APOLLO3_TIMER_SOURCE_HFRC",
+    "TIMER_1_SOURCE": "",
+    "TIMER_ADC_SOURCE": "APOLLO3_TIMER_SOURCE_HFRC",
     "UART_0": "1",
     "UART_0_PIN_CTS": "38",
     "UART_0_PIN_RTS": "37",
@@ -930,7 +931,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 325
+                  "size": 329
                 }
               ]
             },
@@ -953,11 +954,11 @@
               ]
             },
             {
-              "name": "os_bsp_adc0_config",
+              "name": "os_bsp_adc0_default_config",
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 24
+                  "size": 36
                 }
               ]
             },
@@ -1037,15 +1038,6 @@
           "name": "adc_apollo3.o",
           "sym": [
             {
-              "name": "apollo3_adc_chans",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 48
-                }
-              ]
-            },
-            {
               "name": "apollo3_adc_close",
               "areas": [
                 {
@@ -1059,7 +1051,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 108
+                  "size": 112
                 }
               ]
             },
@@ -1082,20 +1074,11 @@
               ]
             },
             {
-              "name": "apollo3_adc_handle",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            },
-            {
               "name": "apollo3_adc_open",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 192
+                  "size": 224
                 }
               ]
             },
@@ -1163,6 +1146,33 @@
               ]
             },
             {
+              "name": "g_apollo3_adc_chans",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 48
+                }
+              ]
+            },
+            {
+              "name": "g_apollo3_adc_handle",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "g_apollo3_timer_int_lut",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 32
+                }
+              ]
+            },
+            {
               "name": "g_bADCDMAComplete",
               "areas": [
                 {
@@ -1185,7 +1195,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 52
+                  "size": 212
                 }
               ]
             }
@@ -2425,7 +2435,7 @@
               ]
             },
             {
-              "name": "apollo3_timer_1",
+              "name": "apollo3_timer_adc",
               "areas": [
                 {
                   "name": "RAM",
@@ -5475,7 +5485,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 232
+                  "size": 160
                 }
               ]
             }

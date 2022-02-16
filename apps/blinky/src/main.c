@@ -105,40 +105,14 @@ main(int argc, char **argv)
     };
     am_hal_gpio_pinconfig(adc_pin, g_AM_PIN_16_ADCSE0);
 
-    #define ADC_SAMPLE_BUF_SIZE 128
-    uint32_t g_ui32ADCSampleBuffer[ADC_SAMPLE_BUF_SIZE];
-
-    struct adc_cfg os_bsp_adc0_config = {
-        .ADCConfig = {
-            .eClock             = AM_HAL_ADC_CLKSEL_HFRC,
-            .ePolarity          = AM_HAL_ADC_TRIGPOL_RISING,
-            .eTrigger           = AM_HAL_ADC_TRIGSEL_SOFTWARE,
-            .eReference         = AM_HAL_ADC_REFSEL_INT_1P5,
-            .eClockMode         = AM_HAL_ADC_CLKMODE_LOW_LATENCY,
-            .ePowerMode         = AM_HAL_ADC_LPMODE0,
-            .eRepeat            = AM_HAL_ADC_REPEATING_SCAN,
-        },
-        .ADCSlotConfig = {
-            .eMeasToAvg      = AM_HAL_ADC_SLOT_AVG_128,
-            .ePrecisionMode  = AM_HAL_ADC_SLOT_14BIT,
-            .eChannel        = AM_HAL_ADC_SLOT_CHSEL_SE0,
-            .bWindowCompare  = false,
-            .bEnabled        = true,
-        },
-        .ADCDMAConfig = {
-            .bDynamicPriority = true,
-            .ePriority = AM_HAL_ADC_PRIOR_SERVICE_IMMED,
-            .bDMAEnable = true,
-            .ui32SampleCount = ADC_SAMPLE_BUF_SIZE,
-            .ui32TargetAddress = (uint32_t)g_ui32ADCSampleBuffer
-        }
-    };
-    struct adc_dev *dev = (struct adc_dev *) os_dev_open("adc0", OS_TIMEOUT_NEVER, &os_bsp_adc0_config);
+    /* Custom config is only needed to overwrite default */
+    struct adc_dev *dev = (struct adc_dev *) os_dev_open("adc0", OS_TIMEOUT_NEVER, NULL);
     assert(dev != NULL);
 #endif
 
     while (1) {
 #if UART_TEST
+        /* Ensures prints show up over uART */
         console_printf("Hello world!\n");
 #endif
 #if SPI_TEST
