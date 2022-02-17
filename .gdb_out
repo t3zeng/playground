@@ -54,16 +54,24 @@ Waiting for GDB connection...Connected to 127.0.0.1
 warning: No executable has been specified and target does not support
 determining executable automatically.  Try using the "file" command.
 Reading all registers
-Read 4 bytes @ address 0x0001956E (Data = 0xBD10B974)
-Read 2 bytes @ address 0x0001956E (Data = 0xB974)
-0x0001956e in ?? ()
+Read 4 bytes @ address 0x000339EE (Data = 0xBD10B974)
+Read 2 bytes @ address 0x000339EE (Data = 0xB974)
+0x000339ee in ?? ()
 Received monitor command: reset
 Resetting target
 Resetting target
-Downloading 16032 bytes @ address 0x00014000
-Downloading 16032 bytes @ address 0x00017EA0
-Downloading 736 bytes @ address 0x0001BD40
-Restoring binary file bin/targets/my_blinky/app/apps/blinky/blinky.img into memory (0x14000 to 0x1c020)
+Downloading 16176 bytes @ address 0x00014000
+Downloading 16032 bytes @ address 0x00017F30
+Downloading 16112 bytes @ address 0x0001BDD0
+Downloading 16000 bytes @ address 0x0001FCC0
+Downloading 16064 bytes @ address 0x00023B40
+Downloading 16000 bytes @ address 0x00027A00
+Downloading 16096 bytes @ address 0x0002B880
+Downloading 16048 bytes @ address 0x0002F760
+Downloading 16176 bytes @ address 0x00033610
+Downloading 16320 bytes @ address 0x00037540
+Downloading 1140 bytes @ address 0x0003B500
+Restoring binary file bin/targets/ble_test_target/app/apps/btshell/btshell.img into memory (0x14000 to 0x3b974)
 Reading register (MSP = 0x10003FD4)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
@@ -74,19 +82,19 @@ Reading register (FPSCR = 0x 2000000)
 r0             0x80000000          2147483648
 r1             0x1                 1
 r2             0x40008000          1073774592
-r3             0x16804             92164
-r4             0x7f                127
+r3             0x69f01             433921
+r4             0x780               1920
 r5             0x0                 0
-r6             0x16084             90244
-r7             0x16296             90774
+r6             0x69781             432001
+r7             0x69781             432001
 r8             0x100               256
 r9             0x40                64
 r10            0x0                 0
 r11            0x0                 0
 r12            0x0                 0
-sp             0x10000350          0x10000350
-lr             0x194fb             103675
-pc             0x1956e             0x1956e
+sp             0x10002290          0x10002290
+lr             0x3397b             211323
+pc             0x339ee             0x339ee
 xpsr           0xa1000000          2701131776
 msp            0x10003fd4          268451796
 psp            0x0                 0

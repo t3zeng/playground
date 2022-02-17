@@ -18,7 +18,7 @@
 
 /*** Repository @apache-mynewt-core info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("d03376bdc4dbfd9699e159fe193ff069940f2824-dirty")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("dbef17ed12cc4dc484b16fe5538281e53c5b2310")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_CORE
@@ -36,7 +36,7 @@
 
 /*** Repository @apache-mynewt-nimble info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE ("dbed9d46d551847f7580c22a1e56f088dfb47941-dirty")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE ("c69460236eb038823acdc950473e0df22f485923-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_NIMBLE
@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("ae2f7f1cd79b12846e9ca6343cc30726ab9d0d3d-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("adb6dbae80b2bead306a6eae077505a640fca3f8-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
@@ -499,14 +499,15 @@
 #define MYNEWT_VAL_SPI_5_SLAVE (0)
 #endif
 
+/* Overridden by @apache-mynewt-core/hw/bsp/apollo3_evb (defined by @apache-mynewt-core/hw/mcu/ambiq/apollo3) */
 #ifndef MYNEWT_VAL_TIMER_0_SOURCE
-#define MYNEWT_VAL_TIMER_0_SOURCE (APOLLO3_TIMER_SOURCE_HFRC)
+#define MYNEWT_VAL_TIMER_0_SOURCE (APOLLO3_TIMER_SOURCE_XT)
 #endif
 
 #undef MYNEWT_VAL_TIMER_1_SOURCE
 
 #ifndef MYNEWT_VAL_UART_0
-#define MYNEWT_VAL_UART_0 (0)
+#define MYNEWT_VAL_UART_0 (1)
 #endif
 
 #ifndef MYNEWT_VAL_UART_1
@@ -1444,8 +1445,9 @@
 #define MYNEWT_VAL_BLE_LL_PRIO (0)
 #endif
 
+/* Overridden by apps/btshell (defined by @apache-mynewt-nimble/nimble/controller) */
 #ifndef MYNEWT_VAL_BLE_LL_PUBLIC_DEV_ADDR
-#define MYNEWT_VAL_BLE_LL_PUBLIC_DEV_ADDR (0x000000000000)
+#define MYNEWT_VAL_BLE_LL_PUBLIC_DEV_ADDR (0x112233445566)
 #endif
 
 #ifndef MYNEWT_VAL_BLE_LL_RESOLV_LIST_SIZE
@@ -1726,8 +1728,9 @@
 #define MYNEWT_VAL_BLE_HS_DEBUG (0)
 #endif
 
+/* Overridden by @apache-mynewt-core/hw/bsp/apollo3_evb (defined by @apache-mynewt-nimble/nimble/host) */
 #ifndef MYNEWT_VAL_BLE_HS_FLOW_CTRL
-#define MYNEWT_VAL_BLE_HS_FLOW_CTRL (0)
+#define MYNEWT_VAL_BLE_HS_FLOW_CTRL (1)
 #endif
 
 #ifndef MYNEWT_VAL_BLE_HS_FLOW_CTRL_ITVL
