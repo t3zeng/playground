@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-02-17T14:40:19-05:00",
+  "build_time": "2022-02-28T14:59:31-05:00",
   "build_version": "0.0.0.0",
-  "id": "977c99547a89e9c89c184bb9ce5d9419838d3e00ccdcc6bacc5f242c64cbd9fa",
+  "id": "6a912ba0e41d8c2e6e6b085b58b4d6728e39599a294cb437a6dec6b44f3aed15",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "977c99547a89e9c89c184bb9ce5d9419838d3e00ccdcc6bacc5f242c64cbd9fa",
+  "image_hash": "6a912ba0e41d8c2e6e6b085b58b4d6728e39599a294cb437a6dec6b44f3aed15",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -50,6 +50,14 @@
     },
     {
       "name": "@apache-mynewt-core/hw/bus/drivers/i2c_common",
+      "repo": "apache-mynewt-core"
+    },
+    {
+      "name": "@apache-mynewt-core/hw/bus/drivers/i2c_hal",
+      "repo": "apache-mynewt-core"
+    },
+    {
+      "name": "@apache-mynewt-core/hw/bus/drivers/spi_apollo3",
       "repo": "apache-mynewt-core"
     },
     {
@@ -165,8 +173,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "ab27fcb696144328702349d3fe9e147e4af4f871",
-      "dirty": true,
+      "commit": "ad9649640166f6d6d7dc4849400fb83c9fd6d28c",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -181,7 +188,7 @@
     },
     {
       "name": "my_project",
-      "commit": "adb6dbae80b2bead306a6eae077505a640fca3f8",
+      "commit": "63251a7bf19fd9aeb774ea9a95401782d9e83753",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -285,6 +292,9 @@
     "I2C_0": "1",
     "I2C_0_PIN_SCL": "5",
     "I2C_0_PIN_SDA": "6",
+    "I2C_0_SLAVE": "0",
+    "I2C_0_SLAVE_PIN_SCL": "0",
+    "I2C_0_SLAVE_PIN_SDA": "1",
     "I2C_1": "0",
     "I2C_1_PIN_SCL": "8",
     "I2C_1_PIN_SDA": "9",
@@ -470,42 +480,59 @@
     "SCARD_SCCIO_PIN": "9",
     "SCARD_SCCRST_PIN": "46",
     "SPI_0_MASTER": "0",
+    "SPI_0_MASTER_PIN_CS": "11",
+    "SPI_0_MASTER_PIN_CS1": "-1",
+    "SPI_0_MASTER_PIN_CS2": "-1",
+    "SPI_0_MASTER_PIN_CS3": "-1",
     "SPI_0_MASTER_PIN_MISO": "6",
     "SPI_0_MASTER_PIN_MOSI": "7",
     "SPI_0_MASTER_PIN_SCK": "5",
-    "SPI_0_PIN_CS": "11",
-    "SPI_0_PIN_CS3": "15",
     "SPI_0_SLAVE": "0",
+    "SPI_0_SLAVE_PIN_CS": "3",
+    "SPI_0_SLAVE_PIN_MISO": "2",
+    "SPI_0_SLAVE_PIN_MOSI": "1",
+    "SPI_0_SLAVE_PIN_SCK": "0",
     "SPI_1_MASTER": "1",
+    "SPI_1_MASTER_PIN_CS": "16",
+    "SPI_1_MASTER_PIN_CS1": "-1",
+    "SPI_1_MASTER_PIN_CS2": "-1",
+    "SPI_1_MASTER_PIN_CS3": "-1",
     "SPI_1_MASTER_PIN_MISO": "9",
     "SPI_1_MASTER_PIN_MOSI": "10",
     "SPI_1_MASTER_PIN_SCK": "8",
-    "SPI_1_PIN_CS": "14",
-    "SPI_1_SLAVE": "0",
     "SPI_2_MASTER": "0",
+    "SPI_2_MASTER_PIN_CS": "23",
+    "SPI_2_MASTER_PIN_CS1": "-1",
+    "SPI_2_MASTER_PIN_CS2": "-1",
+    "SPI_2_MASTER_PIN_CS3": "-1",
     "SPI_2_MASTER_PIN_MISO": "25",
     "SPI_2_MASTER_PIN_MOSI": "28",
     "SPI_2_MASTER_PIN_SCK": "27",
-    "SPI_2_PIN_CS": "15",
-    "SPI_2_SLAVE": "0",
     "SPI_3_MASTER": "0",
+    "SPI_3_MASTER_PIN_CS": "3",
+    "SPI_3_MASTER_PIN_CS1": "-1",
+    "SPI_3_MASTER_PIN_CS2": "-1",
+    "SPI_3_MASTER_PIN_CS3": "-1",
     "SPI_3_MASTER_PIN_MISO": "43",
     "SPI_3_MASTER_PIN_MOSI": "38",
     "SPI_3_MASTER_PIN_SCK": "42",
-    "SPI_3_PIN_CS": "12",
-    "SPI_3_SLAVE": "0",
     "SPI_4_MASTER": "0",
+    "SPI_4_MASTER_PIN_CS": "8",
+    "SPI_4_MASTER_PIN_CS1": "-1",
+    "SPI_4_MASTER_PIN_CS2": "-1",
+    "SPI_4_MASTER_PIN_CS3": "-1",
     "SPI_4_MASTER_PIN_MISO": "40",
     "SPI_4_MASTER_PIN_MOSI": "44",
     "SPI_4_MASTER_PIN_SCK": "39",
-    "SPI_4_PIN_CS": "13",
-    "SPI_4_SLAVE": "0",
     "SPI_5_MASTER": "0",
+    "SPI_5_MASTER_PIN_CS": "12",
+    "SPI_5_MASTER_PIN_CS1": "-1",
+    "SPI_5_MASTER_PIN_CS2": "-1",
+    "SPI_5_MASTER_PIN_CS3": "-1",
     "SPI_5_MASTER_PIN_MISO": "49",
     "SPI_5_MASTER_PIN_MOSI": "47",
     "SPI_5_MASTER_PIN_SCK": "48",
-    "SPI_5_PIN_CS": "16",
-    "SPI_5_SLAVE": "0",
+    "SPI_APOLLO3_USE_NOBLOCK": "0",
     "SWDCK_PIN": "20",
     "SWDIO_PIN": "21",
     "SYSDOWN_CONSTRAIN_DOWN": "1",
@@ -517,15 +544,17 @@
     "SYSINIT_PANIC_MESSAGE": "0",
     "TARGET_NAME": "\"my_blinky\"",
     "TARGET_my_blinky": "1",
+    "TIMER_0": "1",
     "TIMER_0_SOURCE": "APOLLO3_TIMER_SOURCE_HFRC",
-    "TIMER_1_SOURCE": "",
+    "TIMER_1": "0",
+    "TIMER_1_SOURCE": "APOLLO3_TIMER_SOURCE_HFRC",
     "TIMER_ADC_SOURCE": "APOLLO3_TIMER_SOURCE_HFRC",
     "UART_0": "1",
     "UART_0_PIN_CTS": "38",
     "UART_0_PIN_RTS": "37",
     "UART_0_PIN_RX": "23",
     "UART_0_PIN_TX": "22",
-    "UART_1": "0",
+    "UART_1": "1",
     "UART_1_PIN_CTS": "45",
     "UART_1_PIN_RTS": "44",
     "UART_1_PIN_RX": "36",
@@ -544,7 +573,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 105
+                  "size": 119
                 }
               ]
             },
@@ -553,7 +582,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 285
+                  "size": 286
                 }
               ]
             }
@@ -849,7 +878,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 116
+                  "size": 132
                 }
               ]
             },
@@ -900,15 +929,6 @@
           "name": "hal_bsp.o",
           "sym": [
             {
-              "name": "g_ui32ADCSampleBuffer",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 512
-                }
-              ]
-            },
-            {
               "name": "hal_bsp_flash_dev",
               "areas": [
                 {
@@ -918,65 +938,11 @@
               ]
             },
             {
-              "name": "hal_bsp_i2c0m_cfg",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
               "name": "hal_bsp_init",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 329
-                }
-              ]
-            },
-            {
-              "name": "hal_bsp_spi1m_cfg",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "os_bsp_adc0",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "os_bsp_adc0_default_config",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "os_bsp_uart0",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 60
-                }
-              ]
-            },
-            {
-              "name": "os_bsp_uart0_cfg",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
+                  "size": 8
                 }
               ]
             }
@@ -990,6 +956,33 @@
         {
           "name": "bus.o",
           "sym": [
+            {
+              "name": "bus_dev_init_func",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "bus_dev_resume_func",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 54
+                }
+              ]
+            },
+            {
+              "name": "bus_dev_suspend_func",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 70
+                }
+              ]
+            },
             {
               "name": "bus_pkg_init",
               "areas": [
@@ -1005,6 +998,188 @@
                 {
                   "name": "RAM",
                   "size": 4
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@apache-mynewt-core/hw/bus/drivers/i2c_hal",
+      "files": [
+        {
+          "name": "i2c_hal.o",
+          "sym": [
+            {
+              "name": "bus_i2c_configure",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 82
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 20
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 20
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_hal_dev_init_func",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 100
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_hal_ops",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 28
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_init_node",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 18
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 52
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_translate_hal_error",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_write",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 52
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@apache-mynewt-core/hw/bus/drivers/spi_apollo3",
+      "files": [
+        {
+          "name": "spi_apollo3.o",
+          "sym": [
+            {
+              "name": "bus_spi_apollo3_dev_init_func",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 96
+                }
+              ]
+            },
+            {
+              "name": "bus_spi_configure",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 106
+                }
+              ]
+            },
+            {
+              "name": "bus_spi_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 18
+                }
+              ]
+            },
+            {
+              "name": "bus_spi_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 18
+                }
+              ]
+            },
+            {
+              "name": "bus_spi_init_node",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 38
+                }
+              ]
+            },
+            {
+              "name": "bus_spi_ops",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 28
+                }
+              ]
+            },
+            {
+              "name": "bus_spi_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 66
+                }
+              ]
+            },
+            {
+              "name": "bus_spi_write",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            },
+            {
+              "name": "bus_spi_write_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 150
                 }
               ]
             }
@@ -1358,6 +1533,191 @@
       "name": "@apache-mynewt-core/hw/mcu/ambiq/apollo3",
       "files": [
         {
+          "name": "am_hal_iom.o",
+          "sym": [
+            {
+              "name": "am_hal_IOM_CQReset",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 26
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_CQDisable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_CQEnable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 38
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_CQInit",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 54
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_blocking_transfer",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 660
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_configure",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 328
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 112
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 164
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_initialize",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 92
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_power_ctrl",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 580
+                }
+              ]
+            },
+            {
+              "name": "am_hal_iom_spi_blocking_fullduplex",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 592
+                }
+              ]
+            },
+            {
+              "name": "build_cmd",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "compute_freq",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
+                }
+              ]
+            },
+            {
+              "name": "enable_submodule",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 36
+                }
+              ]
+            },
+            {
+              "name": "g_IOMhandles",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 13272
+                }
+              ]
+            },
+            {
+              "name": "internal_iom_get_int_err",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "internal_iom_reset_on_error",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 268
+                }
+              ]
+            },
+            {
+              "name": "iom_get_interface_clock_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 324
+                }
+              ]
+            },
+            {
+              "name": "onebit",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 20
+                }
+              ]
+            },
+            {
+              "name": "validate_transaction",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 138
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "am_hal_adc.o",
           "sym": [
             {
@@ -1546,6 +1906,15 @@
               ]
             },
             {
+              "name": "am_hal_cmdq_term",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 88
+                }
+              ]
+            },
+            {
               "name": "gAmHalCmdQReg",
               "areas": [
                 {
@@ -1560,6 +1929,15 @@
                 {
                   "name": "RAM",
                   "size": 352
+                }
+              ]
+            },
+            {
+              "name": "update_indices",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 60
                 }
               ]
             }
@@ -1727,6 +2105,15 @@
               ]
             },
             {
+              "name": "am_hal_flash_delay_status_check",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
+                }
+              ]
+            },
+            {
               "name": "am_hal_flash_load_ui32",
               "areas": [
                 {
@@ -1768,7 +2155,25 @@
               ]
             },
             {
+              "name": "am_hal_gpio_state_write",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 148
+                }
+              ]
+            },
+            {
               "name": "g_AM_HAL_GPIO_DISABLE",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "g_AM_HAL_GPIO_OUTPUT",
               "areas": [
                 {
                   "name": "FLASH",
@@ -1856,112 +2261,58 @@
           ]
         },
         {
-          "name": "am_hal_iom.o",
+          "name": "am_hal_ios.o",
           "sym": [
             {
-              "name": "am_hal_iom_CQDisable",
+              "name": "am_hal_ios_buffer_init",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 12
+                  "size": 14
                 }
               ]
             },
             {
-              "name": "am_hal_iom_CQEnable",
+              "name": "am_hal_ios_configure",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 38
+                  "size": 232
                 }
               ]
             },
             {
-              "name": "am_hal_iom_CQInit",
+              "name": "am_hal_ios_disable",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 54
+                  "size": 68
                 }
               ]
             },
             {
-              "name": "am_hal_iom_configure",
+              "name": "am_hal_ios_enable",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 328
+                  "size": 68
                 }
               ]
             },
             {
-              "name": "am_hal_iom_enable",
+              "name": "am_hal_ios_fifo_ptr_set",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 164
+                  "size": 76
                 }
               ]
             },
             {
-              "name": "am_hal_iom_initialize",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 92
-                }
-              ]
-            },
-            {
-              "name": "am_hal_iom_power_ctrl",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 580
-                }
-              ]
-            },
-            {
-              "name": "compute_freq",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "enable_submodule",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "g_IOMhandles",
+              "name": "g_sSRAMBuffer",
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 13272
-                }
-              ]
-            },
-            {
-              "name": "iom_get_interface_clock_cfg",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 324
-                }
-              ]
-            },
-            {
-              "name": "onebit",
-              "areas": [
-                {
-                  "name": "FLASH",
                   "size": 20
                 }
               ]
@@ -2328,14 +2679,181 @@
           ]
         },
         {
-          "name": "hal_spi.o",
+          "name": "apollo3_periph.o",
           "sym": [
             {
-              "name": "apollo3_spi1",
+              "name": "apollo3_periph_create",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 24
+                }
+              ]
+            },
+            {
+              "name": "apollo3_periph_create_adc",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 73
+                }
+              ]
+            },
+            {
+              "name": "apollo3_periph_create_i2c",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 73
+                }
+              ]
+            },
+            {
+              "name": "apollo3_periph_create_spi",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 73
+                }
+              ]
+            },
+            {
+              "name": "apollo3_periph_create_timers",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 80
+                }
+              ]
+            },
+            {
+              "name": "apollo3_periph_create_uart",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 130
+                }
+              ]
+            },
+            {
+              "name": "g_ui32ADCSampleBuffer",
               "areas": [
                 {
                   "name": "RAM",
+                  "size": 512
+                }
+              ]
+            },
+            {
+              "name": "i2c0_bus",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 72
+                }
+              ]
+            },
+            {
+              "name": "i2c0_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_adc0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 72
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_adc0_config",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 40
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart0_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart1",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart1_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "spi1_bus",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 76
+                }
+              ]
+            },
+            {
+              "name": "spi1_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
                   "size": 16
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hal_spi.o",
+          "sym": [
+            {
+              "name": "apollo3_spi1_master",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 24
+                }
+              ]
+            },
+            {
+              "name": "apollo3_spi_data_mode",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 34
                 }
               ]
             },
@@ -2349,6 +2867,33 @@
               ]
             },
             {
+              "name": "apollo3_spi_set_continuation",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 22
+                }
+              ]
+            },
+            {
+              "name": "apollo3_spi_set_ss_pin",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 22
+                }
+              ]
+            },
+            {
+              "name": "g_pui8TxFifoBuffer",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 1023
+                }
+              ]
+            },
+            {
               "name": "g_sIOMSpiConfig",
               "areas": [
                 {
@@ -2358,11 +2903,47 @@
               ]
             },
             {
-              "name": "get_uNCE",
+              "name": "g_sIOSSpiConfig",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 28
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_config",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 36
+                  "size": 42
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_config_master",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 54
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_config_slave",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 32
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 24
                 }
               ]
             },
@@ -2376,6 +2957,15 @@
               ]
             },
             {
+              "name": "hal_spi_get_uNCE",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 90
+                }
+              ]
+            },
+            {
               "name": "hal_spi_init",
               "areas": [
                 {
@@ -2385,11 +2975,20 @@
               ]
             },
             {
+              "name": "hal_spi_init_hw",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 94
+                }
+              ]
+            },
+            {
               "name": "hal_spi_init_master",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 280
+                  "size": 412
                 }
               ]
             },
@@ -2407,7 +3006,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 18
+                  "size": 20
                 }
               ]
             },
@@ -2416,7 +3015,61 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 50
+                  "size": 56
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_pin_config_slave",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 6
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_ss_pin_config",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 20
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_ss_pin_config_master",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 80
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_ss_pin_config_slave",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 6
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_ss_pin_init",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 134
+                }
+              ]
+            },
+            {
+              "name": "hal_spi_txrx",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 106
                 }
               ]
             }
@@ -2696,7 +3349,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 248
+                  "size": 1180
                 }
               ]
             },
@@ -2760,6 +3413,24 @@
               ]
             },
             {
+              "name": "hal_i2c_config",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 88
+                }
+              ]
+            },
+            {
+              "name": "hal_i2c_disable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 20
+                }
+              ]
+            },
+            {
               "name": "hal_i2c_enable",
               "areas": [
                 {
@@ -2769,11 +3440,29 @@
               ]
             },
             {
-              "name": "hal_i2c_init",
+              "name": "hal_i2c_init_hw",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 116
+                  "size": 136
+                }
+              ]
+            },
+            {
+              "name": "hal_i2c_master_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "hal_i2c_master_write",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
                 }
               ]
             },
@@ -2782,7 +3471,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 34
+                  "size": 38
                 }
               ]
             }
@@ -2815,6 +3504,29 @@
                 {
                   "name": "FLASH",
                   "size": 44
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hal_gpio.o",
+          "sym": [
+            {
+              "name": "hal_gpio_init_out",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 32
+                }
+              ]
+            },
+            {
+              "name": "hal_gpio_write",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 20
                 }
               ]
             }

@@ -9,6 +9,7 @@
         "complex": "c",
         "typeinfo": "c",
         "bsp.h": "c",
-        "adc_apollo3.h": "c"
+        "adc_apollo3.h": "c",
+        "hci_common.h": "c"
     }
 }

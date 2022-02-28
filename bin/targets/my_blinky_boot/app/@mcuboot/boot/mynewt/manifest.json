@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky_boot",
-  "build_time": "2022-02-04T14:58:46-05:00",
+  "build_time": "2022-02-28T10:57:55-05:00",
   "build_version": "0.0.0.0",
-  "id": "33d2a11b54785e1636e3d3ab81057fa05eca143a3c9c4173cbc3628bb605404b",
+  "id": "",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky_boot/app/@mcuboot/boot/mynewt/mynewt.img",
-  "image_hash": "33d2a11b54785e1636e3d3ab81057fa05eca143a3c9c4173cbc3628bb605404b",
+  "image_hash": "",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -133,7 +133,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "42a7678e6697412da48ce11769d4def299e1aa96",
+      "commit": "dbef17ed12cc4dc484b16fe5538281e53c5b2310",
       "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
@@ -144,12 +144,13 @@
     },
     {
       "name": "my_project",
-      "commit": "9c95dbd66f3eedf56bcbb39a14055034f5c0384c",
+      "commit": "63251a7bf19fd9aeb774ea9a95401782d9e83753",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
   ],
   "syscfg": {
+    "ADC_0": "0",
     "APP_NAME": "\"mynewt\"",
     "APP_mynewt": "1",
     "ARCH_NAME": "\"cortex_m4\"",
@@ -433,7 +434,7 @@
     "UART_0_PIN_RTS": "37",
     "UART_0_PIN_RX": "23",
     "UART_0_PIN_TX": "22",
-    "UART_1": "1",
+    "UART_1": "0",
     "UART_1_PIN_CTS": "45",
     "UART_1_PIN_RTS": "44",
     "UART_1_PIN_RX": "36",
@@ -452,7 +453,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 38
+                  "size": 40
                 }
               ]
             },
@@ -461,7 +462,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 259
+                  "size": 261
                 }
               ]
             }
@@ -658,7 +659,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 206
+                  "size": 142
                 }
               ]
             },
@@ -673,24 +674,6 @@
             },
             {
               "name": "os_bsp_uart0_cfg",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "os_bsp_uart1",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 60
-                }
-              ]
-            },
-            {
-              "name": "os_bsp_uart1_cfg",
               "areas": [
                 {
                   "name": "FLASH",
@@ -1219,6 +1202,15 @@
               ]
             },
             {
+              "name": "am_hal_pwrctrl_periph_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 144
+                }
+              ]
+            },
+            {
               "name": "am_hal_pwrctrl_peripheral_control",
               "areas": [
                 {
@@ -1279,11 +1271,29 @@
               ]
             },
             {
+              "name": "am_hal_uart_control",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 36
+                }
+              ]
+            },
+            {
               "name": "am_hal_uart_initialize",
               "areas": [
                 {
                   "name": "FLASH",
                   "size": 88
+                }
+              ]
+            },
+            {
+              "name": "am_hal_uart_interrupt_clear",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
                 }
               ]
             },
@@ -1302,6 +1312,15 @@
                 {
                   "name": "FLASH",
                   "size": 48
+                }
+              ]
+            },
+            {
+              "name": "am_hal_uart_power_control",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 232
                 }
               ]
             },
@@ -1545,7 +1564,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 112
+                  "size": 122
                 }
               ]
             },
@@ -1618,11 +1637,29 @@
               ]
             },
             {
-              "name": "g_sCOMUART",
+              "name": "g_pui8RxBuffer",
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 4
+                  "size": 2
+                }
+              ]
+            },
+            {
+              "name": "g_pui8TxBuffer",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 256
+                }
+              ]
+            },
+            {
+              "name": "g_sUartConfig",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 40
                 }
               ]
             },
@@ -1649,7 +1686,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 304
+                  "size": 308
                 }
               ]
             },
@@ -1658,7 +1695,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 424
+                  "size": 248
                 }
               ]
             },
@@ -1694,7 +1731,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 40
+                  "size": 48
                 }
               ]
             }

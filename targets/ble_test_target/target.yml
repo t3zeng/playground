@@ -18,6 +18,6 @@
 #
 
 ### Target: targets/btshell
-target.app: "apps/btshell"
+target.app: "apps/bleprph"
 target.bsp: "@apache-mynewt-core/hw/bsp/apollo3_evb"
 target.build_profile: "debug"

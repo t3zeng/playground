@@ -18,7 +18,7 @@
 
 /*** Repository @apache-mynewt-core info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("42a7678e6697412da48ce11769d4def299e1aa96-dirty")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_CORE ("dbef17ed12cc4dc484b16fe5538281e53c5b2310-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_CORE
@@ -36,7 +36,7 @@
 
 /*** Repository @apache-mynewt-nimble info */
 #ifndef MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE
-#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE ("390744d836658c2eecd32e8883fa9d072f4d1c65-dirty")
+#define MYNEWT_VAL_REPO_HASH_APACHE_MYNEWT_NIMBLE ("2e83faa90ac3d306efc5d00ae4e1db1727b2e267")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_APACHE_MYNEWT_NIMBLE
@@ -54,7 +54,7 @@
 
 /*** Repository @my_project info */
 #ifndef MYNEWT_VAL_REPO_HASH_MY_PROJECT
-#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("9c95dbd66f3eedf56bcbb39a14055034f5c0384c-dirty")
+#define MYNEWT_VAL_REPO_HASH_MY_PROJECT ("63251a7bf19fd9aeb774ea9a95401782d9e83753-dirty")
 #endif
 
 #ifndef MYNEWT_VAL_REPO_VERSION_MY_PROJECT
@@ -676,6 +676,10 @@
 #endif
 
 /*** @apache-mynewt-core/hw/mcu/ambiq/apollo3 */
+#ifndef MYNEWT_VAL_ADC_0
+#define MYNEWT_VAL_ADC_0 (0)
+#endif
+
 #ifndef MYNEWT_VAL_I2C_0
 #define MYNEWT_VAL_I2C_0 (0)
 #endif
@@ -767,7 +771,7 @@
 #endif
 
 #ifndef MYNEWT_VAL_UART_1
-#define MYNEWT_VAL_UART_1 (1)
+#define MYNEWT_VAL_UART_1 (0)
 #endif
 
 /*** @apache-mynewt-core/kernel/os */

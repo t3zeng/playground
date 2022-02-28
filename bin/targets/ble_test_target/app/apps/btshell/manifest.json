@@ -1,6 +1,6 @@
 {
   "name": "targets/ble_test_target",
-  "build_time": "2022-02-17T16:27:24-05:00",
+  "build_time": "2022-02-18T09:23:48-05:00",
   "build_version": "0.0.0.0",
   "id": "afc78649de7252c2b3a80baf2ce868af08e8833d6a0f8701aa3a211a85afaf6d",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/ble_test_target/app/apps/btshell/btshell.img",
@@ -213,7 +213,7 @@
     },
     {
       "name": "my_project",
-      "commit": "adb6dbae80b2bead306a6eae077505a640fca3f8",
+      "commit": "63251a7bf19fd9aeb774ea9a95401782d9e83753",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }

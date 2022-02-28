@@ -14,7 +14,7 @@ const struct flash_area sysflash_map_dflt[6] = {
     {
         .fa_id = 0,
         .fa_device_id = 0,
-        .fa_off = 0x000c0000,
+        .fa_off = 0x0000c000,
         .fa_size = 32768, /* 32 kB */
     },
 
