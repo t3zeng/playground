@@ -1,10 +1,10 @@
 {
   "name": "targets/ble_test_target",
-  "build_time": "2022-02-28T14:59:03-05:00",
+  "build_time": "2022-03-03T10:35:54-05:00",
   "build_version": "0.0.0.0",
-  "id": "3fd41b8bf038b196bf8a713d6656f7a78e8f66fe0f02598cc86f92ffa0230bab",
+  "id": "0fcc1d2fe5d52f999a513749aa05339d21c359fa44058adbbd946576e8f82c92",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/ble_test_target/app/apps/bleprph/bleprph.img",
-  "image_hash": "3fd41b8bf038b196bf8a713d6656f7a78e8f66fe0f02598cc86f92ffa0230bab",
+  "image_hash": "0fcc1d2fe5d52f999a513749aa05339d21c359fa44058adbbd946576e8f82c92",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -289,7 +289,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "ad9649640166f6d6d7dc4849400fb83c9fd6d28c",
+      "commit": "e04947875de88f60233fca66460f02712464ee46",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -299,7 +299,8 @@
     },
     {
       "name": "apache-mynewt-nimble",
-      "commit": "2e83faa90ac3d306efc5d00ae4e1db1727b2e267",
+      "commit": "6da2820ee2a0c7b6eab77be59f94843cd2ae1e14",
+      "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-nimble.git"
     },
     {
@@ -309,7 +310,7 @@
     },
     {
       "name": "my_project",
-      "commit": "63251a7bf19fd9aeb774ea9a95401782d9e83753",
+      "commit": "252749a5679450a83609f91709498afdfc34caee",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -384,7 +385,7 @@
     "BLE_HOST": "1",
     "BLE_HS_AUTO_START": "1",
     "BLE_HS_DEBUG": "0",
-    "BLE_HS_FLOW_CTRL": "1",
+    "BLE_HS_FLOW_CTRL": "0",
     "BLE_HS_FLOW_CTRL_ITVL": "1000",
     "BLE_HS_FLOW_CTRL_THRESH": "2",
     "BLE_HS_FLOW_CTRL_TX_ON_DISCONNECT": "0",
@@ -463,7 +464,7 @@
     "BLE_SVC_GAP_APPEARANCE": "0",
     "BLE_SVC_GAP_APPEARANCE_WRITE_PERM": "-1",
     "BLE_SVC_GAP_CENTRAL_ADDRESS_RESOLUTION": "-1",
-    "BLE_SVC_GAP_DEVICE_NAME": "\"nimble-bleprph\"",
+    "BLE_SVC_GAP_DEVICE_NAME": "\"apollo3-nimble\"",
     "BLE_SVC_GAP_DEVICE_NAME_MAX_LENGTH": "31",
     "BLE_SVC_GAP_DEVICE_NAME_WRITE_PERM": "-1",
     "BLE_SVC_GAP_PPCP_MAX_CONN_INTERVAL": "0",
@@ -911,8 +912,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 478
+                  "name": "RAM",
+                  "size": 328
                 }
               ]
             },
@@ -920,8 +921,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 334
+                  "name": "FLASH",
+                  "size": 475
                 }
               ]
             }
@@ -14886,15 +14887,6 @@
           "name": "ble_hs_flow.o",
           "sym": [
             {
-              "name": "ble_hs_flow_acl_free",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 60
-                }
-              ]
-            },
-            {
               "name": "ble_hs_flow_connection_broken",
               "areas": [
                 {
@@ -14904,65 +14896,11 @@
               ]
             },
             {
-              "name": "ble_hs_flow_ev",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_event_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_inc_completed_pkts",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 88
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_mbuf_conn_handle",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_num_completed_pkts",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 2
-                }
-              ]
-            },
-            {
               "name": "ble_hs_flow_startup",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 176
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_timer",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 32
+                  "size": 4
                 }
               ]
             },
@@ -14971,16 +14909,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_tx_num_comp_pkts",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 70
+                  "size": 2
                 }
               ]
             }
@@ -15057,16 +14986,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 187
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_hci_cmd_tx_no_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
+                  "size": 227
                 }
               ]
             },
@@ -18589,7 +18509,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 520
+                  "size": 260
                 }
               ]
             },
@@ -18643,7 +18563,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 465
+                  "size": 440
                 }
               ]
             },
@@ -18748,15 +18668,6 @@
             },
             {
               "name": "ble_hci_trans_reset",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_hci_trans_set_acl_free_cb",
               "areas": [
                 {
                   "name": "FLASH",

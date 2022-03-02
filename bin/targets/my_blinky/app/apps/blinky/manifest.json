@@ -1,10 +1,10 @@
 {
   "name": "targets/my_blinky",
-  "build_time": "2022-02-28T14:59:31-05:00",
+  "build_time": "2022-03-03T10:28:43-05:00",
   "build_version": "0.0.0.0",
-  "id": "6a912ba0e41d8c2e6e6b085b58b4d6728e39599a294cb437a6dec6b44f3aed15",
+  "id": "fe0b90bb5eaaf4014bac900b7b818ee8d22ec70dbd72fc81620a3639f5405622",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/my_blinky/app/apps/blinky/blinky.img",
-  "image_hash": "6a912ba0e41d8c2e6e6b085b58b4d6728e39599a294cb437a6dec6b44f3aed15",
+  "image_hash": "fe0b90bb5eaaf4014bac900b7b818ee8d22ec70dbd72fc81620a3639f5405622",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -173,7 +173,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "ad9649640166f6d6d7dc4849400fb83c9fd6d28c",
+      "commit": "e04947875de88f60233fca66460f02712464ee46",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -188,7 +188,7 @@
     },
     {
       "name": "my_project",
-      "commit": "63251a7bf19fd9aeb774ea9a95401782d9e83753",
+      "commit": "252749a5679450a83609f91709498afdfc34caee",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -573,7 +573,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 119
+                  "size": 123
                 }
               ]
             },
@@ -1052,7 +1052,16 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 28
+                  "size": 32
+                }
+              ]
+            },
+            {
+              "name": "bus_i2c_hal_probe",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 62
                 }
               ]
             },
@@ -3449,6 +3458,15 @@
               ]
             },
             {
+              "name": "hal_i2c_master_probe",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            },
+            {
               "name": "hal_i2c_master_read",
               "areas": [
                 {
@@ -4439,6 +4457,20 @@
                 {
                   "name": "FLASH",
                   "size": 12
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "os_error.o",
+          "sym": [
+            {
+              "name": "os_error_to_sys",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 66
                 }
               ]
             }

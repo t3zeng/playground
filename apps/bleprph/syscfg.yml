@@ -65,9 +65,9 @@ syscfg.vals:
     MSYS_1_BLOCK_COUNT: 22
     MSYS_1_BLOCK_SIZE: 110
 
-    BLE_SVC_GAP_DEVICE_NAME: '"nimble-bleprph"'
+    BLE_SVC_GAP_DEVICE_NAME: '"apollo3-nimble"'
 
     # Whether to save data to sys/config, or just keep it in RAM.
     BLE_STORE_CONFIG_PERSIST: 0
 
-    BLE_LL_PUBLIC_DEV_ADDR: 0x112233445566
+    # BLE_LL_PUBLIC_DEV_ADDR: 0x112233445566

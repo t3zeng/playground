@@ -1,10 +1,10 @@
 {
   "name": "targets/ble_test_target",
-  "build_time": "2022-02-18T09:23:48-05:00",
+  "build_time": "2022-03-03T10:30:29-05:00",
   "build_version": "0.0.0.0",
-  "id": "afc78649de7252c2b3a80baf2ce868af08e8833d6a0f8701aa3a211a85afaf6d",
+  "id": "a25217940ff85f83ebd60626e50ea6ca779e0915e9ee36093e02645db48e762d",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/ble_test_target/app/apps/btshell/btshell.img",
-  "image_hash": "afc78649de7252c2b3a80baf2ce868af08e8833d6a0f8701aa3a211a85afaf6d",
+  "image_hash": "a25217940ff85f83ebd60626e50ea6ca779e0915e9ee36093e02645db48e762d",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -77,14 +77,6 @@
       "repo": "apache-mynewt-nimble"
     },
     {
-      "name": "@apache-mynewt-nimble/nimble/controller",
-      "repo": "apache-mynewt-nimble"
-    },
-    {
-      "name": "@apache-mynewt-nimble/nimble/drivers/apollo3",
-      "repo": "apache-mynewt-nimble"
-    },
-    {
       "name": "@apache-mynewt-nimble/nimble/host",
       "repo": "apache-mynewt-nimble"
     },
@@ -113,7 +105,7 @@
       "repo": "apache-mynewt-nimble"
     },
     {
-      "name": "@apache-mynewt-nimble/nimble/transport/ram",
+      "name": "@apache-mynewt-nimble/nimble/transport/apollo3",
       "repo": "apache-mynewt-nimble"
     },
     {
@@ -197,7 +189,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "dbef17ed12cc4dc484b16fe5538281e53c5b2310",
+      "commit": "e04947875de88f60233fca66460f02712464ee46",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -207,13 +199,13 @@
     },
     {
       "name": "apache-mynewt-nimble",
-      "commit": "c69460236eb038823acdc950473e0df22f485923",
+      "commit": "6da2820ee2a0c7b6eab77be59f94843cd2ae1e14",
       "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-nimble.git"
     },
     {
       "name": "my_project",
-      "commit": "63251a7bf19fd9aeb774ea9a95401782d9e83753",
+      "commit": "252749a5679450a83609f91709498afdfc34caee",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -228,7 +220,7 @@
     "BASELIBC_EXECUTE_GLOBAL_CONSTRUCTORS": "1",
     "BASELIBC_PRESENT": "1",
     "BLE_ACL_BUF_COUNT": "4",
-    "BLE_ACL_BUF_SIZE": "65535",
+    "BLE_ACL_BUF_SIZE": "255",
     "BLE_ATT_PREFERRED_MTU": "256",
     "BLE_ATT_SVR_FIND_INFO": "1",
     "BLE_ATT_SVR_FIND_TYPE": "1",
@@ -245,8 +237,6 @@
     "BLE_ATT_SVR_SIGNED_WRITE": "1",
     "BLE_ATT_SVR_WRITE": "1",
     "BLE_ATT_SVR_WRITE_NO_RSP": "1",
-    "BLE_CONTROLLER": "1",
-    "BLE_DEVICE": "1",
     "BLE_EXT_ADV": "0",
     "BLE_EXT_ADV_MAX_SIZE": "31",
     "BLE_GAP_MAX_PENDING_CONN_PARAM_UPDATE": "1",
@@ -276,18 +266,18 @@
     "BLE_HCI_EVT_BUF_SIZE": "70",
     "BLE_HCI_EVT_HI_BUF_COUNT": "2",
     "BLE_HCI_EVT_LO_BUF_COUNT": "8",
-    "BLE_HCI_TRANSPORT": "builtin",
+    "BLE_HCI_TRANSPORT": "apollo3",
     "BLE_HCI_TRANSPORT_EMSPI": "0",
     "BLE_HCI_TRANSPORT_NIMBLE_BUILTIN": "0",
     "BLE_HCI_TRANSPORT_RAM": "0",
     "BLE_HCI_TRANSPORT_SOCKET": "0",
     "BLE_HCI_TRANSPORT_UART": "0",
-    "BLE_HCI_VS": "1",
+    "BLE_HCI_VS": "0",
     "BLE_HCI_VS_OCF_OFFSET": "0",
     "BLE_HOST": "1",
     "BLE_HS_AUTO_START": "1",
     "BLE_HS_DEBUG": "0",
-    "BLE_HS_FLOW_CTRL": "1",
+    "BLE_HS_FLOW_CTRL": "0",
     "BLE_HS_FLOW_CTRL_ITVL": "1000",
     "BLE_HS_FLOW_CTRL_THRESH": "2",
     "BLE_HS_FLOW_CTRL_TX_ON_DISCONNECT": "0",
@@ -298,7 +288,6 @@
     "BLE_HS_STOP_ON_SHUTDOWN": "1",
     "BLE_HS_STOP_ON_SHUTDOWN_TIMEOUT": "2000",
     "BLE_HS_SYSINIT_STAGE": "200",
-    "BLE_HW_WHITELIST_ENABLE": "1",
     "BLE_ISO": "0",
     "BLE_ISO_TEST": "0",
     "BLE_L2CAP_COC_MAX_NUM": "0",
@@ -308,77 +297,6 @@
     "BLE_L2CAP_MAX_CHANS": "3*MYNEWT_VAL_BLE_MAX_CONNECTIONS",
     "BLE_L2CAP_RX_FRAG_TIMEOUT": "30000",
     "BLE_L2CAP_SIG_MAX_PROCS": "1",
-    "BLE_LL_ADD_STRICT_SCHED_PERIODS": "0",
-    "BLE_LL_CFG_FEAT_CONN_PARAM_REQ": "MYNEWT_VAL_BLE_LL_ROLE_CENTRAL || MYNEWT_VAL_BLE_LL_ROLE_PERIPHERAL",
-    "BLE_LL_CFG_FEAT_CTRL_TO_HOST_FLOW_CONTROL": "0",
-    "BLE_LL_CFG_FEAT_DATA_LEN_EXT": "MYNEWT_VAL_BLE_LL_ROLE_CENTRAL || MYNEWT_VAL_BLE_LL_ROLE_PERIPHERAL",
-    "BLE_LL_CFG_FEAT_LE_2M_PHY": "0",
-    "BLE_LL_CFG_FEAT_LE_CODED_PHY": "0",
-    "BLE_LL_CFG_FEAT_LE_CSA2": "0",
-    "BLE_LL_CFG_FEAT_LE_ENCRYPTION": "MYNEWT_VAL_BLE_LL_ROLE_CENTRAL || MYNEWT_VAL_BLE_LL_ROLE_PERIPHERAL",
-    "BLE_LL_CFG_FEAT_LE_PING": "MYNEWT_VAL_BLE_LL_CFG_FEAT_LE_ENCRYPTION",
-    "BLE_LL_CFG_FEAT_LL_EXT_ADV": "0",
-    "BLE_LL_CFG_FEAT_LL_ISO": "0",
-    "BLE_LL_CFG_FEAT_LL_ISO_TEST": "0",
-    "BLE_LL_CFG_FEAT_LL_PERIODIC_ADV": "0",
-    "BLE_LL_CFG_FEAT_LL_PERIODIC_ADV_SYNC_CNT": "1",
-    "BLE_LL_CFG_FEAT_LL_PERIODIC_ADV_SYNC_LIST_CNT": "1",
-    "BLE_LL_CFG_FEAT_LL_PERIODIC_ADV_SYNC_TRANSFER": "0",
-    "BLE_LL_CFG_FEAT_LL_PRIVACY": "1",
-    "BLE_LL_CFG_FEAT_LL_SCA_UPDATE": "0",
-    "BLE_LL_CFG_FEAT_PERIPH_INIT_FEAT_XCHG": "MYNEWT_VAL_BLE_LL_ROLE_CENTRAL || MYNEWT_VAL_BLE_LL_ROLE_PERIPHERAL",
-    "BLE_LL_CFG_FEAT_SLAVE_INIT_FEAT_XCHG": "0",
-    "BLE_LL_CONN_INIT_MAX_TX_BYTES": "27",
-    "BLE_LL_CONN_INIT_MIN_WIN_OFFSET": "0",
-    "BLE_LL_CONN_INIT_SLOTS": "4",
-    "BLE_LL_DEBUG_GPIO_HCI_CMD": "-1",
-    "BLE_LL_DEBUG_GPIO_HCI_EV": "-1",
-    "BLE_LL_DEBUG_GPIO_RFMGMT": "-1",
-    "BLE_LL_DEBUG_GPIO_SCHED_ITEM": "-1",
-    "BLE_LL_DEBUG_GPIO_SCHED_RUN": "-1",
-    "BLE_LL_DIRECT_TEST_MODE": "0",
-    "BLE_LL_DTM": "0",
-    "BLE_LL_DTM_EXTENSIONS": "0",
-    "BLE_LL_EXT_ADV_AUX_PTR_CNT": "0",
-    "BLE_LL_HCI_LLCP_TRACE": "0",
-    "BLE_LL_HCI_VS": "1",
-    "BLE_LL_HCI_VS_EVENT_ON_ASSERT": "0",
-    "BLE_LL_LNA": "0",
-    "BLE_LL_LNA_GPIO": "-1",
-    "BLE_LL_MASTER_SCA": "4",
-    "BLE_LL_MAX_PKT_SIZE": "251",
-    "BLE_LL_MFRG_ID": "0xFFFF",
-    "BLE_LL_NUM_COMP_PKT_ITVL_MS": "2000",
-    "BLE_LL_NUM_SCAN_DUP_ADVS": "8",
-    "BLE_LL_NUM_SCAN_RSP_ADVS": "8",
-    "BLE_LL_OUR_SCA": "60",
-    "BLE_LL_PA": "0",
-    "BLE_LL_PA_GPIO": "-1",
-    "BLE_LL_PRIO": "0",
-    "BLE_LL_PUBLIC_DEV_ADDR": "0x112233445566",
-    "BLE_LL_RESOLV_LIST_SIZE": "4",
-    "BLE_LL_RFMGMT_ENABLE_TIME": "0",
-    "BLE_LL_RNG_BUFSIZE": "32",
-    "BLE_LL_ROLE_BROADCASTER": "1",
-    "BLE_LL_ROLE_CENTRAL": "1",
-    "BLE_LL_ROLE_OBSERVER": "1",
-    "BLE_LL_ROLE_PERIPHERAL": "1",
-    "BLE_LL_SCA": "60",
-    "BLE_LL_SCAN_AUX_SEGMENT_CNT": "0",
-    "BLE_LL_SCHED_AUX_CHAIN_MAFS_DELAY": "0",
-    "BLE_LL_SCHED_AUX_MAFS_DELAY": "0",
-    "BLE_LL_SCHED_SCAN_AUX_PDU_LEN": "41",
-    "BLE_LL_SCHED_SCAN_SYNC_PDU_LEN": "32",
-    "BLE_LL_STRICT_CONN_SCHEDULING": "0",
-    "BLE_LL_SUPP_MAX_RX_BYTES": "251",
-    "BLE_LL_SUPP_MAX_TX_BYTES": "251",
-    "BLE_LL_SYSINIT_STAGE": "250",
-    "BLE_LL_SYSVIEW": "0",
-    "BLE_LL_TX_PWR_DBM": "0",
-    "BLE_LL_USECS_PER_PERIOD": "3250",
-    "BLE_LL_VND_EVENT_ON_ASSERT": "0",
-    "BLE_LL_WHITELIST_SIZE": "8",
-    "BLE_LP_CLOCK": "1",
     "BLE_MAX_CONNECTIONS": "1",
     "BLE_MAX_PERIODIC_SYNCS": "1",
     "BLE_MESH": "0",
@@ -392,10 +310,8 @@
     "BLE_MONITOR_UART_BUFFER_SIZE": "64",
     "BLE_MONITOR_UART_DEV": "\"uart0\"",
     "BLE_MULTI_ADV_INSTANCES": "0",
-    "BLE_NUM_COMP_PKT_RATE": "(2 * OS_TICKS_PER_SEC)",
     "BLE_PERIODIC_ADV": "0",
     "BLE_PERIODIC_ADV_SYNC_TRANSFER": "0",
-    "BLE_PUBLIC_DEV_ADDR": "(uint8_t[6]){0x00, 0x00, 0x00, 0x00, 0x00, 0x00}",
     "BLE_ROLE_BROADCASTER": "1",
     "BLE_ROLE_CENTRAL": "1",
     "BLE_ROLE_OBSERVER": "1",
@@ -433,10 +349,9 @@
     "BLE_SVC_GAP_PPCP_SUPERVISION_TMO": "0",
     "BLE_SVC_GAP_SYSINIT_STAGE": "301",
     "BLE_SVC_GATT_SYSINIT_STAGE": "302",
-    "BLE_TRANS_RAM_SYSINIT_STAGE": "100",
+    "BLE_TRANS_APOLLO3_SYSINIT_STAGE": "100",
     "BLE_VERSION": "50",
     "BLE_WHITELIST": "1",
-    "BLE_XTAL_SETTLE_TIME": "0",
     "BOOT_SERIAL_NVREG_INDEX": "-1",
     "BOOT_SERIAL_NVREG_MAGIC": "0xB7",
     "BSP_APOLLO3": "1",
@@ -497,6 +412,9 @@
     "I2C_0": "0",
     "I2C_0_PIN_SCL": "5",
     "I2C_0_PIN_SDA": "6",
+    "I2C_0_SLAVE": "0",
+    "I2C_0_SLAVE_PIN_SCL": "0",
+    "I2C_0_SLAVE_PIN_SDA": "1",
     "I2C_1": "0",
     "I2C_1_PIN_SCL": "8",
     "I2C_1_PIN_SDA": "9",
@@ -636,42 +554,58 @@
     "SHELL_SYSINIT_STAGE": "500",
     "SHELL_TASK": "1",
     "SPI_0_MASTER": "0",
+    "SPI_0_MASTER_PIN_CS": "11",
+    "SPI_0_MASTER_PIN_CS1": "-1",
+    "SPI_0_MASTER_PIN_CS2": "-1",
+    "SPI_0_MASTER_PIN_CS3": "-1",
     "SPI_0_MASTER_PIN_MISO": "6",
     "SPI_0_MASTER_PIN_MOSI": "7",
     "SPI_0_MASTER_PIN_SCK": "5",
-    "SPI_0_PIN_CS": "11",
-    "SPI_0_PIN_CS3": "15",
     "SPI_0_SLAVE": "0",
+    "SPI_0_SLAVE_PIN_CS": "3",
+    "SPI_0_SLAVE_PIN_MISO": "2",
+    "SPI_0_SLAVE_PIN_MOSI": "1",
+    "SPI_0_SLAVE_PIN_SCK": "0",
     "SPI_1_MASTER": "0",
+    "SPI_1_MASTER_PIN_CS": "16",
+    "SPI_1_MASTER_PIN_CS1": "-1",
+    "SPI_1_MASTER_PIN_CS2": "-1",
+    "SPI_1_MASTER_PIN_CS3": "-1",
     "SPI_1_MASTER_PIN_MISO": "9",
     "SPI_1_MASTER_PIN_MOSI": "10",
     "SPI_1_MASTER_PIN_SCK": "8",
-    "SPI_1_PIN_CS": "14",
-    "SPI_1_SLAVE": "0",
     "SPI_2_MASTER": "0",
+    "SPI_2_MASTER_PIN_CS": "23",
+    "SPI_2_MASTER_PIN_CS1": "-1",
+    "SPI_2_MASTER_PIN_CS2": "-1",
+    "SPI_2_MASTER_PIN_CS3": "-1",
     "SPI_2_MASTER_PIN_MISO": "25",
     "SPI_2_MASTER_PIN_MOSI": "28",
     "SPI_2_MASTER_PIN_SCK": "27",
-    "SPI_2_PIN_CS": "15",
-    "SPI_2_SLAVE": "0",
     "SPI_3_MASTER": "0",
+    "SPI_3_MASTER_PIN_CS": "3",
+    "SPI_3_MASTER_PIN_CS1": "-1",
+    "SPI_3_MASTER_PIN_CS2": "-1",
+    "SPI_3_MASTER_PIN_CS3": "-1",
     "SPI_3_MASTER_PIN_MISO": "43",
     "SPI_3_MASTER_PIN_MOSI": "38",
     "SPI_3_MASTER_PIN_SCK": "42",
-    "SPI_3_PIN_CS": "12",
-    "SPI_3_SLAVE": "0",
     "SPI_4_MASTER": "0",
+    "SPI_4_MASTER_PIN_CS": "8",
+    "SPI_4_MASTER_PIN_CS1": "-1",
+    "SPI_4_MASTER_PIN_CS2": "-1",
+    "SPI_4_MASTER_PIN_CS3": "-1",
     "SPI_4_MASTER_PIN_MISO": "40",
     "SPI_4_MASTER_PIN_MOSI": "44",
     "SPI_4_MASTER_PIN_SCK": "39",
-    "SPI_4_PIN_CS": "13",
-    "SPI_4_SLAVE": "0",
     "SPI_5_MASTER": "0",
+    "SPI_5_MASTER_PIN_CS": "12",
+    "SPI_5_MASTER_PIN_CS1": "-1",
+    "SPI_5_MASTER_PIN_CS2": "-1",
+    "SPI_5_MASTER_PIN_CS3": "-1",
     "SPI_5_MASTER_PIN_MISO": "49",
     "SPI_5_MASTER_PIN_MOSI": "47",
     "SPI_5_MASTER_PIN_SCK": "48",
-    "SPI_5_PIN_CS": "16",
-    "SPI_5_SLAVE": "0",
     "STATS_CLI": "0",
     "STATS_MGMT": "0",
     "STATS_NAMES": "0",
@@ -694,14 +628,17 @@
     "SYSINIT_PANIC_MESSAGE": "0",
     "TARGET_NAME": "\"ble_test_target\"",
     "TARGET_ble_test_target": "1",
+    "TIMER_0": "1",
     "TIMER_0_SOURCE": "APOLLO3_TIMER_SOURCE_XT",
-    "TIMER_1_SOURCE": "",
+    "TIMER_1": "0",
+    "TIMER_1_SOURCE": "APOLLO3_TIMER_SOURCE_HFRC",
+    "TIMER_ADC_SOURCE": "APOLLO3_TIMER_SOURCE_HFRC",
     "UART_0": "1",
     "UART_0_PIN_CTS": "38",
     "UART_0_PIN_RTS": "37",
     "UART_0_PIN_RX": "23",
     "UART_0_PIN_TX": "22",
-    "UART_1": "0",
+    "UART_1": "1",
     "UART_1_PIN_CTS": "45",
     "UART_1_PIN_RTS": "44",
     "UART_1_PIN_RX": "36",
@@ -719,8 +656,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 446
+                  "name": "FLASH",
+                  "size": 508
                 }
               ]
             },
@@ -728,8 +665,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 575
+                  "name": "RAM",
+                  "size": 410
                 }
               ]
             }
@@ -1025,7 +962,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 116
+                  "size": 132
                 }
               ]
             },
@@ -1089,25 +1026,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 142
-                }
-              ]
-            },
-            {
-              "name": "os_bsp_uart0",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 60
-                }
-              ]
-            },
-            {
-              "name": "os_bsp_uart0_cfg",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
+                  "size": 8
                 }
               ]
             }
@@ -1289,6 +1208,679 @@
       "name": "@apache-mynewt-core/hw/mcu/ambiq/apollo3",
       "files": [
         {
+          "name": "am_hal_ble.o",
+          "sym": [
+            {
+              "name": ".rodata",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 3
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_blocking_hci_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 176
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_blocking_hci_write",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 96
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_blocking_transfer",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 788
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_boot",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 116
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_bus_lock",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_bus_release",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 8
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_check_32k_clock",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 76
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_check_status",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 32
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_cmd_write",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 136
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_config",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 256
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_crc_nz",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_copy_patch_apply",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_patch_apply",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 116
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_trim_set_ramcode",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 132
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_deinitialize",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 92
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_fifo_drain",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 96
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_fifo_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_initialize",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 168
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_int_clear",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 40
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_int_enable",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_int_service",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 268
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_int_status",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 28
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_load_modex_trim_set",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 26
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_patch_apply",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 680
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_patch_complete",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 440
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_patch_copy_end_apply",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 236
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_plf_reg_read",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 176
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_plf_reg_write",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 168
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_power_control",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 372
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_read_trimdata_from_info1",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 44
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_transmitter_modex_set",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 212
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_tx_power_set",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 160
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_vs_command_build",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 40
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_wakeup_set",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 72
+                }
+              ]
+            },
+            {
+              "name": "buffer_compare",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 36
+                }
+              ]
+            },
+            {
+              "name": "ccitt_table",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 512
+                }
+              ]
+            },
+            {
+              "name": "g_psPatchBuffer",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 132
+                }
+              ]
+            },
+            {
+              "name": "g_sBLEState",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 72
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "am_hal_flash.o",
+          "sym": [
+            {
+              "name": "SRAM_write_ui32",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "am_hal_flash_delay",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 40
+                }
+              ]
+            },
+            {
+              "name": "am_hal_flash_delay_status_check",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
+                }
+              ]
+            },
+            {
+              "name": "am_hal_flash_load_ui32",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "am_hal_flash_page_erase",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "am_hal_flash_program_main",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 88
+                }
+              ]
+            },
+            {
+              "name": "am_hal_flash_store_ui32",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 16
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "am_hal_ble_patch.o",
+          "sym": [
+            {
+              "name": "am_ble_buffer_nvds_data",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 192
+                }
+              ]
+            },
+            {
+              "name": "am_ble_buffer_patch",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            },
+            {
+              "name": "am_ble_buffer_patch_data",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 3384
+                }
+              ]
+            },
+            {
+              "name": "am_ble_nvds_patch",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            },
+            {
+              "name": "am_ble_performance_copy_patch",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            },
+            {
+              "name": "am_ble_performance_copy_patch_data",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 2324
+                }
+              ]
+            },
+            {
+              "name": "am_ble_performance_patch",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            },
+            {
+              "name": "am_ble_performance_patch_data",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 260
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_copy_patch_array",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_copy_patches",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_patch_array",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_patches",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_num_default_patches",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "am_hal_ble_patch_b0.o",
+          "sym": [
+            {
+              "name": "am_ble_buffer_nvds_data_b0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 200
+                }
+              ]
+            },
+            {
+              "name": "am_ble_buffer_patch_b0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            },
+            {
+              "name": "am_ble_buffer_patch_data_b0",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 1824
+                }
+              ]
+            },
+            {
+              "name": "am_ble_nvds_patch_b0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            },
+            {
+              "name": "am_ble_performance_patch_b0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            },
+            {
+              "name": "am_ble_performance_patch_data_b0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4788
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_patch_array_b0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_default_patches_b0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "am_hal_ble_num_default_patches_b0",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "am_hal_cachectrl.o",
+          "sym": [
+            {
+              "name": "am_hal_cachectrl_control",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 440
+                }
+              ]
+            },
+            {
+              "name": "set_LPMMODE",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "set_RDWAIT",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            },
+            {
+              "name": "set_SEDELAY",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 68
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "am_hal_ctimer.o",
           "sym": [
             {
@@ -1429,38 +2021,6 @@
           ]
         },
         {
-          "name": "am_hal_flash.o",
-          "sym": [
-            {
-              "name": "am_hal_flash_delay",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "am_hal_flash_page_erase",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "am_hal_flash_program_main",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 88
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "am_hal_gpio.o",
           "sym": [
             {
@@ -1552,8 +2112,76 @@
           ]
         },
         {
+          "name": "am_hal_mcuctrl.o",
+          "sym": [
+            {
+              "name": "am_hal_mcuctrl_info_get",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 92
+                }
+              ]
+            },
+            {
+              "name": "device_info_get",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 188
+                }
+              ]
+            },
+            {
+              "name": "g_am_hal_mcuctrl_flash_size",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
+                }
+              ]
+            },
+            {
+              "name": "g_am_hal_mcuctrl_sram_size",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 64
+                }
+              ]
+            },
+            {
+              "name": "mcuctrl_fault_status",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 56
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "am_hal_pwrctrl.o",
           "sym": [
+            {
+              "name": "am_hal_pwrctrl_blebuck_trim",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 80
+                }
+              ]
+            },
+            {
+              "name": "am_hal_pwrctrl_low_power_init",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 216
+                }
+              ]
+            },
             {
               "name": "am_hal_pwrctrl_periph_disable",
               "areas": [
@@ -1587,6 +2215,15 @@
                 {
                   "name": "FLASH",
                   "size": 124
+                }
+              ]
+            },
+            {
+              "name": "simobuck_updates",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 180
                 }
               ]
             }
@@ -1911,6 +2548,74 @@
           ]
         },
         {
+          "name": "apollo3_periph.o",
+          "sym": [
+            {
+              "name": "apollo3_periph_create",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "apollo3_periph_create_timers",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 76
+                }
+              ]
+            },
+            {
+              "name": "apollo3_periph_create_uart",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 130
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart0",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart0_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart1",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 60
+                }
+              ]
+            },
+            {
+              "name": "os_bsp_uart1_cfg",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "hal_timer.o",
           "sym": [
             {
@@ -2058,42 +2763,6 @@
               ]
             },
             {
-              "name": "hal_timer_read",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "hal_timer_set_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "hal_timer_start_at",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 112
-                }
-              ]
-            },
-            {
-              "name": "hal_timer_stop",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 74
-                }
-              ]
-            },
-            {
               "name": "nvic_configured",
               "areas": [
                 {
@@ -2211,7 +2880,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 248
+                  "size": 1180
                 }
               ]
             },
@@ -2248,6 +2917,20 @@
                 {
                   "name": "RAM",
                   "size": 48
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "am_hal_reset.o",
+          "sym": [
+            {
+              "name": "gAmHalResetStatus",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
                 }
               ]
             }
@@ -3181,11 +3864,11 @@
               ]
             },
             {
-              "name": "os_mempool_clear",
+              "name": "os_mempool_ext_init",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 54
+                  "size": 28
                 }
               ]
             },
@@ -3326,15 +4009,6 @@
               ]
             },
             {
-              "name": "get_le64",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 46
-                }
-              ]
-            },
-            {
               "name": "put_le16",
               "areas": [
                 {
@@ -3349,24 +4023,6 @@
                 {
                   "name": "FLASH",
                   "size": 20
-                }
-              ]
-            },
-            {
-              "name": "put_le64",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 38
-                }
-              ]
-            },
-            {
-              "name": "swap_buf",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
                 }
               ]
             },
@@ -3498,70 +4154,11 @@
           "name": "os_cputime.o",
           "sym": [
             {
-              "name": "os_cputime_get32",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 10
-                }
-              ]
-            },
-            {
               "name": "os_cputime_init",
               "areas": [
                 {
                   "name": "FLASH",
                   "size": 12
-                }
-              ]
-            },
-            {
-              "name": "os_cputime_timer_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 62
-                }
-              ]
-            },
-            {
-              "name": "os_cputime_timer_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "os_cputime_timer_stop",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "os_cputime_pwr2.o",
-          "sym": [
-            {
-              "name": "os_cputime_ticks_to_usecs",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "os_cputime_usecs_to_ticks",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
                 }
               ]
             }
@@ -6921,3877 +7518,6 @@
                 {
                   "name": "FLASH",
                   "size": 10
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "@apache-mynewt-nimble/nimble/controller",
-      "files": [
-        {
-          "name": "ble_ll.o",
-          "sym": [
-            {
-              "name": "ble_ll_acl_data_in",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_chk_txrx_octets",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_chk_txrx_time",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_count_rx_adv_pdus",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 112
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_count_rx_stats",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 96
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_event_comp_pkts",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 10
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_event_dbuf_overflow",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_event_rx_pkt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_event_send",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_event_tx_pkt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_flush_pkt_queue",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_get_our_devaddr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hw_err_timer_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 439
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_is_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_is_valid_own_addr_type",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_is_valid_public_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_is_valid_random_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 120
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_pdu_max_tx_octets_get",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 112
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_pdu_tx_time_get",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 6
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_read_supp_features",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_read_supp_states",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 10
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_reset",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 120
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_rx_pkt_in",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 152
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_set_random_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 84
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_state_get",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_state_set",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_stats",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 268
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_task",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 84
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_tx_mbuf_pducb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_tx_pkt_in",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 128
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_validate_task",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 56
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_data",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 144
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_pdu_header_tx_time",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_stack",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 384
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_task",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 80
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_tx_power",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 1
-                }
-              ]
-            },
-            {
-              "name": "g_dev_addr",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 6
-                }
-              ]
-            },
-            {
-              "name": "g_random_addr",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 6
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_adv.o",
-          "sym": [
-            {
-              "name": "ble_ll_adv_active_chanset_clear",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_active_chanset_set_pri",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_can_chg_whitelist",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_chk_rpa_timeout",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 38
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_conn_req_rxd",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 252
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_done",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 292
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_drop_event",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_enabled",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_event_done",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 10
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_event_rmvd_from_sched",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_final_chan",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 26
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_first_chan",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 26
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_flags_clear",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_flags_set",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_get_local_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_get_peer_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_halt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 60
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_legacy_pdu_make",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 170
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_make_done",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_read_txpwr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_reschedule_event",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 84
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_reset",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_rpa_timeout",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_rpa_update",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 124
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_rx_pkt_in",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 68
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_scheduled",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_send_conn_comp_ev",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_set_adv_data",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 188
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_set_adv_params",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 264
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_set_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 46
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_set_scan_rsp_data",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 162
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_set_sched",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 104
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_sm_find_configured",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 80
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_sm_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_sm_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 300
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_sm_stop",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 108
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_sm_stop_timeout",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 38
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_tx_done",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 56
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_tx_start_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 236
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_update_adv_scan_rsp_data",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 82
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_adv_update_data_mbuf",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 106
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_adv_set_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 26
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_set_adv_data",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_set_scan_rsp_data",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_adv_sm",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 124
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_cur_adv_sm",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_conn_hci.o",
-          "sym": [
-            {
-              "name": "ble_ll_auth_pyld_tmo_event_send",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 42
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_comp_event_send",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 400
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_create_cancel",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_cancel_conn_complete_event",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_chk_conn_params",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 86
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_create",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 296
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_create_check_params",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 68
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_create_check_scan",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_disconnect_cmd",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 152
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_le_ltk_neg_reply",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 76
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_le_ltk_reply",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 98
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_le_start_encrypt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 96
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_param_nrr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 102
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_param_rr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 172
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_rd_auth_pyld_tmo",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 50
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_rd_chan_map",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 84
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_rd_rem_ver_cmd",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 66
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_rd_rssi",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_read_rem_features",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 96
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_set_chan_class",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 46
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_set_data_len",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 112
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_update",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 230
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_hci_wr_auth_pyld_tmo",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 108
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_num_comp_pkts_event_send",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 232
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_process_conn_params",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 102
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_disconn_comp_event_send",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_init_alloc_conn_comp_ev",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_last_num_comp_pkt_evt",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_ctrl.o",
-          "sym": [
-            {
-              "name": "ble_ll_calc_session_key",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 18
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_chanmap_req_make",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 68
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_chk_proc_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 112
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_conn_param_pdu_make",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 202
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_conn_param_pdu_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 356
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_conn_param_reply",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_conn_upd_make",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 276
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_datalen_upd_make",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_enc_allowed_pdu",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 56
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_enc_allowed_pdu_rx",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_enc_allowed_pdu_tx",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_enc_req_make",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_init_conn_sm",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_initiate_dle",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_is_start_enc_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 30
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_is_terminate_ind",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_len_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 102
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_proc_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 248
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_proc_rsp_timer_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_proc_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 80
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_proc_stop",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_proc_unk_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 204
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_reject_ind_send",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 78
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_chanmap_req",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 76
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_conn_param_req",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 128
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_conn_param_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_conn_update",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 136
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_enc_req",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 124
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_enc_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 60
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_feature_req",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 82
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_feature_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 56
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_pause_enc_req",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 26
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_pause_enc_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 58
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_pdu",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 940
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_ping_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 10
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_reject_ind",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 148
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_start_enc_req",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 58
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_start_enc_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 100
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_rx_version_ind",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 96
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_start_enc_send",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 66
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_start_rsp_timer",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 14
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_terminate_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 100
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_update_features",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_ctrl_version_ind_make",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 38
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_ctrl_pkt_lengths",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 42
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_conn.o",
-          "sym": [
-            {
-              "name": "ble_ll_conn_adjust_pyld_len",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 42
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_auth_pyld_timer_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 26
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_auth_pyld_timer_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 38
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_calc_dci",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 26
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_calc_dci_csa1",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 74
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_central_common_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 108
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_central_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 82
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_central_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 196
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_chk_csm_flags",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 108
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_continue_rx_encrypt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_created",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 376
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_created_on_legacy",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_current_sm_over",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_end",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 276
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_enqueue_pkt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 164
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_event_end",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 332
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_event_halt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_event_start_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 352
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_find_active_conn",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_get_ce_end_time",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_get_next_sched_time",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 88
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_halt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_is_lru",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 18
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_itvl_to_ticks",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_module_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 152
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_module_reset",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 200
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_next_event",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 752
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_periph_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 492
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_rx_data_pdu",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 420
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_rxend_unencrypt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_set_csa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_set_global_chanmap",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 68
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_sm_get",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_sm_new",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 248
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_start_rx_encrypt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 46
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_start_rx_unencrypt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_stats",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 128
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_timeout",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 60
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_tx_pdu",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 1220
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_tx_pkt_in",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_txend_encrypt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_update_eff_data_len",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 96
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_conn_wait_txend",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_init_get_conn_comp_ev",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_conn_active_list",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_conn_comp_ev",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_conn_create_sm",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_conn_cur_sm",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_conn_free_list",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_conn_params",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_conn_sm",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 416
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_hci.o",
-          "sym": [
-            {
-              "name": "ble_ll_hci_acl_rx",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 10
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_adv_mode_ext",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_cb_set_event_mask",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_cb_set_event_mask2",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_cmd_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 328
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_cmd_rx",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 60
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ctlr_bb_cmd_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 76
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_disconnect",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_event_send",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_get_num_cmd_pkts",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_info_params_cmd_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 90
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 88
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_is_event_enabled",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 108
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_is_le_event_enabled",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_cmd_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 702
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_cmd_send_cmd_status",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 74
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_encrypt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 66
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_rand",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 18
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_rd_max_data_len",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_rd_sugg_data_len",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_read_bufsize",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_read_local_features",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_read_supp_states",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_le_wr_sugg_data_len",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 96
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_link_ctrl_cmd_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 34
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_rd_bd_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_rd_local_supp_cmd",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 76
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_rd_local_supp_feat",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_rd_local_version",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_send_noop",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_set_le_event_mask",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_status_params_cmd_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_read_rf_path_compensation",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_read_tx_power",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_write_rf_path_compensation",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 100
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_hci_cmd_ev",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_hci_event_mask",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_hci_event_mask2",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_hci_le_event_mask",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "rx_path_pwr_compensation",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "tx_path_pwr_compensation",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 2
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_hci_ev.o",
-          "sym": [
-            {
-              "name": "ble_ll_hci_ev_conn_update",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 68
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ev_databuf_overflow",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 38
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ev_datalen_chg",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ev_encrypt_chg",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 114
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ev_hw_err",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ev_ltk_req",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 80
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ev_rd_rem_used_feat",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 76
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ev_rd_rem_ver",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 66
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_ev_rem_conn_parm_req",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 74
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_scan.o",
-          "sym": [
-            {
-              "name": "ble_ll_hci_send_adv_report",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 148
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_send_dir_adv_report",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 100
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_can_chg_whitelist",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_chk_resume",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 108
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_common_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 124
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_dup_check_legacy",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 248
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_dup_update_legacy",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 96
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_enabled",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_event_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 180
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_get_addr_data_from_legacy",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 100
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_get_local_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_get_next_adv_prim_chan",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 14
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_get_peer_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_halt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_hci_set_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_hci_set_params",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 200
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 97
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_initiator_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 144
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_interrupted_event_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_is_inside_window",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_move_window_to",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 42
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_req_backoff",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 196
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_reset",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_rx_pkt_in",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 92
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_rx_pkt_in_on_legacy",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 148
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_rx_pkt_in_restore_addr_data",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 160
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_send_adv_report",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 200
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_set_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 236
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_set_peer_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_sm_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 144
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_sm_stop",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 124
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 160
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_scan_timer_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 10
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_scan_num_rsp_advs",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 1
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_scan_params",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_scan_rsp_advs",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 80
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_scan_sm",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 136
-                }
-              ]
-            },
-            {
-              "name": "g_scan_dup_list",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "g_scan_dup_mem",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 128
-                }
-              ]
-            },
-            {
-              "name": "g_scan_dup_pool",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 28
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_hci_vs.o",
-          "sym": [
-            {
-              "name": "ble_ll_hci_vs_cmd_proc",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 50
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_vs_find_by_ocf",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_vs_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_vs_is_controller_busy",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 68
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_vs_rd_static_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 50
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_vs_register",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 84
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_hci_vs_set_tx_power",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 72
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_hci_vs_cmds",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_hci_vs_list",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_resolv.o",
-          "sym": [
-            {
-              "name": "ble_ll_is_controller_busy",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_is_on_resolv_list",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 64
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_enable_cmd",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_enabled",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_gen_priv_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 120
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_gen_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_get_priv_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 134
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 52
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_irk_nonzero",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_list_add",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 300
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_list_chg_allowed",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_list_clr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_list_find",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 64
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_list_read_size",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_list_reset",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_list_rmv",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 152
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_local_addr_rd",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 54
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_peer_addr_rd",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 54
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_rpa_timer_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 100
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_set_local_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_set_peer_rpa",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolv_set_rpa_tmo",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 84
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_resolve_set_priv_mode",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 58
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_resolv_data",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_resolv_list",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 216
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_rand.o",
-          "sym": [
-            {
-              "name": "ble_ll_rand",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_rand_data_get",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 128
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_rand_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_rand_prand_get",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_rand_sample",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 80
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_rand_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_rnum_buf",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 32
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_rnum_data",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "init",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 1
-                }
-              ]
-            },
-            {
-              "name": "xsubi",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 6
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_rfmgmt.o",
-          "sym": [
-            {
-              "name": "ble_ll_rfmgmt_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 28
-                }
-              ]
-            },
-            {
-              "name": "enabled",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_sched.o",
-          "sym": [
-            {
-              "name": "ble_ll_sched_adv_new",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 116
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_adv_resched_pdu",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 112
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_adv_reschedule",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 136
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_conn_periph_new",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 140
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_conn_reschedule",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 228
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_execute_item",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 132
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_insert",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 312
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_next_time",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_overlaps_current",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_preempt",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 96
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_rmv_elem",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 160
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_run",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 84
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_sched_stop",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_sched_offset_ticks",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 1
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_sched_q",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_sched_q_head_changed",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 1
-                }
-              ]
-            },
-            {
-              "name": "g_ble_ll_sched_timer",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "preempt_any",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "preempt_any_except_conn",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "preempt_none",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_utils.o",
-          "sym": [
-            {
-              "name": "ble_ll_utils_calc_access_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 180
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_utils_calc_num_used_chans",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 62
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_utils_calc_window_widening",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 56
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_utils_remapped_channel",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 82
-                }
-              ]
-            },
-            {
-              "name": "g_ble_sca_ppm_tbl",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 16
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_whitelist.o",
-          "sym": [
-            {
-              "name": "ble_ll_whitelist_add",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 42
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_whitelist_chg_allowed",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 24
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_whitelist_clear",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_whitelist_disable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_whitelist_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_whitelist_read_size",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_whitelist_rmv",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 64
-                }
-              ]
-            },
-            {
-              "name": "ble_ll_whitelist_search",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_ll_supp_cmd.o",
-          "sym": [
-            {
-              "name": "g_ble_ll_supp_cmds",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 45
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "@apache-mynewt-nimble/nimble/drivers/apollo3",
-      "files": [
-        {
-          "name": "ble_hw.o",
-          "sym": [
-            {
-              "name": "ble_hw_encrypt_block",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 6
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_get_public_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 6
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_get_static_addr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 6
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_resolv_list_add",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_resolv_list_clear",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_resolv_list_rmv",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_resolv_list_size",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_rng_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_rng_start",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 56
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_rng_stop",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_whitelist_clear",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_whitelist_disable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_whitelist_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_hw_whitelist_rmv",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "rng_cb",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "rng_started",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ble_phy.o",
-          "sym": [
-            {
-              "name": "ble_phy_disable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_encrypt_disable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_encrypt_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_encrypt_set_pkt_cntr",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_init",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 20
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_max_data_pdu_pyld",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_resolv_list_disable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_resolv_list_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_rfclk_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_rx_set_start_time",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_set_rx_pwr_compensation",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_set_txend_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_setchan",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_state_get",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 12
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_tx",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 116
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_tx_set_start_time",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_txpower_round",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 22
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_txpwr_set",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 56
-                }
-              ]
-            },
-            {
-              "name": "ble_phy_wfr_enable",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 2
-                }
-              ]
-            },
-            {
-              "name": "g_ble_phy_data",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 48
-                }
-              ]
-            },
-            {
-              "name": "g_ble_phy_stats",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "g_ble_phy_tx_buf",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 257
                 }
               ]
             }
@@ -16312,15 +13038,6 @@
           "name": "ble_hs_flow.o",
           "sym": [
             {
-              "name": "ble_hs_flow_acl_free",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 60
-                }
-              ]
-            },
-            {
               "name": "ble_hs_flow_connection_broken",
               "areas": [
                 {
@@ -16330,65 +13047,11 @@
               ]
             },
             {
-              "name": "ble_hs_flow_ev",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 16
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_event_cb",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_inc_completed_pkts",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 88
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_mbuf_conn_handle",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 8
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_num_completed_pkts",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 2
-                }
-              ]
-            },
-            {
               "name": "ble_hs_flow_startup",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 180
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_timer",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 32
+                  "size": 4
                 }
               ]
             },
@@ -16397,16 +13060,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 36
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_flow_tx_num_comp_pkts",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 70
+                  "size": 2
                 }
               ]
             }
@@ -16483,16 +13137,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 124
-                }
-              ]
-            },
-            {
-              "name": "ble_hs_hci_cmd_tx_no_rsp",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 32
+                  "size": 227
                 }
               ]
             },
@@ -16510,7 +13155,7 @@
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 300
+                  "size": 284
                 }
               ]
             },
@@ -17451,7 +14096,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 84
+                  "size": 160
                 }
               ]
             },
@@ -17515,6 +14160,15 @@
                 {
                   "name": "FLASH",
                   "size": 42
+                }
+              ]
+            },
+            {
+              "name": "ble_hs_startup_read_sup_f_tx",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 91
                 }
               ]
             },
@@ -19063,7 +15717,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 50
+                  "size": 48
                 }
               ]
             },
@@ -19072,7 +15726,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 58
+                  "size": 4
                 }
               ]
             }
@@ -19081,13 +15735,85 @@
       ]
     },
     {
-      "name": "@apache-mynewt-nimble/nimble/transport/ram",
+      "name": "@apache-mynewt-nimble/nimble/transport/apollo3",
       "files": [
         {
-          "name": "ble_hci_ram.o",
+          "name": "apollo3_ble_hci.o",
           "sym": [
             {
-              "name": "ble_hci_ram_cmd_buf",
+              "name": ".rodata",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 28
+                }
+              ]
+            },
+            {
+              "name": "BLE",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 4
+                }
+              ]
+            },
+            {
+              "name": "apollo3_ble_hci_api",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 16
+                }
+              ]
+            },
+            {
+              "name": "apollo3_ble_hci_init",
+              "areas": [
+                {
+                  "name": "FLASH",
+                  "size": 469
+                }
+              ]
+            },
+            {
+              "name": "apollo3_ble_hci_pool_acl",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 36
+                }
+              ]
+            },
+            {
+              "name": "apollo3_ble_hci_pool_acl_buf",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 1200
+                }
+              ]
+            },
+            {
+              "name": "apollo3_ble_hci_pool_acl_mbuf",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 12
+                }
+              ]
+            },
+            {
+              "name": "apollo3_ble_hci_pool_cmd_mempool",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 28
+                }
+              ]
+            },
+            {
+              "name": "apollo3_ble_hci_pool_cmd_mempool_buf",
               "areas": [
                 {
                   "name": "RAM",
@@ -19096,7 +15822,7 @@
               ]
             },
             {
-              "name": "ble_hci_ram_cmd_pool",
+              "name": "apollo3_ble_hci_pool_evt_hi",
               "areas": [
                 {
                   "name": "RAM",
@@ -19105,7 +15831,7 @@
               ]
             },
             {
-              "name": "ble_hci_ram_evt_hi_buf",
+              "name": "apollo3_ble_hci_pool_evt_hi_buf",
               "areas": [
                 {
                   "name": "RAM",
@@ -19114,7 +15840,7 @@
               ]
             },
             {
-              "name": "ble_hci_ram_evt_hi_pool",
+              "name": "apollo3_ble_hci_pool_evt_lo",
               "areas": [
                 {
                   "name": "RAM",
@@ -19123,7 +15849,7 @@
               ]
             },
             {
-              "name": "ble_hci_ram_evt_lo_buf",
+              "name": "apollo3_ble_hci_pool_evt_lo_buf",
               "areas": [
                 {
                   "name": "RAM",
@@ -19132,92 +15858,74 @@
               ]
             },
             {
-              "name": "ble_hci_ram_evt_lo_pool",
+              "name": "apollo3_ble_hci_rx_data",
               "areas": [
                 {
                   "name": "RAM",
-                  "size": 28
+                  "size": 16
                 }
               ]
             },
             {
-              "name": "ble_hci_ram_init",
+              "name": "apollo3_ble_hci_trans_rx_process",
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 284
+                  "size": 440
                 }
               ]
             },
             {
-              "name": "ble_hci_ram_rx_acl_hs_arg",
+              "name": "apollo3_hci_int",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 4
+                  "name": "FLASH",
+                  "size": 76
                 }
               ]
             },
             {
-              "name": "ble_hci_ram_rx_acl_hs_cb",
+              "name": "apollo3_hci_radio_boot",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 4
+                  "name": "FLASH",
+                  "size": 248
                 }
               ]
             },
             {
-              "name": "ble_hci_ram_rx_acl_ll_arg",
+              "name": "apollo3_hci_radio_shutdown",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 4
+                  "name": "FLASH",
+                  "size": 80
                 }
               ]
             },
             {
-              "name": "ble_hci_ram_rx_acl_ll_cb",
+              "name": "apollo3_hci_write",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 4
+                  "name": "FLASH",
+                  "size": 92
                 }
               ]
             },
             {
-              "name": "ble_hci_ram_rx_cmd_hs_arg",
+              "name": "apollo3_update_wake",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 4
+                  "name": "FLASH",
+                  "size": 88
                 }
               ]
             },
             {
-              "name": "ble_hci_ram_rx_cmd_hs_cb",
+              "name": "ble_hci_trans_acl_tx",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_hci_ram_rx_cmd_ll_arg",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
-                }
-              ]
-            },
-            {
-              "name": "ble_hci_ram_rx_cmd_ll_cb",
-              "areas": [
-                {
-                  "name": "RAM",
-                  "size": 4
+                  "name": "FLASH",
+                  "size": 32
                 }
               ]
             },
@@ -19226,7 +15934,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 80
+                  "size": 72
                 }
               ]
             },
@@ -19244,16 +15952,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 40
-                }
-              ]
-            },
-            {
-              "name": "ble_hci_trans_cfg_ll",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 40
+                  "size": 20
                 }
               ]
             },
@@ -19262,7 +15961,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 44
+                  "size": 8
                 }
               ]
             },
@@ -19271,25 +15970,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_hci_trans_ll_acl_tx",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
-                }
-              ]
-            },
-            {
-              "name": "ble_hci_trans_ll_evt_tx",
-              "areas": [
-                {
-                  "name": "FLASH",
-                  "size": 44
+                  "size": 26
                 }
               ]
             },
@@ -19298,16 +15979,25 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 4
+                  "size": 16
                 }
               ]
             },
             {
-              "name": "ble_hci_trans_set_acl_free_cb",
+              "name": "g_ble_mac_address",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 4
+                  "name": "RAM",
+                  "size": 6
+                }
+              ]
+            },
+            {
+              "name": "g_read_buf",
+              "areas": [
+                {
+                  "name": "RAM",
+                  "size": 256
                 }
               ]
             }
@@ -19650,7 +16340,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 88
+                  "size": 64
                 }
               ]
             },
@@ -21900,7 +18590,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 60
+                  "size": 56
                 }
               ]
             }
