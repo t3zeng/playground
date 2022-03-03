@@ -54,22 +54,23 @@ Waiting for GDB connection...Connected to 127.0.0.1
 warning: No executable has been specified and target does not support
 determining executable automatically.  Try using the "file" command.
 Reading all registers
-Read 4 bytes @ address 0x0002DB1E (Data = 0xBD10B974)
-Read 2 bytes @ address 0x0002DB1E (Data = 0xB974)
-0x0002db1e in ?? ()
+Read 4 bytes @ address 0x0002DAFE (Data = 0xBD10B974)
+Read 2 bytes @ address 0x0002DAFE (Data = 0xB974)
+0x0002dafe in ?? ()
 Received monitor command: reset
 Resetting target
 Resetting target
-Downloading 16032 bytes @ address 0x00014000
-Downloading 16064 bytes @ address 0x00017EA0
-Downloading 16016 bytes @ address 0x0001BD60
-Downloading 16096 bytes @ address 0x0001FBF0
-Downloading 15920 bytes @ address 0x00023AD0
-Downloading 15968 bytes @ address 0x00027900
-Downloading 16064 bytes @ address 0x0002B760
-Downloading 16160 bytes @ address 0x0002F620
-Downloading 8000 bytes @ address 0x00033540
-Restoring binary file bin/targets/ble_test_target/app/apps/bleprph/bleprph.img into memory (0x14000 to 0x35480)
+Downloading 16176 bytes @ address 0x00014000
+Downloading 16032 bytes @ address 0x00017F30
+Downloading 16128 bytes @ address 0x0001BDD0
+Downloading 16000 bytes @ address 0x0001FCD0
+Downloading 16112 bytes @ address 0x00023B50
+Downloading 16048 bytes @ address 0x00027A40
+Downloading 15968 bytes @ address 0x0002B8F0
+Downloading 16272 bytes @ address 0x0002F750
+Downloading 16240 bytes @ address 0x000336E0
+Downloading 7716 bytes @ address 0x00037650
+Restoring binary file bin/targets/ble_test_target/app/apps/btshell/btshell.img into memory (0x14000 to 0x39474)
 Reading register (MSP = 0x10003FD4)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
@@ -80,19 +81,19 @@ Reading register (FPSCR = 0x 2000000)
 r0             0x80000000          2147483648
 r1             0x1                 1
 r2             0x40008000          1073774592
-r3             0x7802              30722
+r3             0x12cc2             76994
 r4             0x780               1920
 r5             0x0                 0
-r6             0x7082              28802
-r7             0x7082              28802
+r6             0x12542             75074
+r7             0x12542             75074
 r8             0x100               256
 r9             0x40                64
 r10            0x0                 0
 r11            0x0                 0
 r12            0x0                 0
 sp             0x10003858          0x10003858
-lr             0x2daab             187051
-pc             0x2db1e             0x2db1e
+lr             0x2da8b             187019
+pc             0x2dafe             0x2dafe
 xpsr           0xa1000000          2701131776
 msp            0x10003fd4          268451796
 psp            0x0                 0

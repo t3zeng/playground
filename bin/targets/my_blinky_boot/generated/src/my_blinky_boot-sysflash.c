@@ -14,7 +14,7 @@ const struct flash_area sysflash_map_dflt[6] = {
     {
         .fa_id = 0,
         .fa_device_id = 0,
-        .fa_off = 0x0000c000,
+        .fa_off = 0x00000000,
         .fa_size = 32768, /* 32 kB */
     },
 
@@ -22,31 +22,31 @@ const struct flash_area sysflash_map_dflt[6] = {
     {
         .fa_id = 1,
         .fa_device_id = 0,
-        .fa_off = 0x00014000,
-        .fa_size = 229376, /* 224 kB */
+        .fa_off = 0x0000c000,
+        .fa_size = 483328, /* 472 kB */
     },
 
     /* FLASH_AREA_IMAGE_1 */
     {
         .fa_id = 2,
         .fa_device_id = 0,
-        .fa_off = 0x0004c000,
-        .fa_size = 229376, /* 224 kB */
+        .fa_off = 0x00082000,
+        .fa_size = 483328, /* 472 kB */
     },
 
     /* FLASH_AREA_IMAGE_SCRATCH */
     {
         .fa_id = 3,
         .fa_device_id = 0,
-        .fa_off = 0x00084000,
-        .fa_size = 8192, /* 8 kB */
+        .fa_off = 0x000f8000,
+        .fa_size = 16384, /* 16 kB */
     },
 
     /* FLASH_AREA_REBOOT_LOG */
     {
         .fa_id = 16,
         .fa_device_id = 0,
-        .fa_off = 0x00086000,
+        .fa_off = 0x00008000,
         .fa_size = 16384, /* 16 kB */
     },
 
@@ -54,7 +54,7 @@ const struct flash_area sysflash_map_dflt[6] = {
     {
         .fa_id = 17,
         .fa_device_id = 0,
-        .fa_off = 0x0008a000,
+        .fa_off = 0x000fc000,
         .fa_size = 16384, /* 16 kB */
     },
 };

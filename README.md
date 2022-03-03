@@ -1,59 +1,16 @@
-<!--
-#
-# Licensed to the Apache Software Foundation (ASF) under one
-# or more contributor license agreements.  See the NOTICE file
-# distributed with this work for additional information
-# regarding copyright ownership.  The ASF licenses this file
-# to you under the Apache License, Version 2.0 (the
-# "License"); you may not use this file except in compliance
-# with the License.  You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing,
-# software distributed under the License is distributed on an
-# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-#  KIND, either express or implied.  See the License for the
-# specific language governing permissions and limitations
-# under the License.
-#
--->
-
-# Apache Blinky
+# Tian's Playground
 
 ## Overview
+This repo is a Mynewt playground meant for development of Ambiq Apollo 3 support. It pulls in my custom mynewt-core and mynewt-nimble forks located at t3zeng/mynewt-core and t3zeng/mynewt-nimble respectively. An Apollo3 EVB is required to run the targets in this repo.
 
-Apache Blinky is a skeleton for new Apache Mynewt projects.  The user downloads
-this skeleton by issuing the "newt new" command (using Apache Newt).  Apache
-blinky also contains an example app and target for use with Apache Mynewt to
-help you get started.
+## Setup
+Setting this repo up is very standard for a Mynewt repo. Run `newt upgrade` to pull in all of the necessary repos to run the applications. 
 
-## Building
+## Bootloader
+The bootloader target is named `my_blinky_boot`. You may build it using `newt build my_blinky_boot` and load it using `newt load my_blinky_boot`. The Ambiq Apollo3 Secure Bootloader located at 0x0000 cannot be modified and the memory is protected all the way up until 0xc0000. The Secure Bootloader will run code starting at 0xc000 so mcuboot is placed at this address.
 
-Apache Blinky contains an example Apache Mynewt application called blinky.
-When executed on suitably equipped hardware, this application repeatedly blinks
-an LED.  The below procedure describes how to build this application for the
-Apache Mynewt simulator.
+## Apps
+The main app used to validate Ambiq Apollo3 support on mynewt-core is called `my_blinky`. This app can test GPIOs, LEDs, I2C, SPI, UART and the ADC. There are also a couple of nimBLE apps brought into this repo to test Bluetooth. These are the `bleprph` and `btshell` example apps which can be run using the target `ble_test_target`. Currently I am switching between the apps by changing the app in `target.yml`.
 
-1. Download and install Apache Newt.
-
-You will need to download the Apache Newt tool, as documented in the [Getting Started Guide](https://mynewt.apache.org/latest/get_started/index.html).
-
-2. Download the Apache Mynewt Core package (executed from the blinky directory).
-
-```no-highlight
-    $ newt install
-```
-
-3. Build the blinky app for the sim platform using the "my_blinky_sim" target
-(executed from the blinky directory).
-
-```no-highlight
-    $ newt build my_blinky_sim
-```
-
-The Apache Newt tool should indicate the location of the generated blinky
-executable.  Since the simulator does not have an LED to blink, this version of
-blinky is not terribly exciting - a printed message indicating the current LED
-state.  To learn how to build blinky for actual hardware, please see the
-[Getting Started Guide](https://mynewt.apache.org/latest/get_started/index.html).
+## mynewt-core and mynewt-nimble branches
+The Apollo 3 work for mynewt-core is ready for review to go upstream into `apache-mynewt-core` so you can use the `master` branch of `t3zeng/mynewt-core` fork. The nimBLE stack is still a WIP so instead of using `master` branch in `t3zeng/mynewt-nimble`, use the branch `tian-playground`.

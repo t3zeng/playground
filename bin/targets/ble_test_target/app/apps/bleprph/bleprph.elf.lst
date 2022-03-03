@@ -58137,8 +58137,8 @@ apollo3_hci_write(uint8_t type, uint16_t len, uint8_t *pData)
    27798:	10004438 	.word	0x10004438
 
 0002779c <ble_hci_trans_acl_tx>:
+    return 0;
 }
-#endif
 
 static int
 ble_hci_trans_acl_tx(struct os_mbuf *om)
@@ -58188,7 +58188,7 @@ ble_hci_trans_acl_tx(struct os_mbuf *om)
 
 000277cc <ble_hci_trans_cfg_hs>:
 
-#if MYNEWT_VAL(BLE_HOST) || MYNEWT_VAL(BLE_HCI_BRIDGE)
+#if MYNEWT_VAL(BLE_HOST)
 void
 ble_hci_trans_cfg_hs(ble_hci_trans_rx_cmd_fn *evt_cb, void *evt_arg,
                      ble_hci_trans_rx_acl_fn *acl_cb, void *acl_arg)
@@ -58224,7 +58224,6 @@ ble_hci_trans_hs_acl_tx(struct os_mbuf *om)
 000277e8 <ble_hci_trans_buf_alloc>:
 #endif
 
-#if !MYNEWT_VAL(BLE_HCI_BRIDGE)
 uint8_t *
 ble_hci_trans_buf_alloc(int type)
 {
@@ -58668,8 +58667,8 @@ ble_hci_trans_buf_free(uint8_t *buf)
 	...
 
 00027af4 <apollo3_ble_hci_init>:
+    return 0;
 }
-#endif
 
 void
 apollo3_ble_hci_init(void)
@@ -58711,7 +58710,6 @@ apollo3_ble_hci_init(void)
    27b24:	2800      	cmp	r0, #0
    27b26:	d13e      	bne.n	27ba6 <apollo3_ble_hci_init+0xb2>
 
-#if !MYNEWT_VAL(BLE_HCI_BRIDGE)
     rc = os_mempool_init(&apollo3_ble_hci_pool_evt_hi,
    27b28:	4b3e      	ldr	r3, [pc, #248]	; (27c24 <apollo3_ble_hci_init+0x130>)
    27b2a:	9300      	str	r3, [sp, #0]

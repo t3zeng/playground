@@ -1,10 +1,10 @@
 {
   "name": "targets/ble_test_target",
-  "build_time": "2022-03-03T10:30:29-05:00",
+  "build_time": "2022-03-07T17:06:05-05:00",
   "build_version": "0.0.0.0",
-  "id": "a25217940ff85f83ebd60626e50ea6ca779e0915e9ee36093e02645db48e762d",
+  "id": "5519715effefd083d9c73785a3ad6aadb322926d06cfc01d2bf46a61c5e16eaf",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/ble_test_target/app/apps/btshell/btshell.img",
-  "image_hash": "a25217940ff85f83ebd60626e50ea6ca779e0915e9ee36093e02645db48e762d",
+  "image_hash": "5519715effefd083d9c73785a3ad6aadb322926d06cfc01d2bf46a61c5e16eaf",
   "loader": "",
   "loader_hash": "",
   "pkgs": [
@@ -189,7 +189,7 @@
   "repos": [
     {
       "name": "apache-mynewt-core",
-      "commit": "e04947875de88f60233fca66460f02712464ee46",
+      "commit": "4e5bccc5469b0de131f69c09e336c237069b7bfe",
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -199,13 +199,13 @@
     },
     {
       "name": "apache-mynewt-nimble",
-      "commit": "6da2820ee2a0c7b6eab77be59f94843cd2ae1e14",
+      "commit": "3f896d9dde9ba3dcc3e4dbebecfbac03fa16d761",
       "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-nimble.git"
     },
     {
       "name": "my_project",
-      "commit": "252749a5679450a83609f91709498afdfc34caee",
+      "commit": "af7437f29b82cad7888fbb9ec5af7e613879ae72",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -263,6 +263,9 @@
     "BLE_GATT_WRITE_RELIABLE": "MYNEWT_VAL_BLE_ROLE_CENTRAL",
     "BLE_HCI_BRIDGE": "0",
     "BLE_HCI_BRIDGE_TRANSPORT": "",
+    "BLE_HCI_DRV_MAX_RX_PACKET": "256",
+    "BLE_HCI_DRV_MAX_TX_PACKET": "256",
+    "BLE_HCI_DRV_MAX_XTAL_RETRIES": "10",
     "BLE_HCI_EVT_BUF_SIZE": "70",
     "BLE_HCI_EVT_HI_BUF_COUNT": "2",
     "BLE_HCI_EVT_LO_BUF_COUNT": "8",
@@ -656,8 +659,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 508
+                  "name": "RAM",
+                  "size": 410
                 }
               ]
             },
@@ -665,8 +668,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 410
+                  "name": "FLASH",
+                  "size": 507
                 }
               ]
             }
@@ -13137,7 +13140,7 @@
               "areas": [
                 {
                   "name": "FLASH",
-                  "size": 227
+                  "size": 124
                 }
               ]
             },

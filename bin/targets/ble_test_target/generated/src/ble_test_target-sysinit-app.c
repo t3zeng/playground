@@ -8,28 +8,15 @@ void os_pkg_init(void);
 void flash_map_init(void);
 void stats_module_init(void);
 void console_pkg_init(void);
-void config_pkg_init(void);
 void apollo3_ble_hci_init(void);
 void log_init(void);
-void mfg_init(void);
 void modlog_init(void);
 void ble_hs_init(void);
-void log_reboot_pkg_init(void);
-void config_pkg_init_stage2(void);
 void ble_svc_gap_init(void);
 void ble_svc_gatt_init(void);
 void ble_svc_ans_init(void);
-void ble_svc_dis_init(void);
 void ble_store_config_init(void);
-void id_init(void);
-void imgmgr_module_init(void);
-void smp_pkg_init(void);
-void split_app_init(void);
-void img_mgmt_module_init(void);
-void log_mgmt_module_init(void);
-void os_mgmt_module_init(void);
-void smp_ble_pkg_init(void);
-void stat_mgmt_module_init(void);
+void shell_init(void);
 
 void
 sysinit_app(void)
@@ -50,29 +37,17 @@ sysinit_app(void)
     /* 20.0: console_pkg_init (sys/console/full) */
     console_pkg_init();
 
-    /*** Stage 50 */
-    /* 50.0: config_pkg_init (sys/config) */
-    config_pkg_init();
-
     /*** Stage 100 */
     /* 100.0: apollo3_ble_hci_init (nimble/transport/apollo3) */
     apollo3_ble_hci_init();
     /* 100.1: log_init (sys/log/full) */
     log_init();
-    /* 100.2: mfg_init (sys/mfg) */
-    mfg_init();
-    /* 100.3: modlog_init (sys/log/modlog) */
+    /* 100.2: modlog_init (sys/log/modlog) */
     modlog_init();
 
     /*** Stage 200 */
     /* 200.0: ble_hs_init (nimble/host) */
     ble_hs_init();
-    /* 200.1: log_reboot_pkg_init (sys/reboot) */
-    log_reboot_pkg_init();
-
-    /*** Stage 220 */
-    /* 220.0: config_pkg_init_stage2 (sys/config) */
-    config_pkg_init_stage2();
 
     /*** Stage 301 */
     /* 301.0: ble_svc_gap_init (nimble/host/services/gap) */
@@ -85,32 +60,12 @@ sysinit_app(void)
     /*** Stage 303 */
     /* 303.0: ble_svc_ans_init (nimble/host/services/ans) */
     ble_svc_ans_init();
-    /* 303.1: ble_svc_dis_init (nimble/host/services/dis) */
-    ble_svc_dis_init();
 
     /*** Stage 500 */
     /* 500.0: ble_store_config_init (nimble/host/store/config) */
     ble_store_config_init();
-    /* 500.1: id_init (sys/id) */
-    id_init();
-    /* 500.2: imgmgr_module_init (mgmt/imgmgr) */
-    imgmgr_module_init();
-    /* 500.3: smp_pkg_init (mgmt/smp) */
-    smp_pkg_init();
-    /* 500.4: split_app_init (boot/split) */
-    split_app_init();
-
-    /*** Stage 501 */
-    /* 501.0: img_mgmt_module_init (cmd/img_mgmt/port/mynewt) */
-    img_mgmt_module_init();
-    /* 501.1: log_mgmt_module_init (cmd/log_mgmt/port/mynewt) */
-    log_mgmt_module_init();
-    /* 501.2: os_mgmt_module_init (cmd/os_mgmt) */
-    os_mgmt_module_init();
-    /* 501.3: smp_ble_pkg_init (mgmt/smp/transport/ble) */
-    smp_ble_pkg_init();
-    /* 501.4: stat_mgmt_module_init (cmd/stat_mgmt/port/mynewt) */
-    stat_mgmt_module_init();
+    /* 500.1: shell_init (sys/shell) */
+    shell_init();
 }
 
 #endif

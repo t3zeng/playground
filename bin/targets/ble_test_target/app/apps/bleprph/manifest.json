@@ -1,6 +1,6 @@
 {
   "name": "targets/ble_test_target",
-  "build_time": "2022-03-03T10:35:54-05:00",
+  "build_time": "2022-03-04T10:03:01-05:00",
   "build_version": "0.0.0.0",
   "id": "0fcc1d2fe5d52f999a513749aa05339d21c359fa44058adbbd946576e8f82c92",
   "image": "/Users/tianzeng/Documents/workspace/playground/bin/targets/ble_test_target/app/apps/bleprph/bleprph.img",
@@ -290,6 +290,7 @@
     {
       "name": "apache-mynewt-core",
       "commit": "e04947875de88f60233fca66460f02712464ee46",
+      "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-core.git"
     },
     {
@@ -299,7 +300,7 @@
     },
     {
       "name": "apache-mynewt-nimble",
-      "commit": "6da2820ee2a0c7b6eab77be59f94843cd2ae1e14",
+      "commit": "772025af9df67678ee84fb38af2b332a43e968cc",
       "dirty": true,
       "url": "https://github.com/t3zeng/mynewt-nimble.git"
     },
@@ -310,7 +311,7 @@
     },
     {
       "name": "my_project",
-      "commit": "252749a5679450a83609f91709498afdfc34caee",
+      "commit": "af7437f29b82cad7888fbb9ec5af7e613879ae72",
       "dirty": true,
       "url": "https://github.com/t3zeng/playground.git"
     }
@@ -912,8 +913,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "RAM",
-                  "size": 328
+                  "name": "FLASH",
+                  "size": 475
                 }
               ]
             },
@@ -921,8 +922,8 @@
               "name": "*fill*",
               "areas": [
                 {
-                  "name": "FLASH",
-                  "size": 475
+                  "name": "RAM",
+                  "size": 328
                 }
               ]
             }
