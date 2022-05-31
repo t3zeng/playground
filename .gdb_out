@@ -55,15 +55,22 @@ Waiting for GDB connection...Connected to 127.0.0.1
 warning: No executable has been specified and target does not support
 determining executable automatically.  Try using the "file" command.
 Reading all registers
-Read 4 bytes @ address 0x0000015C (Data = 0xE7FEE7FE)
-Read 2 bytes @ address 0x0000015C (Data = 0xE7FE)
-0x0000015c in ?? ()
+Read 4 bytes @ address 0x0002A362 (Data = 0xBD38B905)
+Read 2 bytes @ address 0x0002A362 (Data = 0xB905)
+0x0002a362 in ?? ()
 Received monitor command: reset
 Resetting target
 Resetting target
 Downloading 16032 bytes @ address 0x0000C000
-Downloading 7584 bytes @ address 0x0000FEA0
-Restoring binary file bin/targets/nrf52_blinky/app/apps/blinky/blinky.img into memory (0xc000 to 0x11c40)
+Downloading 16048 bytes @ address 0x0000FEA0
+Downloading 16000 bytes @ address 0x00013D50
+Downloading 16016 bytes @ address 0x00017BD0
+Downloading 16016 bytes @ address 0x0001BA60
+Downloading 16080 bytes @ address 0x0001F8F0
+Downloading 15920 bytes @ address 0x000237C0
+Downloading 16048 bytes @ address 0x000275F0
+Downloading 15172 bytes @ address 0x0002B4A0
+Restoring binary file bin/targets/ble_test_target/app/apps/bleprph/bleprph.img into memory (0xc000 to 0x2efe4)
 Reading register (MSP = 0x20040000)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
@@ -71,23 +78,23 @@ Reading register (BASEPRI = 0x       0)
 Reading register (FAULTMASK = 0x       0)
 Reading register (CONTROL = 0x       0)
 Reading register (FPSCR = 0x       0)
-r0             0x0                 0
-r1             0x0                 0
-r2             0x80000000          2147483648
-r3             0xe000ed00          3758157056
-r4             0x0                 0
-r5             0x0                 0
-r6             0x0                 0
-r7             0x0                 0
+r0             0x1                 1
+r1             0x20001948          536877384
+r2             0xac8000            11304960
+r3             0x5240              21056
+r4             0xac8000            11304960
+r5             0x53                83
+r6             0xa500              42240
+r7             0xac2d              44077
 r8             0x0                 0
-r9             0x0                 0
+r9             0x40                64
 r10            0x0                 0
 r11            0x0                 0
-r12            0x76000             483328
-sp             0x2003ffb8          0x2003ffb8
-lr             0xfffffff9          4294967289
-pc             0x15c               0x15c
-xpsr           0x41000002          1090519042
+r12            0x0                 0
+sp             0x200006c0          0x200006c0
+lr             0x2a2eb             172779
+pc             0x2a362             0x2a362
+xpsr           0x21000000          553648128
 msp            0x20040000          537133056
 psp            0x0                 0
 primask        0x0                 0

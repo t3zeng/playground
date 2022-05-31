@@ -65,7 +65,7 @@ syscfg.vals:
     MSYS_1_BLOCK_COUNT: 22
     MSYS_1_BLOCK_SIZE: 110
 
-    BLE_SVC_GAP_DEVICE_NAME: '"apollo3-nimble"'
+    BLE_SVC_GAP_DEVICE_NAME: '"tian"'
 
     # Whether to save data to sys/config, or just keep it in RAM.
     BLE_STORE_CONFIG_PERSIST: 0
