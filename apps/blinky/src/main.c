@@ -6,7 +6,7 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- * 
+ *
  *  http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing,
@@ -27,9 +27,13 @@
 #include "hal/hal_i2c.h"
 #include "hal/hal_spi.h"
 #include "adc/adc.h"
-#include "adc_apollo3/adc_apollo3.h"
 #include "console/console.h"
+
+#if MYNEWT_VAL(MCU_APOLLO3)
+#include "adc_apollo3/adc_apollo3.h"
 #include "am_mcu_apollo.h"
+#endif
+
 #ifdef ARCH_sim
 #include "mcu/mcu_sim.h"
 #endif
@@ -38,7 +42,7 @@
 #define SPI_TEST (0)
 #define I2C_TEST (0)
 #define UART_TEST (1)
-#define ADC_TEST (1)
+#define ADC_TEST (0)
 
 static volatile int g_task1_loops;
 
@@ -123,7 +127,7 @@ main(int argc, char **argv)
 // recv_val = bytearray(2)
 // def nss_callback(line):
 //     global spi, data, recv_val
-    
+
 //     print("Cb hit!")
 //     try:
 //         spi.recv(recv_val)
@@ -163,7 +167,7 @@ main(int argc, char **argv)
         adc_read_channel(dev, 0, &result);
         console_printf("Result: %d\n", result);
 #endif
-        
+
         ++g_task1_loops;
 
         /* Wait one second */
