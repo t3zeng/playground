@@ -17,9 +17,7 @@
 # under the License.
 #
 
-### Target: targets/btshell
-# target.app: "apps/bleprph"
-target.app: "@apache-mynewt-nimble/apps/btshell"
-target.bsp: "@apache-mynewt-core/hw/bsp/apollo3_evb"
-# target.bsp: "@apache-mynewt-core/hw/bsp/nordic_pca10056"
+### Target: targets/my_blinky_sim
+target.app: "@mcuboot/boot/mynewt"
+target.bsp: "@apache-mynewt-core/hw/bsp/nordic_pca10095_net"
 target.build_profile: "debug"

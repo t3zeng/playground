@@ -17,7 +17,7 @@ SEGGER J-Link GDB Server V7.60e Command Line Version
 
 JLinkARM.dll V7.60e (DLL compiled Jan 20 2022 11:10:57)
 
-Command line: -device nrf52840_xxaa -speed 1000 -if SWD -port 3333 -singlerun
+Command line: -device AMA3B1KK-KBR -speed 1000 -if SWD -port 3333 -singlerun
 -----GDB Server start settings-----
 GDBInit file:                  none
 GDB Server Listening port:     3333
@@ -35,17 +35,16 @@ J-Link Host interface:         USB
 J-Link script:                 none
 J-Link settings file:          none
 ------Target related settings------
-Target device:                 nrf52840_xxaa
+Target device:                 AMA3B1KK-KBR
 Target interface:              SWD
 Target interface speed:        1000kHz
 Target endian:                 little
 
 Connecting to J-Link...
 J-Link is connected.
-Firmware: J-Link OB-SAM3U128-V2-NordicSemi compiled Dec  3 2021 15:41:28
-Hardware: V1.00
-S/N: 683613794
-Feature(s): RDI, FlashBP, FlashDL, JFlash, GDB
+Firmware: J-Link OB-SAM3U128 V3 compiled Feb  2 2021 16:48:08
+Hardware: V3.00
+S/N: 483135407
 Checking target voltage...
 Target voltage: 3.30 V
 Listening on TCP/IP port 3333
@@ -55,53 +54,54 @@ Waiting for GDB connection...Connected to 127.0.0.1
 warning: No executable has been specified and target does not support
 determining executable automatically.  Try using the "file" command.
 Reading all registers
-Read 4 bytes @ address 0x0002A362 (Data = 0xBD38B905)
-Read 2 bytes @ address 0x0002A362 (Data = 0xB905)
-0x0002a362 in ?? ()
+Read 4 bytes @ address 0x0000C16C (Data = 0xE7FEE7FE)
+Read 2 bytes @ address 0x0000C16C (Data = 0xE7FE)
+0x0000c16c in ?? ()
 Received monitor command: reset
 Resetting target
 Resetting target
-Downloading 16032 bytes @ address 0x0000C000
-Downloading 16048 bytes @ address 0x0000FEA0
-Downloading 16000 bytes @ address 0x00013D50
-Downloading 16016 bytes @ address 0x00017BD0
-Downloading 16016 bytes @ address 0x0001BA60
-Downloading 16080 bytes @ address 0x0001F8F0
-Downloading 15920 bytes @ address 0x000237C0
-Downloading 16048 bytes @ address 0x000275F0
-Downloading 15172 bytes @ address 0x0002B4A0
-Restoring binary file bin/targets/ble_test_target/app/apps/bleprph/bleprph.img into memory (0xc000 to 0x2efe4)
-Reading register (MSP = 0x20040000)
+Downloading 16176 bytes @ address 0x00014000
+Downloading 15984 bytes @ address 0x00017F30
+Downloading 16080 bytes @ address 0x0001BDA0
+Downloading 16096 bytes @ address 0x0001FC70
+Downloading 15936 bytes @ address 0x00023B50
+Downloading 16128 bytes @ address 0x00027990
+Downloading 16048 bytes @ address 0x0002B890
+Downloading 16272 bytes @ address 0x0002F740
+Downloading 16208 bytes @ address 0x000336D0
+Downloading 8972 bytes @ address 0x00037620
+Restoring binary file bin/targets/ble_test_target/app/@apache-mynewt-nimble/apps/btshell/btshell.img into memory (0x14000 to 0x3992c)
+Reading register (MSP = 0x10003FD4)
 Reading register (PSP = 0x       0)
 Reading register (PRIMASK = 0x       0)
 Reading register (BASEPRI = 0x       0)
 Reading register (FAULTMASK = 0x       0)
-Reading register (CONTROL = 0x       0)
-Reading register (FPSCR = 0x       0)
-r0             0x1                 1
-r1             0x20001948          536877384
-r2             0xac8000            11304960
-r3             0x5240              21056
-r4             0xac8000            11304960
-r5             0x53                83
-r6             0xa500              42240
-r7             0xac2d              44077
-r8             0x0                 0
-r9             0x40                64
+Reading register (CONTROL = 0x       4)
+Reading register (FPSCR = 0x 2000000)
+r0             0x0                 0
+r1             0x0                 0
+r2             0x80000000          2147483648
+r3             0xe000ed00          3758157056
+r4             0x1005ffd9          268828633
+r5             0x7294              29332
+r6             0x10008008          268468232
+r7             0x10004000          268451840
+r8             0x100               256
+r9             0x0                 0
 r10            0x0                 0
 r11            0x0                 0
-r12            0x0                 0
-sp             0x200006c0          0x200006c0
-lr             0x2a2eb             172779
-pc             0x2a362             0x2a362
-xpsr           0x21000000          553648128
-msp            0x20040000          537133056
+r12            0x38000             229376
+sp             0x1005ff68          0x1005ff68
+lr             0xffffffe9          4294967273
+pc             0xc16c              0xc16c
+xpsr           0x41000002          1090519042
+msp            0x10003fd4          268451796
 psp            0x0                 0
 primask        0x0                 0
 basepri        0x0                 0
 faultmask      0x0                 0
-control        0x0                 0
-fpscr          0x0                 0
+control        0x4                 4
+fpscr          0x2000000           33554432
 Received monitor command: reset
 Resetting target
 Resetting target

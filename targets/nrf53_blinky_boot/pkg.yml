@@ -17,9 +17,12 @@
 # under the License.
 #
 
-### Target: targets/btshell
-# target.app: "apps/bleprph"
-target.app: "@apache-mynewt-nimble/apps/btshell"
-target.bsp: "@apache-mynewt-core/hw/bsp/apollo3_evb"
-# target.bsp: "@apache-mynewt-core/hw/bsp/nordic_pca10056"
-target.build_profile: "debug"
+### Package: targets/my_blinky
+pkg.name: "targets/nrf53_blinky_boot"
+pkg.type: "target"
+pkg.description: Blinky bootloader for the nrf52 development board
+pkg.author: Tianyu Zeng
+pkg.homepage:
+pkg.keywords:
+    - nordic
+    - evb
